@@ -25,3 +25,5 @@ class HashCreateView(CreateView):
 class SearchTagCreateView(CreateView):
     model = SearchTag
     fields = ('tags', 'count')
+
+# TODO: search a way to get the text from the htmls

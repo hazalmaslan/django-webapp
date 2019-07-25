@@ -11,4 +11,8 @@ urlpatterns = [
 
     # engine/update/
     path('upload/', views.upload, name='upload'),
+
+    # engine/virus_total_search
+    path('virus_total_search/', views.search, name='virus_total_search'),
 ]
+

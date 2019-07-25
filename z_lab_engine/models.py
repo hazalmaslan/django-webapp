@@ -19,3 +19,7 @@ class Hash(models.Model):
 class SearchTag(models.Model):
     tags = models.CharField(max_length=1000)
     count = models.IntegerField()
+
+
+# TODO: find the best way to associate the hash with searchtags
+

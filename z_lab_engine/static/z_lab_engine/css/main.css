@@ -771,12 +771,12 @@ input[type="date"]{
   -webkit-filter: none;
 }
 .hide-me[type="checkbox"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+	-webkit-appearance: none;
+  	-moz-appearance: none;
+  	appearance: none;
 
-  /* Styling checkbox */
-  width: 16px;
-  height: 16px;
-  background-image:url(/images/question.png);
+	/* Styling checkbox */
+  	width: 16px;
+  	height: 16px;
+	background-image: url("../images/question.png");
 }

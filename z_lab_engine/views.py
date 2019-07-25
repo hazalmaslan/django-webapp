@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic import CreateView
+from .models import Hash, SearchTag
+
 # Create your views here.
 
 
@@ -13,3 +15,13 @@ def dashboard(request):
 
 def upload(request):
     return render(request, 'z_lab_engine/upload.html')
+
+
+class HashCreateView(CreateView):
+    model = Hash
+    fields = ('md5', 'sha1', 'sha256', 'update_tags')
+
+
+class SearchTagCreateView(CreateView):
+    model = SearchTag
+    fields = ('tags', 'count')

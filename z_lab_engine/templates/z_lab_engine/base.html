@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>zLab Tool</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+        {% block style %}
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'z_lab_engine/css/main.css' %}">
+    <!--===============================================================================================-->
+
+    <link rel="stylesheet" href="{% static "fontawesome/css/fontawesome-all.min.css" %}">
+
+    <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="{% static 'z_lab_engine/fonts/iconic/css/material-design-iconic-font.min.css'%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'z_lab_engine/css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'z_lab_engine/css/pie.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'z_lab_engine/css/util.css' %}">
+        {% endblock %}
+    <!--===============================================================================================-->
+</head>
+
+<body>
+      <!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="#"><h3>zLab Tool</h3></a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'upload' %}">Upload</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'search' %}">Search</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'search' %}">Search in VirusTotal</a>
+      </li>
+
+    </ul>
+    <!-- Links -->
+
+      <li class="nav-item dropdown" >
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false" style="margin-right: 30px;"><i class="fa fa-user" style="color: white;"></i></a>
+        <div class="dropdown-menu dropdown-primary " aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Log In</a>
+          <a class="dropdown-item" href="#">Register</a>
+        </div>
+      </li>
+    </div>
+
+  <!-- Collapsible content -->
+
+</nav>
+{% block body %}
+{% endblock %}
+
+    <!--===============================================================================================-->
+    <script src="{% static '/z_lab_engine/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static '/z_lab_engine/vendor/bootstrap/js/popper.js' %}"></script>
+    <script src="{% static '/z_lab_engine/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <script src="{% static '/z_lab_engine/js/main.js' %}"></script>
+</body>
+</html>

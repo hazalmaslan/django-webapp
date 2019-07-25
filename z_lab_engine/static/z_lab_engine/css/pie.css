@@ -1,0 +1,432 @@
+/*
+CSS Variables for pie segments 
+
+FORMULA:
+circumference = 2 * MATH.pi * r  (314 when r=50)
+fill = circumference * percentage of segment
+space = circumference - fill
+*/
+
+:root {
+  --pie1-medium-fill: 276.3;
+  --pie1-medium-space: 36.7;
+  --pie1-dark-fill: 257.5;
+  --pie1-dark-space: 54.5;
+
+  --pie2-medium-fill: 222.9;
+  --pie2-medium-space: 91.1;
+  --pie2-dark-fill: 128.7;
+  --pie2-dark-space: 185.3;
+
+  --pie3-medium-fill: 285.7;
+  --pie3-medium-space: 28.3;
+  --pie3-dark-fill: 207.2;
+  --pie3-dark-space: 106.8;
+  
+  --pie1-light: #cb7d65;
+  --pie1-medium: #a14933;
+  --pie1-dark: #710000;
+  
+  --pie2-light: #fdc578;
+  --pie2-medium: #faa74a;
+  --pie2-dark: #f8971d;
+  
+  --pie3-light: #b1c46d;
+  --pie3-medium: #81a747;
+  --pie3-dark: #578937;
+}
+
+/* Arbitrary Google Font */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+
+/* General layout and style things */
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  text-align: center;
+  margin: auto;
+}
+
+.pie-chart {
+  display: inline-block;
+  border: 1px solid #f1f1f1;
+  padding: 10px;
+  height: auto;
+  width: 250px;
+  margin: 1rem;
+}
+
+.pie-chart h3 {
+  margin: 0 0 10px 0;
+}
+
+/* Meat and Potatoes begins here */
+svg circle {
+  fill: rgba(0, 0, 0, 0);
+  stroke-width: 100;
+  stroke-dasharray: 0, 314;
+}
+
+/* 
+Styles for individual pie charts 
+
+Pie 1
+*/
+#pie1 circle {
+  animation: pie1-dark 3s ease both;
+  -webkit-animation-name: pie1-light;
+  -moz-animation-name: pie1-light;
+  -o-animation-name: pie1-light;
+}
+
+svg #pie1-light {
+  stroke: var(--pie1-light);
+}
+
+svg #pie1-medium {
+  stroke: var(--pie1-medium);
+  animation-name: pie1-medium;
+  -webkit-animation-name: pie1-medium;
+  -moz-animation-name: pie1-medium;
+  -o-animation-name: pie1-medium;
+}
+
+svg #pie1-dark {
+  stroke: var(--pie1-dark);
+  animation-name: pie1-dark;
+  -webkit-animation-name: pie1-dark;
+  -moz-animation-name: pie1-dark;
+  -o-animation-name: pie1-dark;
+}
+
+/* Segment 1 */
+@keyframes pie1-light {
+  to {
+    stroke-dasharray: 314, 0;
+  }
+}
+@-webkit-keyframes pie1-light {
+  to {
+    stroke-dasharray: 314, 0;
+  }
+}
+@-moz-keyframes pie1-light {
+  to {
+    stroke-dasharray: 314, 0;
+  }
+}
+@-o-keyframes pie1-light {
+  to {
+    stroke-dasharray: 314, 0;
+  }
+}
+
+/* Segment 2 */
+@keyframes pie1-medium {
+  to {
+    stroke-dasharray: var(--pie1-medium-fill), var(--pie1-medium-space);
+  }
+}
+@-webkit-keyframes pie1-medium {
+  to {
+    stroke-dasharray: var(--pie1-medium-fill), var(--pie1-medium-space);
+  }
+}
+@-moz-keyframes pie1-medium {
+  to {
+    stroke-dasharray: var(--pie1-medium-fill), var(--pie1-medium-space);
+  }
+}
+@-o-keyframes pie1-medium {
+  to {
+    stroke-dasharray: var(--pie1-medium-fill), var(--pie1-medium-space);
+  }
+}
+
+/* Segment 3 */
+@keyframes pie1-dark {
+  to {
+    stroke-dasharray: var(--pie1-dark-fill), var(--pie1-dark-space);
+  }
+}
+@-webkit-keyframes pie1-dark {
+  to {
+    stroke-dasharray: var(--pie1-dark-fill), var(--pie1-dark-space);
+  }
+}
+@-moz-keyframes pie1-dark {
+  to {
+    stroke-dasharray: var(--pie1-dark-fill), var(--pie1-dark-space);
+  }
+}
+@-o-keyframes pie1-dark {
+  to {
+    stroke-dasharray: var(--pie1-dark-fill), var(--pie1-dark-space);
+  }
+}
+
+/*  
+Pie 2
+*/
+#pie2 circle {
+  animation: pie2-dark 3s ease both;
+  -webkit-animation-name: pie2-light;
+  -moz-animation-name: pie2-light;
+  -o-animation-name: pie2-light;
+}
+
+svg #pie2-light {
+  stroke: var(--pie2-light);
+}
+
+svg #pie2-medium {
+  stroke: var(--pie2-medium);
+  animation-name: pie2-medium;
+  -webkit-animation-name: pie2-medium;
+  -moz-animation-name: pie2-medium;
+  -o-animation-name: pie2-medium;
+}
+
+svg #pie2-dark {
+  stroke: var(--pie2-dark);
+  animation-name: pie2-dark;
+  -webkit-animation-name: pie2-dark;
+  -moz-animation-name: pie2-dark;
+  -o-animation-name: pie2-dark;
+}
+
+/* Segment 1 */
+@keyframes pie2-light {
+  to {
+    stroke-dasharray: 314, 0;
+  }
+}
+@-webkit-keyframes pie2-light {
+  to {
+    stroke-dasharray: 314, 0;
+  }
+}
+@-moz-keyframes pie2-light {
+  to {
+    stroke-dasharray: 314, 0;
+  }
+}
+@-o-keyframes pie2-light {
+  to {
+    stroke-dasharray: 314, 0;
+  }
+}
+
+/* Segment 2 */
+@keyframes pie2-medium {
+  to {
+    stroke-dasharray: var(--pie2-medium-fill), var(--pie2-medium-space);
+  }
+}
+@-webkit-keyframes pie2-medium {
+  to {
+    stroke-dasharray: var(--pie2-medium-fill), var(--pie2-medium-space);
+  }
+}
+@-moz-keyframes pie2-medium {
+  to {
+    stroke-dasharray: var(--pie2-medium-fill), var(--pie2-medium-space);
+  }
+}
+@-o-keyframes pie2-medium {
+  to {
+    stroke-dasharray: var(--pie2-medium-fill), var(--pie2-medium-space);
+  }
+}
+
+/* Segment 3 */
+@keyframes pie2-dark {
+  to {
+    stroke-dasharray: var(--pie2-dark-fill), var(--pie2-dark-space);
+  }
+}
+@-webkit-keyframes pie2-dark {
+  to {
+    stroke-dasharray: var(--pie2-dark-fill), var(--pie2-dark-space);
+  }
+}
+@-moz-keyframes pie2-dark {
+  to {
+    stroke-dasharray: var(--pie2-dark-fill), var(--pie2-dark-space);
+  }
+}
+@-o-keyframes pie2-dark {
+  to {
+    stroke-dasharray: var(--pie2-dark-fill), var(--pie2-dark-space);
+  }
+}
+
+/*  
+Pie 3
+*/
+#pie3 circle {
+  animation: pie3-dark 3s ease both;
+  -webkit-animation-name: pie3-light;
+  -moz-animation-name: pie3-light;
+  -o-animation-name: pie3-light;
+}
+
+svg #pie3-light {
+  stroke: var(--pie3-light);
+}
+
+svg #pie3-medium {
+  stroke: var(--pie3-medium);
+  animation-name: pie3-medium;
+  -webkit-animation-name: pie3-medium;
+  -moz-animation-name: pie3-medium;
+  -o-animation-name: pie3-medium;
+}
+
+svg #pie3-dark {
+  stroke: var(--pie3-dark);
+  animation-name: pie3-dark;
+  -webkit-animation-name: pie3-dark;
+  -moz-animation-name: pie3-dark;
+  -o-animation-name: pie3-dark;
+}
+
+/* Segment 1 */
+@keyframes pie3-light {
+  to {
+    stroke-dasharray: 314, 0;
+  }
+}
+@-webkit-keyframes pie3-light {
+  to {
+    stroke-dasharray: 314, 0;
+  }
+}
+@-moz-keyframes pie3-light {
+  to {
+    stroke-dasharray: 314, 0;
+  }
+}
+@-o-keyframes pie3-light {
+  to {
+    stroke-dasharray: 314, 0;
+  }
+}
+
+/* Segment 2 */
+@keyframes pie3-medium {
+  to {
+    stroke-dasharray: var(--pie3-medium-fill), var(--pie3-medium-space);
+  }
+}
+@-webkit-keyframes pie3-medium {
+  to {
+    stroke-dasharray: var(--pie3-medium-fill), var(--pie3-medium-space);
+  }
+}
+@-moz-keyframes pie3-medium {
+  to {
+    stroke-dasharray: var(--pie3-medium-fill), var(--pie3-medium-space);
+  }
+}
+@-o-keyframes pie3-medium {
+  to {
+    stroke-dasharray: var(--pie3-medium-fill), var(--pie3-medium-space);
+  }
+}
+
+/* Segment 3 */
+@keyframes pie3-dark {
+  to {
+    stroke-dasharray: var(--pie3-dark-fill), var(--pie3-dark-space);
+  }
+}
+@-webkit-keyframes pie3-dark {
+  to {
+    stroke-dasharray: var(--pie3-dark-fill), var(--pie3-dark-space);
+  }
+}
+@-moz-keyframes pie3-dark {
+  to {
+    stroke-dasharray: var(--pie3-dark-fill), var(--pie3-dark-space);
+  }
+}
+@-o-keyframes pie3-dark {
+  to {
+    stroke-dasharray: var(--pie3-dark-fill), var(--pie3-dark-space);
+  }
+}
+
+/* Meat and Potatoes ends here */
+
+/* Legend Styles */
+
+.legend {
+  display: inline-block;
+  font-size: 12px;
+  list-style: none;
+  margin: 10px auto 0;
+  padding: 0;
+}
+
+.legend li {
+  float: left;
+  margin: 0 5px;
+}
+
+.legend::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.legend-color {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 2.5px;
+    border-radius: 2px;
+}
+
+#legend-pie1-light {
+  background: var(--pie1-light);
+}
+
+#legend-pie1-medium {
+  background: var(--pie1-medium);
+}
+
+#legend-pie1-dark {
+  background: var(--pie1-dark);
+}
+
+#legend-pie2-light {
+  background: var(--pie2-light);
+}
+
+#legend-pie2-medium {
+  background: var(--pie2-medium);
+}
+
+#legend-pie2-dark {
+  background: var(--pie2-dark);
+}
+
+#legend-pie3-light {
+  background: var(--pie3-light);
+}
+
+#legend-pie3-medium {
+  background: var(--pie3-medium);
+}
+
+#legend-pie3-dark {
+  background: var(--pie3-dark);
+}
+
+
+/*for line chart*/
+
+

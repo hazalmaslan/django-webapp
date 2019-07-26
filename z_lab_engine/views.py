@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import CreateView
 from .models import Hash, SearchTag
+
+
 from django.http import HttpResponse
 # Create your views here.
 
@@ -17,14 +19,6 @@ def upload(request):
     return render(request, 'z_lab_engine/upload.html')
 
 
-def login(request):
-    return HttpResponse("Login page")
-
-
-def register(request):
-    return HttpResponse("Register page")
-
-
 class HashCreateView(CreateView):
     model = Hash
     fields = ('md5', 'sha1', 'sha256', 'update_tags')
@@ -33,6 +27,7 @@ class HashCreateView(CreateView):
 class SearchTagCreateView(CreateView):
     model = SearchTag
     fields = ('tags', 'count')
+
 
 # TODO: search a way to get the text from the htmls
 # TODO: create the forms and related error messages

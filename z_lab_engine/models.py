@@ -1,12 +1,10 @@
 from django.db import models
 from taggit.managers import TaggableManager
 
-'''
-    TODO: Learn how to filter those values when storing to database
-    whether a has value is md5, sha1 or sha256
-    TODO: How to connect two tables together
-    TODO: How to add tags to the tag table
-'''
+
+# TODO: Learn how to filter those values when storing to database whether a has value is md5, sha1 or sha256T
+# TODO: How to connect two tables together
+# TODO: How to add tags to the tag table
 
 
 class Hash(models.Model):
@@ -19,7 +17,3 @@ class Hash(models.Model):
 class SearchTag(models.Model):
     tags = models.CharField(max_length=1000)
     count = models.IntegerField()
-
-
-# TODO: find the best way to associate the hash with searchtags
-

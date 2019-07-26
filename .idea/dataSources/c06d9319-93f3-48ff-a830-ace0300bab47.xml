@@ -7,20 +7,20 @@
     <database id="2" parent="1" name="postgres">
       <ObjectId>12413</ObjectId>
       <Comment>default administrative connection database</Comment>
-      <StateNumber>659</StateNumber>
       <Owner>postgres</Owner>
       <IntrospectionStateNumber>754</IntrospectionStateNumber>
       <Current>1</Current>
+      <Substituted>1</Substituted>
     </database>
     <database id="3" parent="1" name="z_lab_project">
       <ObjectId>16583</ObjectId>
-      <StateNumber>723</StateNumber>
       <Owner>postgres</Owner>
+      <Substituted>1</Substituted>
     </database>
     <database id="4" parent="1" name="zlabproject">
       <ObjectId>16384</ObjectId>
-      <StateNumber>666</StateNumber>
       <Owner>postgres</Owner>
+      <Substituted>1</Substituted>
     </database>
     <role id="5" parent="1" name="postgres">
       <ObjectId>10</ObjectId>
@@ -51,5 +51,26 @@ TimeZone=UTC</Config>
 default_transaction_isolation=read committed
 TimeZone=Europe/Istanbul</Config>
     </role>
+    <schema id="8" parent="2" name="information_schema">
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="9" parent="2" name="pg_catalog">
+      <Comment>system catalog schema</Comment>
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="10" parent="3" name="information_schema">
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="11" parent="3" name="pg_catalog">
+      <Comment>system catalog schema</Comment>
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="12" parent="4" name="information_schema">
+      <Substituted>1</Substituted>
+    </schema>
+    <schema id="13" parent="4" name="pg_catalog">
+      <Comment>system catalog schema</Comment>
+      <Substituted>1</Substituted>
+    </schema>
   </database-model>
 </dataSource>

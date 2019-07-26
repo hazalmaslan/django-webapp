@@ -1,20 +1,18 @@
 from django.urls import path
 from . import views
 
-# Add url patterns of the newly added sites to the z_lab_engine app
 
 urlpatterns = [
-    # /
+    # engine/
     path('', views.dashboard, name='dashboard'),
 
-    # /search/
+    # engine/search/
     path('search/', views.search, name='search'),
 
-    # /upload/
+    # engine/update/
     path('upload/', views.upload, name='upload'),
 
-    # /virus_total_search/
+    # engine/virus_total_search
     path('virus_total_search/', views.search, name='virus_total_search'),
-
 ]
 

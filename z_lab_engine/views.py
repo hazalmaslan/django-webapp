@@ -2,8 +2,6 @@ from django.shortcuts import render
 from django.views.generic import CreateView
 from .models import Hash, SearchTag
 
-
-from django.http import HttpResponse
 # Create your views here.
 
 
@@ -28,7 +26,4 @@ class SearchTagCreateView(CreateView):
     model = SearchTag
     fields = ('tags', 'count')
 
-
 # TODO: search a way to get the text from the htmls
-# TODO: create the forms and related error messages
-# TODO: create a way of registerimg people and signing in

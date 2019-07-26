@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="574a96d0-4245-420a-ab8e-6ea79e387520" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/z_lab_engine/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/search_in_virustotal.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/search_in_virustotal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/z_lab_engine/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/z_lab_engine/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,76 +32,6 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Z_Lab_Tool/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/z_lab_engine/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/z_lab_engine/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/z_lab_engine/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/search_in_virustotal.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
-              <caret line="494" column="60" selection-start-line="494" selection-start-column="60" selection-end-line="494" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Z_Lab_Tool/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="40" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="40" />
-              <folding>
-                <element signature="e#634#666#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -122,63 +48,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/z_lab_engine/admin.py" />
-        <option value="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/index.html" />
-        <option value="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/upload.html" />
-        <option value="$PROJECT_DIR$/Z_Lab_Tool/urls.py" />
-        <option value="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css/main.css" />
-        <option value="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/dashboard.html" />
-        <option value="$PROJECT_DIR$/Z_Lab_Tool/settings.py" />
-        <option value="$PROJECT_DIR$/z_lab_engine/views.py" />
-        <option value="$PROJECT_DIR$/z_lab_engine/models.py" />
-        <option value="$PROJECT_DIR$/z_lab_engine/urls.py" />
-        <option value="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/base.html" />
-        <option value="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/search_in_virustotal.html" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="1147" />
     <option name="y" value="24" />
     <option name="width" value="1434" />
     <option name="height" value="1416" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Z_Lab_Tool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Z_Lab_Tool" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Z_Lab_Tool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Z_Lab_Tool" type="462c0819:PsiDirectoryNode" />
-              <item name="z_lab_engine" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Z_Lab_Tool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Z_Lab_Tool" type="462c0819:PsiDirectoryNode" />
-              <item name="Z_Lab_Tool" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Z_Lab_Tool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
@@ -191,16 +68,16 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images" />
-      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css" />
-      <recent name="$PROJECT_DIR$/z_lab_engine/static" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine" />
       <recent name="$PROJECT_DIR$/z_lab_engine/templates" />
       <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/" />
       <recent name="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images" />
+      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css" />
+      <recent name="$PROJECT_DIR$/z_lab_engine/static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -256,222 +133,10 @@
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21887000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="1147" y="24" width="1434" height="1416" extended-state="4" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1851585" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32925472" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49926144" weight="0.1820259" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.32925472" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.022848438" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50073856" side_tool="true" weight="0.2669633" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32925472" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.3293944" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1851585" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32925472" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49926144" weight="0.1820259" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.32925472" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.022848438" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50073856" side_tool="true" weight="0.2669633" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32925472" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.3293944" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LAST_COMMIT_MESSAGE" value="" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e267c20a-74a1-4f19-a6ac-53361640350b/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c50845e9-55a0-4cef-b7a2-9c35b69ef031/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/lib/python3.5/importlib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c06d9319-93f3-48ff-a830-ace0300bab47/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/fonts/iconic/css/material-design-iconic-font.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/vendor/jquery/jquery-3.2.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/main.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/js/main.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/fonts/font-awesome-4.7.0/css/font-awesome.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/upload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="14" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/update.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="72" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Z_Lab_Tool/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="40" />
-          <folding>
-            <element signature="e#634#666#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images/question.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5616">
-          <caret line="770" column="23" lean-forward="true" selection-start-line="770" selection-start-column="23" selection-end-line="770" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/vendor/bootstrap/js/popper.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="93" lean-forward="true" selection-start-line="2" selection-start-column="93" selection-end-line="2" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images/img-01.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images/bg-01.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207">
-          <caret line="78" column="36" selection-start-line="77" selection-start-column="35" selection-end-line="78" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="55" column="70" lean-forward="true" selection-start-line="55" selection-start-column="70" selection-end-line="55" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Z_Lab_Tool/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/search_in_virustotal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="494" column="60" selection-start-line="494" selection-start-column="60" selection-end-line="494" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

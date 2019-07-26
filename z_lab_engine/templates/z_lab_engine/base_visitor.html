@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}zLabTool{% endblock %}</title>
+    {% load staticfiles %}
+
+    <!--===============================================================================================-->
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'z_lab_engine/css/main.css' %}">
+    <!--===============================================================================================-->
+
+    <link rel="stylesheet" href="{% static "fontawesome/css/fontawesome-all.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'z_lab_engine/fonts/iconic/css/material-design-iconic-font.min.css'%}">
+    <!--===============================================================================================-->
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'z_lab_engine/css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'z_lab_engine/css/pie.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'z_lab_engine/css/util.css' %}">
+
+    <!--===============================================================================================-->
+
+    <!--===============================================================================================-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="{% static '/z_lab_engine/js/main.js' %}"></script>
+</head>
+
+<body>
+      <!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="#"><h3>zLab Tool</h3></a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'upload' %}">Upload</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'search' %}">Search</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'virus_total_search' %}">Search in VirusTotal</a>
+      </li>
+
+    </ul>
+    <!-- Links -->
+
+      <li class="nav-item dropdown" >
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false" style="margin-right: 30px;"><i class="fa fa-user" style="color: white;"></i></a>
+        <div class="dropdown-menu dropdown-primary " aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'login' %}">Log In</a>
+          <a class="dropdown-item" href="{% url 'register' %}">Register</a>
+        </div>
+      </li>
+    </div>
+
+  <!-- Collapsible content -->
+
+</nav>
+{% block body %}
+{% endblock %}
+
+
+</body>
+</html>

@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="574a96d0-4245-420a-ab8e-6ea79e387520" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/form_template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Z_Lab_Tool/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Z_Lab_Tool/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Z_Lab_Tool/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Z_Lab_Tool/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/search_in_virustotal.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/search_in_virustotal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,12 +59,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="1147" />
-    <option name="y" value="24" />
-    <option name="width" value="1434" />
-    <option name="height" value="1416" />
-  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -75,6 +80,8 @@
       <recent name="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine" />
+      <recent name="$PROJECT_DIR$/templates/registration" />
       <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images" />
       <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css" />
       <recent name="$PROJECT_DIR$/z_lab_engine/static" />

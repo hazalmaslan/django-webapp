@@ -13,7 +13,7 @@ class Hash(models.Model):
     md5 = models.CharField(max_length=32, blank=True)
     sha1 = models.CharField(max_length=40, blank=True)
     sha256 = models.CharField(max_length=64, blank=True)
-    update_tags = TaggableManager()
+    upload_tags = TaggableManager()
 
 
 class SearchTag(models.Model):

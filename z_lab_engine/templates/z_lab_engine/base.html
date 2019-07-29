@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'z_lab_engine/css/main.css' %}">
     <!--===============================================================================================-->
 
-    <link rel="stylesheet" href="{% static "fontawesome/css/fontawesome-all.min.css" %}">
+    <link rel="stylesheet" href="{% static " fontawesome/css/fontawesome-all.min.css " %}">
     <link rel="stylesheet" type="text/css" href="{% static 'z_lab_engine/fonts/iconic/css/material-design-iconic-font.min.css'%}">
     <!--===============================================================================================-->
 
@@ -35,55 +35,55 @@
 </head>
 
 <body>
-      <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
 
-  <!-- Navbar brand -->
-  <a class="navbar-brand" href="#"><h3>zLab Tool</h3></a>
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#"><h3>zLab Tool</h3></a>
 
-  <!-- Collapse button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-    aria-controls="basicExampleNav" aria-expanded="false" >
-    <span class="navbar-toggler-icon"></span>
-  </button>
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <!-- Collapsible content -->
-  <div class="collapse navbar-collapse" id="basicExampleNav">
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
 
-    <!-- Links -->
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'upload' %}">Upload</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'search' %}">Search</a>
-      </li>
-        <li class="nav-item">
-        <a class="nav-link" href="{% url 'virus_total_search' %}">Search in VirusTotal</a>
-      </li>
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'upload' %}">Upload</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'search' %}">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'virus_total_search' %}">Search in VirusTotal</a>
+                </li>
 
-    </ul>
-    <!-- Links -->
+            </ul>
 
-      <li class="nav-item dropdown" >
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false" style="margin-right: 30px;"><i class="fa fa-user" style="color: white;"></i></a>
-        <div class="dropdown-menu dropdown-primary " aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Log In</a>
-          <a class="dropdown-item" href="#">Register</a>
+            <!-- Links -->
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-right: 30px;"><i class="fa fa-user" style="color: white;"></i></a>
+                <div class="dropdown-menu dropdown-primary " aria-labelledby="navbarDropdownMenuLink">
+                    {% if user.is_authenticated %} Hello {{ user.username }}
+                    <a href="{% url 'logout'%}">Logout</a> {% else %}
+                    <a href="{% url 'register'%}">Sign up</a>
+                    <a href="{% url 'login'%}">Login</a> {% endif %}
+                </div>
+            </li>
         </div>
-      </li>
-    </div>
 
-  <!-- Collapsible content -->
+        <!-- Collapsible content -->
 
-</nav>
-{% block body %}
-{% endblock %}
-
+    </nav>
+    {% block body %} {% endblock %}
 
 </body>
+
 </html>

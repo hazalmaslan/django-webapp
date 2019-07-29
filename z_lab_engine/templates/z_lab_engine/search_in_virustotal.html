@@ -1,14 +1,12 @@
-{% extends 'z_lab_engine/base.html' %}
-
-{% block body %}
-    <!-- Search bar -->
-   <div class="container col-12">
+{% extends 'z_lab_engine/base.html' %} {% block body %}
+<!-- Search bar -->
+<div class="container col-12">
     <div class="row">
         <div class="col-8">
             <div class="search-bar">
                 <article id="title-article-search">VirusTotal Search</article>
                 <form>
-        
+
                     <!-- <label for="searchQuery"><i class="fas fa-search"></i></label> -->
                     <input type="search" id="searchQuery" name="searchQuery" placeholder="Search" />
                     <button class="search-button" type="submit"><i class="fa fa-search"></i> Search</button>
@@ -28,13 +26,12 @@
                     <option>eCommerce Bussiness</option>
                     <option>UI/UX Design</option>
                     <option>Online Services</option>
-                </select>  
+                </select>
             </div>
         </div>
     </div>
 </div>
-    
-    
+
 <!-- ikinci container -->
 <div class="container col-12">
     <div class="row">
@@ -46,16 +43,16 @@
         <div class="col-2">
             <h8><u>Scope</u></h8>
         </div>
-        
+
     </div>
-     <div class="row">
+    <div class="row">
         <div class="col-2">
             <i class="fa fa-plus"></i>
             <h8>size</h8>
         </div>
         <div class="col-2">
             <h8>Any file type. </h8>
-            
+
             <!---------------  popup ---------------------->
             <input type="checkbox" id="hide-me" class="hide-me">
             <label for="hide-me" class="check-box-label">
@@ -107,13 +104,12 @@
                     <br><b>Video&audio: </b>ogg, flc, fli, mp3, flac, wav, midi, avi, mpeg, qt, asf, divx, flv, wma, wmv, rm, mov, mp4, 3gp.
                     <br><b>Documents:</b> text, pdf, ps, doc, docx, rtf, ppt, pptx, xls, xlsx, odp, ods, odt, hwp, gul, ebook, latex.
                     <br><b>Bundles:</b> isoimage, zip, gzip, bzip, rzip, dzip, 7zip, cab, jar, rar, mscompress, ace, arc, arj, asd, blackhole, kgb.
-                   <br><b> Code:</b> script, php, python, perl, ruby, c, cpp, java, shell, pascal, awk, dyalog, fortran, java-bytecode.
+                    <br><b> Code:</b> script, php, python, perl, ruby, c, cpp, java, shell, pascal, awk, dyalog, fortran, java-bytecode.
                     <br><b>Apple:</b> apple, mac, applesingle, appledouble, machfs, appleplist, maclib.
                     <br><b>Miscellaneous:</b> lnk, ttf, rom.
                 </div>
             </label>
             <!---------------    -------------------------->
-
 
         </div>
         <div class="col-2">
@@ -150,7 +146,7 @@
     </div>
     <div class="row">
         <div class="col-2">
-         
+
         </div>
         <div class="col-2">
 
@@ -177,11 +173,11 @@
             <label class="check-box-label " for="check_30">outlook</label>
             <input type="checkbox" id="check_31" class="check-button">
             <label class="check-box-label " for="check_31">cap</label>
-        </div>  
+        </div>
     </div>
-        <div class="row">
+    <div class="row">
         <div class="col-2">
-         
+
         </div>
         <div class="col-2">
 
@@ -200,11 +196,11 @@
             <label class="check-box-label " for="check_35">android</label>
             <input type="checkbox" id="check_36" class="check-button">
             <label class="check-box-label " for="check_36">iphone</label>
-        </div>  
+        </div>
     </div>
     <div class="row">
         <div class="col-2">
-         
+
         </div>
         <div class="col-2">
 
@@ -223,7 +219,7 @@
             <label class="check-box-label " for="check_40">gif</label>
             <input type="checkbox" id="check_41" class="check-button">
             <label class="check-box-label " for="check_41">png</label>
-             <input type="checkbox" id="check_42" class="check-button">
+            <input type="checkbox" id="check_42" class="check-button">
             <label class="check-box-label " for="check_42">bmp</label>
             <input type="checkbox" id="check_43" class="check-button">
             <label class="check-box-label " for="check_43">gimp</label>
@@ -233,7 +229,7 @@
             <label class="check-box-label " for="check_45">psd</label>
             <input type="checkbox" id="check_46" class="check-button">
             <label class="check-box-label " for="check_46">targa</label>
-             <input type="checkbox" id="check_47" class="check-button">
+            <input type="checkbox" id="check_47" class="check-button">
             <label class="check-box-label " for="check_47">xws</label>
             <input type="checkbox" id="check_48" class="check-button">
             <label class="check-box-label " for="check_48">dib</label>
@@ -243,11 +239,11 @@
             <label class="check-box-label " for="check_50">ico</label>
             <input type="checkbox" id="check_51" class="check-button">
             <label class="check-box-label " for="check_51">fpx</label>
-        </div>  
+        </div>
     </div>
     <div class="row">
         <div class="col-2">
-         
+
         </div>
         <div class="col-2">
 
@@ -266,7 +262,7 @@
             <label class="check-box-label " for="check_55">mp3</label>
             <input type="checkbox" id="check_56" class="check-button">
             <label class="check-box-label " for="check_56">flac</label>
-             <input type="checkbox" id="check_57" class="check-button">
+            <input type="checkbox" id="check_57" class="check-button">
             <label class="check-box-label " for="check_57">waw</label>
             <input type="checkbox" id="check_58" class="check-button">
             <label class="check-box-label " for="check_58">midi</label>
@@ -276,7 +272,7 @@
             <label class="check-box-label " for="check_60">mpeg</label>
             <input type="checkbox" id="check_61" class="check-button">
             <label class="check-box-label " for="check_61">qt</label>
-             <input type="checkbox" id="check_63" class="check-button">
+            <input type="checkbox" id="check_63" class="check-button">
             <label class="check-box-label " for="check_63">asf</label>
             <input type="checkbox" id="check_64" class="check-button">
             <label class="check-box-label " for="check_64">divx</label>
@@ -294,11 +290,11 @@
             <label class="check-box-label " for="check_70">mp4</label>
             <input type="checkbox" id="check_71" class="check-button">
             <label class="check-box-label " for="check_71">3gp</label>
-        </div>  
+        </div>
     </div>
-        <div class="row">
+    <div class="row">
         <div class="col-2">
-         
+
         </div>
         <div class="col-2">
 
@@ -317,7 +313,7 @@
             <label class="check-box-label " for="check_75">doc</label>
             <input type="checkbox" id="check_76" class="check-button">
             <label class="check-box-label " for="check_76">docx</label>
-             <input type="checkbox" id="check_77" class="check-button">
+            <input type="checkbox" id="check_77" class="check-button">
             <label class="check-box-label " for="check_77">rft</label>
             <input type="checkbox" id="check_78" class="check-button">
             <label class="check-box-label " for="check_78">ppt</label>
@@ -327,7 +323,7 @@
             <label class="check-box-label " for="check_80">xls</label>
             <input type="checkbox" id="check_81" class="check-button">
             <label class="check-box-label " for="check_81">xlsx</label>
-             <input type="checkbox" id="check_83" class="check-button">
+            <input type="checkbox" id="check_83" class="check-button">
             <label class="check-box-label " for="check_83">odp</label>
             <input type="checkbox" id="check_84" class="check-button">
             <label class="check-box-label " for="check_84">ods</label>
@@ -341,11 +337,11 @@
             <label class="check-box-label " for="check_88">ebook</label>
             <input type="checkbox" id="check_89" class="check-button">
             <label class="check-box-label " for="check_89">latex</label>
-        </div>  
+        </div>
     </div>
     <div class="row">
         <div class="col-2">
-         
+
         </div>
         <div class="col-2">
 
@@ -364,7 +360,7 @@
             <label class="check-box-label " for="check_95">bzip</label>
             <input type="checkbox" id="check_96" class="check-button">
             <label class="check-box-label " for="check_96">rzip</label>
-             <input type="checkbox" id="check_97" class="check-button">
+            <input type="checkbox" id="check_97" class="check-button">
             <label class="check-box-label " for="check_97">dzip</label>
             <input type="checkbox" id="check_98" class="check-button">
             <label class="check-box-label " for="check_98">7zip</label>
@@ -374,7 +370,7 @@
             <label class="check-box-label " for="check_100">jar</label>
             <input type="checkbox" id="check_101" class="check-button">
             <label class="check-box-label " for="check_101">rar</label>
-             <input type="checkbox" id="check_102" class="check-button">
+            <input type="checkbox" id="check_102" class="check-button">
             <label class="check-box-label " for="check_102">mscompress</label>
             <input type="checkbox" id="check_103" class="check-button">
             <label class="check-box-label " for="check_103">ace</label>
@@ -388,11 +384,11 @@
             <label class="check-box-label " for="check_107">blackhole</label>
             <input type="checkbox" id="check_108" class="check-button">
             <label class="check-box-label " for="check_108">kgb</label>
-        </div>  
+        </div>
     </div>
     <div class="row">
         <div class="col-2">
-         
+
         </div>
         <div class="col-2">
 
@@ -417,7 +413,7 @@
             <label class="check-box-label " for="check_115">cpp</label>
             <input type="checkbox" id="check_116" class="check-button">
             <label class="check-box-label " for="check_116">java</label>
-             <input type="checkbox" id="check_117" class="check-button">
+            <input type="checkbox" id="check_117" class="check-button">
             <label class="check-box-label " for="check_117">shell</label>
             <input type="checkbox" id="check_118" class="check-button">
             <label class="check-box-label " for="check_118">pascal</label>
@@ -427,13 +423,13 @@
             <label class="check-box-label " for="check_120">dyalog</label>
             <input type="checkbox" id="check_121" class="check-button">
             <label class="check-box-label " for="check_121">fortran</label>
-             <input type="checkbox" id="check_122" class="check-button">
+            <input type="checkbox" id="check_122" class="check-button">
             <label class="check-box-label " for="check_122">java-bytecode</label>
-        </div>  
+        </div>
     </div>
     <div class="row">
         <div class="col-2">
-         
+
         </div>
         <div class="col-2">
 
@@ -456,11 +452,11 @@
             <label class="check-box-label " for="check_128">appleplist</label>
             <input type="checkbox" id="check_129" class="check-button">
             <label class="check-box-label " for="check_129">maclib</label>
-        </div>  
+        </div>
     </div>
     <div class="row">
         <div class="col-2">
-         
+
         </div>
         <div class="col-2">
 
@@ -475,7 +471,7 @@
             <label class="check-box-label " for="check_131">ttf</label>
             <input type="checkbox" id="check_132" class="check-button">
             <label class="check-box-label " for="check_132">rom</label>
-        </div>  
+        </div>
     </div>
     <div class="row">
         <div class="col-2">
@@ -505,7 +501,7 @@
             <label class="check-box-label " for="check_134">larger than</label>
             <input type="checkbox" id="check_135" class="check-button">
             <label class="check-box-label " for="check_135">smaller than</label>
-        </div>  
+        </div>
     </div>
     <div class="row">
         <div class="col-2">
@@ -517,7 +513,7 @@
             <i class="fa fa-question"></i>
         </div>
         <div class="col-2">
-             <input class="size-input" placeholder="size">
+            <input class="size-input" placeholder="size">
         </div>
         <div class="col-6">
             <input type="checkbox" id="check_136" class="check-button">
@@ -527,8 +523,7 @@
             <input type="checkbox" id="check_138" class="check-button">
             <label class="check-box-label " for="check_138">smaller than</label>
 
-            
-        </div>  
+        </div>
     </div>
     <div class="row">
         <div class="col-2">
@@ -540,12 +535,11 @@
             <i class="fa fa-question"></i>
         </div>
         <div class="col-2">
-             <input class="size-input" placeholder="size">
+            <input class="size-input" placeholder="size">
         </div>
         <div class="col-6">
-            
-            
-        </div>  
+
+        </div>
     </div>
     <div class="row" style="margin-top: 10px; margin-bottom: 10px; ">
         <div class="col-2">
@@ -558,8 +552,8 @@
         </div>
         <div class="col-2">
             <input type="date" placeholder="Select Date">
-        
-    </div>
+
+        </div>
         <div class="col-6">
             <input type="checkbox" id="check_139" class="check-button">
             <label class="check-box-label " for="check_139">respectively</label>
@@ -567,8 +561,8 @@
             <label class="check-box-label " for="check_140">larger than</label>
             <input type="checkbox" id="check_141" class="check-button">
             <label class="check-box-label " for="check_141">smaller than</label>
-            
-        </div>  
+
+        </div>
     </div>
     <div class="row" style="margin-top: 10px; margin-bottom: 10px; ">
         <div class="col-2">
@@ -581,8 +575,8 @@
         </div>
         <div class="col-2">
             <input type="date" placeholder="Select Date">
-        
-    </div>
+
+        </div>
         <div class="col-6">
             <input type="checkbox" id="check_142" class="check-button">
             <label class="check-box-label " for="check_142">respectively</label>
@@ -590,8 +584,8 @@
             <label class="check-box-label " for="check_143">larger than</label>
             <input type="checkbox" id="check_144" class="check-button">
             <label class="check-box-label " for="check_144">smaller than</label>
-            
-        </div>  
+
+        </div>
     </div>
     <div class="row" style="margin-top: 10px; margin-bottom: 10px; ">
         <div class="col-2">
@@ -606,236 +600,232 @@
             <input type="date" placeholder="Select Date">
         </div>
     </div>
-        <div class="col-6">
-            <input type="checkbox" id="check_145" class="check-button">
-            <label class="check-box-label " for="check_145">respectively</label>
-            <input type="checkbox" id="check_146" class="check-button">
-            <label class="check-box-label " for="check_146">larger than</label>
-            <input type="checkbox" id="check_147" class="check-button">
-            <label class="check-box-label " for="check_147">smaller than</label>
-            
-        </div>  
-    </div>
-    <div class="row">
-        <div class="col-2">
-            <i class="fa fa-plus"></i>
-            <h8>submissions</h8>
-        </div>
-        <div class="col-2">
-            <h8>Any file type.</h8>
-            <i class="fa fa-question"></i>
-        </div>
-        <div class="col-2">
-            <input class="size-input" placeholder="size">
-        </div>
-        <div class="col-6">
-           <input type="checkbox" id="check_148" class="check-button">
-            <label class="check-box-label " for="check_148">respectively</label>
-            <input type="checkbox" id="check_149" class="check-button">
-            <label class="check-box-label " for="check_149">larger than</label>
-            <input type="checkbox" id="check_150" class="check-button">
-            <label class="check-box-label " for="check_150">smaller than</label>
-        </div>  
-    </div>
-    <div class="row">
-        <div class="col-2">
-            <i class="fa fa-plus"></i>
-            <h8>sources</h8>
-        </div>
-        <div class="col-2">
-            <h8>Any file type.</h8>
-            <i class="fa fa-question"></i>
-        </div>
-        <div class="col-2">
-            <input class="size-input" placeholder="size">
-        </div>
-        <div class="col-6">
-           <input type="checkbox" id="check_151" class="check-button">
-            <label class="check-box-label " for="check_151">respectively</label>
-            <input type="checkbox" id="check_152" class="check-button">
-            <label class="check-box-label " for="check_152">larger than</label>
-            <input type="checkbox" id="check_153" class="check-button">
-            <label class="check-box-label " for="check_153">smaller than</label>
-        </div>  
-    </div>
-    <div class="row">
-        <div class="col-2">
-            <i class="fa fa-plus"></i>
-            <h8>submitter</h8>
-        </div>
-        <div class="col-2">
-            <h8>Any file type.</h8>
-            <i class="fa fa-question"></i>
-        </div>
-        <div class="col-2">
-             <input class="size-input" placeholder="size" style="">
-        </div>
-        <div class="col-6">
-            
-            
-        </div>  
-    </div>
-    <div class="row" style="margin-bottom: 10px; margin-top: 10px;">
-        <div class="col-2">
-            <i class="fa fa-plus"></i>
-            <h8>sources</h8>
-        </div>
-        <div class="col-2">
-            <h8>Any file type.</h8>
-            <i class="fa fa-question"></i>
-        </div>
-        <div class="col-2">
-            
-        </div>
-        <div class="col-6">
-           <input type="checkbox" id="check_154" class="check-button">
-            <label class="check-box-label " for="check_154">via-tor</label>
-            <input type="checkbox" id="check_155" class="check-button">
-            <label class="check-box-label " for="check_155">zero-filled</label>
-            <input type="checkbox" id="check_156" class="check-button">
-            <label class="check-box-label " for="check_156">corrupt</label>
-            <input type="checkbox" id="check_157" class="check-button">
-            <label class="check-box-label " for="check_157">64bits</label>
-            <input type="checkbox" id="check_158" class="check-button">
-            <label class="check-box-label " for="check_158">trusted</label>
-        </div>  
-    </div>
-    <div class="row">
-        <div class="col-2">
-         
-        </div>
-        <div class="col-2">
+    <div class="col-6">
+        <input type="checkbox" id="check_145" class="check-button">
+        <label class="check-box-label " for="check_145">respectively</label>
+        <input type="checkbox" id="check_146" class="check-button">
+        <label class="check-box-label " for="check_146">larger than</label>
+        <input type="checkbox" id="check_147" class="check-button">
+        <label class="check-box-label " for="check_147">smaller than</label>
 
-        </div>
-        <div class="col-2">
-            <h9>Portable Executable specific: </h9>
-        </div>
-        <div class="col-6">
-            <input type="checkbox" id="check_159" class="check-button">
-            <label class="check-box-label " for="check_159">assembly</label>
-            <input type="checkbox" id="check_160" class="check-button">
-            <label class="check-box-label " for="check_160">native</label>
-            <input type="checkbox" id="check_161" class="check-button">
-            <label class="check-box-label " for="check_161">efi</label>
-            <input type="checkbox" id="check_162" class="check-button">
-            <label class="check-box-label " for="check_162">overlay</label>
-            <input type="checkbox" id="check_163" class="check-button">
-            <label class="check-box-label " for="check_163">contains-rom</label>
-        </div>  
     </div>
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-2"></div>
-        <div class="col-2">
-            <h9>Mac OS X Executable specific: </h9>
-        </div>
-        <div class="col-6">
-            <input type="checkbox" id="check_164" class="check-button">
-            <label class="check-box-label " for="check_164">lib</label>
-            <input type="checkbox" id="check_165" class="check-button">
-            <label class="check-box-label " for="check_165">arm</label>
-            <input type="checkbox" id="check_166" class="check-button">
-            <label class="check-box-label " for="check_166">ios</label>
-            <input type="checkbox" id="check_167" class="check-button">
-            <label class="check-box-label " for="check_167">suspicious-eip</label>
-            <input type="checkbox" id="check_168" class="check-button">
-            <label class="check-box-label " for="check_168">dropper</label>
-        </div>  
+</div>
+<div class="row">
+    <div class="col-2">
+        <i class="fa fa-plus"></i>
+        <h8>submissions</h8>
     </div>
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-2"></div>
-        <div class="col-2">
-            <h9>Linux ELF Executable specific: </h9>
-        </div>
-        <div class="col-6">
-            <input type="checkbox" id="check_169" class="check-button">
-            <label class="check-box-label " for="check_169">relocatable</label>
-            <input type="checkbox" id="check_170" class="check-button">
-            <label class="check-box-label " for="check_170">shared-lib</label>
-            <input type="checkbox" id="check_171" class="check-button">
-            <label class="check-box-label " for="check_171">coredump</label>
+    <div class="col-2">
+        <h8>Any file type.</h8>
+        <i class="fa fa-question"></i>
+    </div>
+    <div class="col-2">
+        <input class="size-input" placeholder="size">
+    </div>
+    <div class="col-6">
+        <input type="checkbox" id="check_148" class="check-button">
+        <label class="check-box-label " for="check_148">respectively</label>
+        <input type="checkbox" id="check_149" class="check-button">
+        <label class="check-box-label " for="check_149">larger than</label>
+        <input type="checkbox" id="check_150" class="check-button">
+        <label class="check-box-label " for="check_150">smaller than</label>
+    </div>
+</div>
+<div class="row">
+    <div class="col-2">
+        <i class="fa fa-plus"></i>
+        <h8>sources</h8>
+    </div>
+    <div class="col-2">
+        <h8>Any file type.</h8>
+        <i class="fa fa-question"></i>
+    </div>
+    <div class="col-2">
+        <input class="size-input" placeholder="size">
+    </div>
+    <div class="col-6">
+        <input type="checkbox" id="check_151" class="check-button">
+        <label class="check-box-label " for="check_151">respectively</label>
+        <input type="checkbox" id="check_152" class="check-button">
+        <label class="check-box-label " for="check_152">larger than</label>
+        <input type="checkbox" id="check_153" class="check-button">
+        <label class="check-box-label " for="check_153">smaller than</label>
+    </div>
+</div>
+<div class="row">
+    <div class="col-2">
+        <i class="fa fa-plus"></i>
+        <h8>submitter</h8>
+    </div>
+    <div class="col-2">
+        <h8>Any file type.</h8>
+        <i class="fa fa-question"></i>
+    </div>
+    <div class="col-2">
+        <input class="size-input" placeholder="size" style="">
+    </div>
+    <div class="col-6">
 
-        </div>  
     </div>
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-2"></div>
-        <div class="col-2">
-            <h9>File bundles specific: </h9>
-        </div>
-        <div class="col-6">
-            <input type="checkbox" id="check_172" class="check-button">
-            <label class="check-box-label " for="check_172">contains-pe</label>
-            <input type="checkbox" id="check_173" class="check-button">
-            <label class="check-box-label " for="check_173">contains-rom</label>
-            <input type="checkbox" id="check_174" class="check-button">
-            <label class="check-box-label " for="check_174">contains-macho</label>
-            <input type="checkbox" id="check_175" class="check-button">
-            <label class="check-box-label " for="check_175">mac-app</label>
-            <input type="checkbox" id="check_176" class="check-button">
-            <label class="check-box-label " for="check_176">contains-elf</label>
-             <input type="checkbox" id="check_177" class="check-button">
-            <label class="check-box-label " for="check_177">contains-dmg</label>
-            <input type="checkbox" id="check_178" class="check-button">
-            <label class="check-box-label " for="check_178">contains-deb</label>
-            <input type="checkbox" id="check_179" class="check-button">
-            <label class="check-box-label " for="check_179">blob</label>
-            <input type="checkbox" id="check_180" class="check-button">
-            <label class="check-box-label " for="check_180">encrypted</label>
-            <input type="checkbox" id="check_181" class="check-button">
-            <label class="check-box-label " for="check_181">tar-bundle</label>
-        </div>  
+</div>
+<div class="row" style="margin-bottom: 10px; margin-top: 10px;">
+    <div class="col-2">
+        <i class="fa fa-plus"></i>
+        <h8>sources</h8>
     </div>
-    <div class="row" style="margin-top: 10px; margin-bottom: 10px; ">
-        <div class="col-2">
-            <i class="fa fa-plus"></i>
-            <h8>section</h8>
-        </div>
-        <div class="col-2">
-            <h8>PE, ELFs, Mas-Os</h8>
-            <i class="fa fa-question"></i>
-        </div>
-        <div class="col-2">
-             <input class="size-input" placeholder="size">
-        </div>
-        <div class="col-6">
-            
-            
-        </div>  
+    <div class="col-2">
+        <h8>Any file type.</h8>
+        <i class="fa fa-question"></i>
     </div>
-    <div class="row">
-        <div class="col-2">
-            <i class="fa fa-plus"></i>
-            <h8>imports</h8>
-        </div>
-        <div class="col-2">
-            <h8>PE, ELFs, Mas-Os, IPAs, JARs, Java bytecode</h8>
-            <i class="fa fa-question"></i>
-        </div>
-        <div class="col-2">
-             <input class="size-input" placeholder="size">
-        </div>
-        <div class="col-6">
-            
-            
-        </div>  
+    <div class="col-2">
+
     </div>
-    <div class="row">
-        <div class="col-2">
-            <i class="fa fa-plus"></i>
-            <h8>exports</h8>
-        </div>
-        <div class="col-2">
-            <h8>PE, ELFs, Java bytecode</h8>
-            <i class="fa fa-question"></i>
-        </div>
-        <div class="col-2">
-             <input class="size-input" placeholder="size">
-        </div>
-        <div class="col-6">
-            
-            
-        </div>  
+    <div class="col-6">
+        <input type="checkbox" id="check_154" class="check-button">
+        <label class="check-box-label " for="check_154">via-tor</label>
+        <input type="checkbox" id="check_155" class="check-button">
+        <label class="check-box-label " for="check_155">zero-filled</label>
+        <input type="checkbox" id="check_156" class="check-button">
+        <label class="check-box-label " for="check_156">corrupt</label>
+        <input type="checkbox" id="check_157" class="check-button">
+        <label class="check-box-label " for="check_157">64bits</label>
+        <input type="checkbox" id="check_158" class="check-button">
+        <label class="check-box-label " for="check_158">trusted</label>
     </div>
+</div>
+<div class="row">
+    <div class="col-2">
+
+    </div>
+    <div class="col-2">
+
+    </div>
+    <div class="col-2">
+        <h9>Portable Executable specific: </h9>
+    </div>
+    <div class="col-6">
+        <input type="checkbox" id="check_159" class="check-button">
+        <label class="check-box-label " for="check_159">assembly</label>
+        <input type="checkbox" id="check_160" class="check-button">
+        <label class="check-box-label " for="check_160">native</label>
+        <input type="checkbox" id="check_161" class="check-button">
+        <label class="check-box-label " for="check_161">efi</label>
+        <input type="checkbox" id="check_162" class="check-button">
+        <label class="check-box-label " for="check_162">overlay</label>
+        <input type="checkbox" id="check_163" class="check-button">
+        <label class="check-box-label " for="check_163">contains-rom</label>
+    </div>
+</div>
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-2"></div>
+    <div class="col-2">
+        <h9>Mac OS X Executable specific: </h9>
+    </div>
+    <div class="col-6">
+        <input type="checkbox" id="check_164" class="check-button">
+        <label class="check-box-label " for="check_164">lib</label>
+        <input type="checkbox" id="check_165" class="check-button">
+        <label class="check-box-label " for="check_165">arm</label>
+        <input type="checkbox" id="check_166" class="check-button">
+        <label class="check-box-label " for="check_166">ios</label>
+        <input type="checkbox" id="check_167" class="check-button">
+        <label class="check-box-label " for="check_167">suspicious-eip</label>
+        <input type="checkbox" id="check_168" class="check-button">
+        <label class="check-box-label " for="check_168">dropper</label>
+    </div>
+</div>
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-2"></div>
+    <div class="col-2">
+        <h9>Linux ELF Executable specific: </h9>
+    </div>
+    <div class="col-6">
+        <input type="checkbox" id="check_169" class="check-button">
+        <label class="check-box-label " for="check_169">relocatable</label>
+        <input type="checkbox" id="check_170" class="check-button">
+        <label class="check-box-label " for="check_170">shared-lib</label>
+        <input type="checkbox" id="check_171" class="check-button">
+        <label class="check-box-label " for="check_171">coredump</label>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-2"></div>
+    <div class="col-2">
+        <h9>File bundles specific: </h9>
+    </div>
+    <div class="col-6">
+        <input type="checkbox" id="check_172" class="check-button">
+        <label class="check-box-label " for="check_172">contains-pe</label>
+        <input type="checkbox" id="check_173" class="check-button">
+        <label class="check-box-label " for="check_173">contains-rom</label>
+        <input type="checkbox" id="check_174" class="check-button">
+        <label class="check-box-label " for="check_174">contains-macho</label>
+        <input type="checkbox" id="check_175" class="check-button">
+        <label class="check-box-label " for="check_175">mac-app</label>
+        <input type="checkbox" id="check_176" class="check-button">
+        <label class="check-box-label " for="check_176">contains-elf</label>
+        <input type="checkbox" id="check_177" class="check-button">
+        <label class="check-box-label " for="check_177">contains-dmg</label>
+        <input type="checkbox" id="check_178" class="check-button">
+        <label class="check-box-label " for="check_178">contains-deb</label>
+        <input type="checkbox" id="check_179" class="check-button">
+        <label class="check-box-label " for="check_179">blob</label>
+        <input type="checkbox" id="check_180" class="check-button">
+        <label class="check-box-label " for="check_180">encrypted</label>
+        <input type="checkbox" id="check_181" class="check-button">
+        <label class="check-box-label " for="check_181">tar-bundle</label>
+    </div>
+</div>
+<div class="row" style="margin-top: 10px; margin-bottom: 10px; ">
+    <div class="col-2">
+        <i class="fa fa-plus"></i>
+        <h8>section</h8>
+    </div>
+    <div class="col-2">
+        <h8>PE, ELFs, Mas-Os</h8>
+        <i class="fa fa-question"></i>
+    </div>
+    <div class="col-2">
+        <input class="size-input" placeholder="size">
+    </div>
+    <div class="col-6">
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-2">
+        <i class="fa fa-plus"></i>
+        <h8>imports</h8>
+    </div>
+    <div class="col-2">
+        <h8>PE, ELFs, Mas-Os, IPAs, JARs, Java bytecode</h8>
+        <i class="fa fa-question"></i>
+    </div>
+    <div class="col-2">
+        <input class="size-input" placeholder="size">
+    </div>
+    <div class="col-6">
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-2">
+        <i class="fa fa-plus"></i>
+        <h8>exports</h8>
+    </div>
+    <div class="col-2">
+        <h8>PE, ELFs, Java bytecode</h8>
+        <i class="fa fa-question"></i>
+    </div>
+    <div class="col-2">
+        <input class="size-input" placeholder="size">
+    </div>
+    <div class="col-6">
+
+    </div>
+</div>
 {% endblock %}

@@ -14,7 +14,11 @@ def search(request):
 
 
 def dashboard(request):
-    return render(request, 'z_lab_engine/dashboard.html')
+    data = Hash.objects.all()
+    count = Hash.objects.count()
+
+    return render(request, 'z_lab_engine/dashboard.html', {'data': data,
+                                                           'count': count})
 
 
 def upload(request):

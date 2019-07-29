@@ -15,6 +15,16 @@ class Hash(models.Model):
     sha256 = models.CharField(max_length=64, blank=True)
     upload_tags = TaggableManager()
 
+    def __str__(self):
+        string = ''
+        if self.md5 is not '':
+            string += '\nmd5= ' + self.md5
+        if self.sha1 is not '':
+            string += '\nsha1= ' + self.sha1
+        if self.sha256 is not '':
+            string += '\nsha256= ' + self.sha256
+        return string
+
 
 class SearchTag(models.Model):
     tags = models.CharField(max_length=1000)

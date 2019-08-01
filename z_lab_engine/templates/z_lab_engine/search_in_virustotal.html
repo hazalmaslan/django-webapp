@@ -29,40 +29,40 @@
                     <div>
                         <form action="" method="post">
                             {% csrf_token %}
-                            <input type="checkbox" id="recent" class="radiolist" value="recent" onclick="showSearchTags()">
+                            <input type="checkbox" id="recent" class="radiolist" value="recent" onclick="showMostRecent()">
                             <label class="check-box-label " for="recent">Recent</label>
-                            <input type="checkbox" id="mostused" class="radiolist" value="mostused" onclick="showSearchTags()">
+                            <input type="checkbox" id="mostused" class="radiolist" value="mostused" onclick="showMostUsed()">
                             <label class="check-box-label " for="mostused">Most Used</label>
-                            <input type="checkbox" id="sort" class="radiolist" value="sort" onclick="showSearchTags()">
+                            <input type="checkbox" id="sort" class="radiolist" value="sort" onclick="showSortedTags()">
                             <label class="check-box-label " for="sort">Sort</label>
                         </form>
 
                     </div>
 
                     <div>
-                        <label for="sample-tags">deneme</label>
-                        <textarea id="sample-tags">
-                            {{ searchTag }}
-                        </textarea>
+
                         <label>
-                            <select class="js-select2" name="service">
-                                <option>
-gittgit
-                                </option>
+                            <select class="js-select2 col-8" name="service" id="sample-tags">
+
                             </select>
                         </label>
                     </div>
 
                         <!--===============================================================================================-->
-                    {% load jsonify %}
-
                     {% block content %}
                         <script type="text/javascript">
-                            <![CDATA[ var items = {{ searchTag }}; ]]>
-                            function showSearchTags(){
-                                alert("bok")
+                            function showMostUsed() {
+                                document.getElementById("sample-tags").innerHTML = "";
+                                document.getElementById("sample-tags").innerHTML = "{% for m in mostused %}<option>{{ m }}</option>{% endfor %}";
                             }
-
+                            function showMostRecent() {
+                                document.getElementById("sample-tags").innerHTML = "";
+                                document.getElementById("sample-tags").innerHTML = "{% for r in recent %}<option>{{ r }}</option>{% endfor %}";
+                            }
+                            function showSortedTags() {
+                                document.getElementById("sample-tags").innerHTML = "";
+                                document.getElementById("sample-tags").innerHTML = "{% for s in sorted %}<option>{{ s }}</option>{% endfor %}";
+                            }
                         </script>
                     {% endblock %}
 

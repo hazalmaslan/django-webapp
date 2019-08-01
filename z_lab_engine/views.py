@@ -3,6 +3,7 @@ from django.views.generic import CreateView
 from .models import Hash, SearchTag
 from django.contrib.auth import login, logout, authenticate
 from .forms import UserForm, SearchTagForm, HashForm, ChoiceForm
+import copy
 import json
 
 
@@ -121,11 +122,27 @@ def virus_search(request):
             search_tag.tags = tag
             search_tag.save()
         return render(request, 'z_lab_engine/detail.html', {'tag': search_tag})
-    liste = [obj.as_dict() for obj in SearchTag.objects.get_queryset()]
+    liste = SearchTag.objects.get_queryset()
+    search_tag_dict = dict()
+    for el in liste:
+        search_tag_dict[el.tags] = el.count
+
+    most_used_tags = sorted(search_tag_dict.items(), key=lambda x: x[1], reverse=True)
+    li = []
+    for tag in most_used_tags:
+        li.append(tag[0])
+
+    sorted_tags = sorted(search_tag_dict, key=lambda x: x[0])
+
+    li2 = []
+    for tag in sorted_tags:
+        li2.append(tag)
 
     context = {
         "form": form,
-        "searchTag": json.dumps(liste),
+        "mostused": li,
+        "recent": search_tag_dict.keys(),
+        "sorted": li2,
     }
     return render(request, 'z_lab_engine/search_in_virustotal.html', context)
 

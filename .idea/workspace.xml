@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="574a96d0-4245-420a-ab8e-6ea79e387520" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/z_lab_engine/migrations/0005_auto_20190730_1142.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06d9319-93f3-48ff-a830-ace0300bab47.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c06d9319-93f3-48ff-a830-ace0300bab47.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Z_Lab_Tool/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Z_Lab_Tool/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/z_lab_engine/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/z_lab_engine/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/form_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/form_template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/search_in_virustotal.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/search_in_virustotal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/z_lab_engine/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/z_lab_engine/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -142,6 +127,7 @@
       <workItem from="1564035599551" duration="15960000" />
       <workItem from="1564493486519" duration="4040000" />
       <workItem from="1564553773264" duration="22503000" />
+      <workItem from="1564640126799" duration="3960000" />
     </task>
     <servers />
   </component>

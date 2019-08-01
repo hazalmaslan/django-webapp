@@ -29,11 +29,11 @@
                     <div>
                         <form action="" method="post">
                             {% csrf_token %}
-                            <input type="checkbox" id="recent" class="radiolist" value="recent" onclick="showMostRecent()">
+                            <input type="radio" id="recent" class="radiolist" name="search-tag-sample" value="recent" onclick="showMostRecent()">
                             <label class="check-box-label " for="recent">Recent</label>
-                            <input type="checkbox" id="mostused" class="radiolist" value="mostused" onclick="showMostUsed()">
+                            <input type="radio" id="mostused" class="radiolist" name="search-tag-sample" value="mostused" onclick="showMostUsed()">
                             <label class="check-box-label " for="mostused">Most Used</label>
-                            <input type="checkbox" id="sort" class="radiolist" value="sort" onclick="showSortedTags()">
+                            <input type="radio" id="sort" class="radiolist" name="search-tag-sample" value="sort" onclick="showSortedTags()">
                             <label class="check-box-label " for="sort">Sort</label>
                         </form>
 
@@ -42,7 +42,7 @@
                     <div>
 
                         <label>
-                            <select class="js-select2 col-8" name="service" id="sample-tags">
+                            <select class="js-select2" name="service" id="sample-tags">
 
                             </select>
                         </label>

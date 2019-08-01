@@ -791,3 +791,8 @@ input[type="date"]{
 	height: 100px;
 	margin-bottom: 10px;
 }
+
+.js-select2 {
+	min-width: 400px;
+	width: 100%;
+}

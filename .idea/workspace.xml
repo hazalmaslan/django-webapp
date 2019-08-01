@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="574a96d0-4245-420a-ab8e-6ea79e387520" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images/plus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Z_Lab_Tool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Z_Lab_Tool.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images/img-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images/img-01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images/question.png" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images/question.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/search_in_virustotal.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/search_in_virustotal.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,24 +62,25 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine" />
-      <recent name="$PROJECT_DIR$/z_lab_engine/templates" />
-      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/" />
-      <recent name="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine" />
       <recent name="$PROJECT_DIR$/templates/registration" />
       <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images" />
       <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css" />
       <recent name="$PROJECT_DIR$/z_lab_engine/static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images" />
+      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine" />
+      <recent name="$PROJECT_DIR$/z_lab_engine/templates" />
+      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/" />
+      <recent name="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -127,7 +135,7 @@
       <workItem from="1564035599551" duration="15960000" />
       <workItem from="1564493486519" duration="4040000" />
       <workItem from="1564553773264" duration="22503000" />
-      <workItem from="1564640126799" duration="4832000" />
+      <workItem from="1564640126799" duration="14383000" />
     </task>
     <servers />
   </component>

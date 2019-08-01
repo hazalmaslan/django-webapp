@@ -14,7 +14,9 @@
                             {% endif %}
                             <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
                                 {% csrf_token %}
-                                <div class="virus-total">{% include 'z_lab_engine/form_template.html' %}</div>
+                                <div class="virus-total">{% include 'z_lab_engine/form_template.html' %}
+                                    <label for="searchQuery">Search Query</label><textarea id="searchQuery"></textarea>
+                                </div>
 
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
@@ -74,20 +76,20 @@
     <!-- ikinci container -->
     <div class="container col-12">
         <form>
-            <div class="row">
+        <div class="row">
                 <div class="col-2">
 
-                    <h6><u>Modifier</u></h6>
+                    <h8><u>Modifier</u></h8>
 
                 </div>
                 <div class="col-2">
-                    <h6><u>Scope</u></h6>
+                    <h8><u>Scope</u></h8>
                 </div>
 
             </div>
             <div class="row">
                 <div class="col-2">
-                    <i class="fa fa-plus"></i>
+                    <button type="submit" class="plus-icon" value="size" ></button>
                     <h8>size</h8>
                 </div>
                 <div class="col-2">
@@ -104,29 +106,29 @@
                     <!---------------    -------------------------->
                 </div>
                 <div class="col-2">
-                    <input class="size-input" id="size" placeholder="size">
+                    <label for="size"></label><input type="text" class="size-input" id="size" placeholder="size" value="">
                 </div>
                 <div class="col-2">
-                    <input type="checkbox" id="check_4" class="check-button" value="Byte">
+                    <input type="radio" id="check_4" class="check-button" value="Byte" name="size-val">
                     <label class="check-box-label " for="check_4">Byte</label>
-                    <input type="checkbox" id="check_5" class="check-button" value="KB">
+                    <input type="radio" id="check_5" class="check-button" value="KB" name="size-val">
                     <label class="check-box-label " for="check_5">KB</label>
-                    <input type="checkbox" id="check_6" class="check-button" value="MB">
+                    <input type="radio" id="check_6" class="check-button" value="MB" name="size-val">
                     <label class="check-box-label " for="check_6">MB</label>
                 </div>
                 <div class="col-4">
-                    <input type="checkbox" id="check_7" class="check-button" value="respectively">
+                    <input type="radio" id="check_7" class="check-button" value="respectively" name="size">
                     <label class="check-box-label " for="check_7">respectively</label>
-                    <input type="checkbox" id="check_8" class="check-button" value="larger than">
+                    <input type="radio" id="check_8" class="check-button" value="larger than" name="size">
                     <label class="check-box-label " for="check_8">larger than</label>
-                    <input type="checkbox" id="check_9" class="check-button" value="smaller than">
+                    <input type="radio" id="check_9" class="check-button" value="smaller than" name="size">
                     <label class="check-box-label " for="check_9">smaller than</label>
                 </div>
 
             </div>
             <div class="row">
                 <div class="col-2">
-                    <i class="fa fa-plus"></i>
+                    <button type="submit" class="plus-icon" value="type-of"></button>
                     <h8>type of</h8>
                 </div>
                 <div class="col-2">
@@ -155,31 +157,31 @@
                     <h9>Executables: </h9>
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_10" class="check-button" value="peexe">
-                    <label class="check-box-label " for="check_10>">peexe</label>
-                    <input type="checkbox" id="check_11" class="check-button" value="pedll">
+                    <input type="checkbox" id="check_10" class="check-button" value="type:peexe">
+                    <label class="check-box-label " for="check_10">peexe</label>
+                    <input type="checkbox" id="check_11" class="check-button" value="type:pedll">
                     <label class="check-box-label " for="check_11">pedll</label>
-                    <input type="checkbox" id="check_12" class="check-button" value="neexe">
+                    <input type="checkbox" id="check_12" class="check-button" value="type:neexe">
                     <label class="check-box-label " for="check_12">neexe</label>
-                    <input type="checkbox" id="check_13" class="check-button" value="nedll">
+                    <input type="checkbox" id="check_13" class="check-button" value="type:nedll">
                     <label class="check-box-label " for="check_13">nedll</label>
-                    <input type="checkbox" id="check_14" class="check-button" value="mz">
+                    <input type="checkbox" id="check_14" class="check-button" value="type:mz">
                     <label class="check-box-label " for="check_14">mz</label>
-                    <input type="checkbox" id="check_15" class="check-button" value="msi">
+                    <input type="checkbox" id="check_15" class="check-button" value="type:msi">
                     <label class="check-box-label " for="check_15">msi</label>
-                    <input type="checkbox" id="check_16" class="check-button" value="com">
+                    <input type="checkbox" id="check_16" class="check-button" value="type:com">
                     <label class="check-box-label " for="check_16">com</label>
-                    <input type="checkbox" id="check_17" class="check-button" value="coff">
+                    <input type="checkbox" id="check_17" class="check-button" value="type:coff">
                     <label class="check-box-label " for="check_17">coff</label>
-                    <input type="checkbox" id="check_18" class="check-button" value="elf">
+                    <input type="checkbox" id="check_18" class="check-button" value="type:elf">
                     <label class="check-box-label " for="check_18">elf</label>
-                    <input type="checkbox" id="check_19" class="check-button" value="krnl">
+                    <input type="checkbox" id="check_19" class="check-button" value="type:krnl">
                     <label class="check-box-label " for="check_19">krnl</label>
-                    <input type="checkbox" id="check_20" class="check-button" value="rpm">
+                    <input type="checkbox" id="check_20" class="check-button" value="type:rpm">
                     <label class="check-box-label " for="check_20">rpm</label>
-                    <input type="checkbox" id="check_21" class="check-button" value="linux">
+                    <input type="checkbox" id="check_21" class="check-button" value="type:linux">
                     <label class="check-box-label " for="check_21">linux</label>
-                    <input type="checkbox" id="check_22" class="check-button" value="macho">
+                    <input type="checkbox" id="check_22" class="check-button" value="type:macho">
                     <label class="check-box-label " for="check_22">macho</label>
                 </div>
             </div>
@@ -194,23 +196,23 @@
                     <h9>Internet: </h9>
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_23" class="check-button" value="html">
+                    <input type="checkbox" id="check_23" class="check-button" value="type:html">
                     <label class="check-box-label " for="check_23">html</label>
-                    <input type="checkbox" id="check_24" class="check-button" value="xml">
+                    <input type="checkbox" id="check_24" class="check-button" value="type:xml">
                     <label class="check-box-label " for="check_24">xml</label>
-                    <input type="checkbox" id="check_25" class="check-button" value="flash">
+                    <input type="checkbox" id="check_25" class="check-button" value="type:flash">
                     <label class="check-box-label " for="check_25">flash</label>
-                    <input type="checkbox" id="check_26" class="check-button" value="fla">
+                    <input type="checkbox" id="check_26" class="check-button" value="type:fla">
                     <label class="check-box-label " for="check_26">fla</label>
-                    <input type="checkbox" id="check_27" class="check-button" value="iecookie">
+                    <input type="checkbox" id="check_27" class="check-button" value="type:iecookie">
                     <label class="check-box-label " for="check_27">iecookie</label>
-                    <input type="checkbox" id="check_28" class="check-button" value="bittorent">
+                    <input type="checkbox" id="check_28" class="check-button" value="type:bittorent">
                     <label class="check-box-label " for="check_28">bittorent</label>
-                    <input type="checkbox" id="check_29" class="check-button" value="email">
+                    <input type="checkbox" id="check_29" class="check-button" value="type:email">
                     <label class="check-box-label " for="check_29">email</label>
-                    <input type="checkbox" id="check_30" class="check-button" value="outlook">
+                    <input type="checkbox" id="check_30" class="check-button" value="type:outlook">
                     <label class="check-box-label " for="check_30">outlook</label>
-                    <input type="checkbox" id="check_31" class="check-button" value="cap">
+                    <input type="checkbox" id="check_31" class="check-button" value="type:cap">
                     <label class="check-box-label " for="check_31">cap</label>
                 </div>
             </div>
@@ -225,15 +227,15 @@
                     <h9>Phone&tablet: </h9>
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_32" class="check-button" value="symbian">
+                    <input type="checkbox" id="check_32" class="check-button" value="type:symbian">
                     <label class="check-box-label " for="check_32">symbian</label>
-                    <input type="checkbox" id="check_33" class="check-button" value="palmos">
+                    <input type="checkbox" id="check_33" class="check-button" value="type:palmos">
                     <label class="check-box-label " for="check_33">palmos</label>
-                    <input type="checkbox" id="check_34" class="check-button" value="wince">
+                    <input type="checkbox" id="check_34" class="check-button" value="type:wince">
                     <label class="check-box-label " for="check_34">wince</label>
-                    <input type="checkbox" id="check_35" class="check-button" value="android">
+                    <input type="checkbox" id="check_35" class="check-button" value="type:android">
                     <label class="check-box-label " for="check_35">android</label>
-                    <input type="checkbox" id="check_36" class="check-button" value="iphone">
+                    <input type="checkbox" id="check_36" class="check-button" value="type:iphone">
                     <label class="check-box-label " for="check_36">iphone</label>
                 </div>
             </div>
@@ -248,35 +250,35 @@
                     <h9>Images: </h9>
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_37" class="check-button" value="jpeg">
+                    <input type="checkbox" id="check_37" class="check-button" value="type:jpeg">
                     <label class="check-box-label " for="check_37">jpeg</label>
-                    <input type="checkbox" id="check_38" class="check-button" value="emf">
+                    <input type="checkbox" id="check_38" class="check-button" value="type:emf">
                     <label class="check-box-label " for="check_38">emf</label>
-                    <input type="checkbox" id="check_39" class="check-button" value="tiff">
+                    <input type="checkbox" id="check_39" class="check-button" value="type:tiff">
                     <label class="check-box-label " for="check_39">tiff</label>
-                    <input type="checkbox" id="check_40" class="check-button" value="gif">
+                    <input type="checkbox" id="check_40" class="check-button" value="type:gif">
                     <label class="check-box-label " for="check_40">gif</label>
-                    <input type="checkbox" id="check_41" class="check-button" value="png">
+                    <input type="checkbox" id="check_41" class="check-button" value="type:png">
                     <label class="check-box-label " for="check_41">png</label>
-                    <input type="checkbox" id="check_42" class="check-button" value="bmp">
+                    <input type="checkbox" id="check_42" class="check-button" value="type:bmp">
                     <label class="check-box-label " for="check_42">bmp</label>
-                    <input type="checkbox" id="check_43" class="check-button" value="gimp">
+                    <input type="checkbox" id="check_43" class="check-button" value="type:gimp">
                     <label class="check-box-label " for="check_43">gimp</label>
-                    <input type="checkbox" id="check_44" class="check-button" value="indesign">
+                    <input type="checkbox" id="check_44" class="check-button" value="type:indesign">
                     <label class="check-box-label " for="check_44">indesign</label>
-                    <input type="checkbox" id="check_45" class="check-button" value="psd">
+                    <input type="checkbox" id="check_45" class="check-button" value="type:psd">
                     <label class="check-box-label " for="check_45">psd</label>
-                    <input type="checkbox" id="check_46" class="check-button" value="targa">
+                    <input type="checkbox" id="check_46" class="check-button" value="type:targa">
                     <label class="check-box-label " for="check_46">targa</label>
-                    <input type="checkbox" id="check_47" class="check-button" value="xws">
+                    <input type="checkbox" id="check_47" class="check-button" value="type:xws">
                     <label class="check-box-label " for="check_47">xws</label>
-                    <input type="checkbox" id="check_48" class="check-button" value="dib">
+                    <input type="checkbox" id="check_48" class="check-button" value="type:dib">
                     <label class="check-box-label " for="check_48">dib</label>
-                    <input type="checkbox" id="check_49" class="check-button" value="jng">
+                    <input type="checkbox" id="check_49" class="check-button" value="type:jng">
                     <label class="check-box-label " for="check_49">jng</label>
-                    <input type="checkbox" id="check_50" class="check-button" value="ico">
+                    <input type="checkbox" id="check_50" class="check-button" value="type:ico">
                     <label class="check-box-label " for="check_50">ico</label>
-                    <input type="checkbox" id="check_51" class="check-button" value="fpx">
+                    <input type="checkbox" id="check_51" class="check-button" value="type:fpx">
                     <label class="check-box-label " for="check_51">fpx</label>
                 </div>
             </div>
@@ -291,43 +293,43 @@
                     <h9>Video&audio: </h9>
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_52" class="check-button" value="ogg">
+                    <input type="checkbox" id="check_52" class="check-button" value="type:ogg">
                     <label class="check-box-label " for="check_52">ogg</label>
-                    <input type="checkbox" id="check_53" class="check-button" value="flc">
+                    <input type="checkbox" id="check_53" class="check-button" value="type:flc">
                     <label class="check-box-label " for="check_53">flc</label>
-                    <input type="checkbox" id="check_54" class="check-button" value="fli">
+                    <input type="checkbox" id="check_54" class="check-button" value="type:fli">
                     <label class="check-box-label " for="check_54">fli</label>
-                    <input type="checkbox" id="check_55" class="check-button" value="mp3">
+                    <input type="checkbox" id="check_55" class="check-button" value="type:mp3">
                     <label class="check-box-label " for="check_55">mp3</label>
-                    <input type="checkbox" id="check_56" class="check-button" value="flac">
+                    <input type="checkbox" id="check_56" class="check-button" value="type:flac">
                     <label class="check-box-label " for="check_56">flac</label>
-                    <input type="checkbox" id="check_57" class="check-button" value="waw">
+                    <input type="checkbox" id="check_57" class="check-button" value="type:waw">
                     <label class="check-box-label " for="check_57">waw</label>
-                    <input type="checkbox" id="check_58" class="check-button" value="midi">
+                    <input type="checkbox" id="check_58" class="check-button" value="type:midi">
                     <label class="check-box-label " for="check_58">midi</label>
-                    <input type="checkbox" id="check_59" class="check-button" value="avi">
+                    <input type="checkbox" id="check_59" class="check-button" value="type:avi">
                     <label class="check-box-label " for="check_59">avi</label>
-                    <input type="checkbox" id="check_60" class="check-button" value="mpeg">
+                    <input type="checkbox" id="check_60" class="check-button" value="type:mpeg">
                     <label class="check-box-label " for="check_60">mpeg</label>
-                    <input type="checkbox" id="check_61" class="check-button" value="qt">
+                    <input type="checkbox" id="check_61" class="check-button" value="type:qt">
                     <label class="check-box-label " for="check_61">qt</label>
-                    <input type="checkbox" id="check_63" class="check-button" value="asf">
+                    <input type="checkbox" id="check_63" class="check-button" value="type:asf">
                     <label class="check-box-label " for="check_63">asf</label>
-                    <input type="checkbox" id="check_64" class="check-button" value="divx">
+                    <input type="checkbox" id="check_64" class="check-button" value="type:divx">
                     <label class="check-box-label " for="check_64">divx</label>
-                    <input type="checkbox" id="check_65" class="check-button" value="flv">
+                    <input type="checkbox" id="check_65" class="check-button" value="type:flv">
                     <label class="check-box-label " for="check_65">flv</label>
-                    <input type="checkbox" id="check_66" class="check-button" value="wma">
+                    <input type="checkbox" id="check_66" class="check-button" value="type:wma">
                     <label class="check-box-label " for="check_66">wma</label>
-                    <input type="checkbox" id="check_67" class="check-button" value="wmv">
+                    <input type="checkbox" id="check_67" class="check-button" value="type:wmv">
                     <label class="check-box-label " for="check_67">wmv</label>
-                    <input type="checkbox" id="check_68" class="check-button" value="rm">
+                    <input type="checkbox" id="check_68" class="check-button" value="type:rm">
                     <label class="check-box-label " for="check_68">rm</label>
-                    <input type="checkbox" id="check_69" class="check-button" value="mov">
+                    <input type="checkbox" id="check_69" class="check-button" value="type:mov">
                     <label class="check-box-label " for="check_69">mov</label>
-                    <input type="checkbox" id="check_70" class="check-button" value="mp4">
+                    <input type="checkbox" id="check_70" class="check-button" value="type:mp4">
                     <label class="check-box-label " for="check_70">mp4</label>
-                    <input type="checkbox" id="check_71" class="check-button" value="3gp">
+                    <input type="checkbox" id="check_71" class="check-button" value="type:3gp">
                     <label class="check-box-label " for="check_71">3gp</label>
                 </div>
             </div>
@@ -342,39 +344,39 @@
                     <h9>Documents: </h9>
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_72" class="check-button" value="text">
+                    <input type="checkbox" id="check_72" class="check-button" value="type:text">
                     <label class="check-box-label " for="check_72">text</label>
-                    <input type="checkbox" id="check_73" class="check-button" value="pdf">
+                    <input type="checkbox" id="check_73" class="check-button" value="type:pdf">
                     <label class="check-box-label " for="check_73">pdf</label>
-                    <input type="checkbox" id="check_74" class="check-button" value="ps">
+                    <input type="checkbox" id="check_74" class="check-button" value="type:ps">
                     <label class="check-box-label " for="check_74">ps</label>
-                    <input type="checkbox" id="check_75" class="check-button" value="doc">
+                    <input type="checkbox" id="check_75" class="check-button" value="type:doc">
                     <label class="check-box-label " for="check_75">doc</label>
-                    <input type="checkbox" id="check_76" class="check-button" value="docx">
+                    <input type="checkbox" id="check_76" class="check-button" value="type:docx">
                     <label class="check-box-label " for="check_76">docx</label>
-                    <input type="checkbox" id="check_77" class="check-button" value="rft">
+                    <input type="checkbox" id="check_77" class="check-button" value="type:rft">
                     <label class="check-box-label " for="check_77">rft</label>
-                    <input type="checkbox" id="check_78" class="check-button" value="ppt">
+                    <input type="checkbox" id="check_78" class="check-button" value="type:ppt">
                     <label class="check-box-label " for="check_78">ppt</label>
-                    <input type="checkbox" id="check_79" class="check-button" value="pptx">
+                    <input type="checkbox" id="check_79" class="check-button" value="type:pptx">
                     <label class="check-box-label " for="check_79">pptx</label>
-                    <input type="checkbox" id="check_80" class="check-button" value="xls">
+                    <input type="checkbox" id="check_80" class="check-button" value="type:xls">
                     <label class="check-box-label " for="check_80">xls</label>
-                    <input type="checkbox" id="check_81" class="check-button" value="xlsx">
+                    <input type="checkbox" id="check_81" class="check-button" value="type:xlsx">
                     <label class="check-box-label " for="check_81">xlsx</label>
-                    <input type="checkbox" id="check_83" class="check-button" value="odp">
+                    <input type="checkbox" id="check_83" class="check-button" value="type:odp">
                     <label class="check-box-label " for="check_83">odp</label>
-                    <input type="checkbox" id="check_84" class="check-button" value="ods">
+                    <input type="checkbox" id="check_84" class="check-button" value="type:ods">
                     <label class="check-box-label " for="check_84">ods</label>
-                    <input type="checkbox" id="check_85" class="check-button" value="odt">
+                    <input type="checkbox" id="check_85" class="check-button" value="type:odt">
                     <label class="check-box-label " for="check_85">odt</label>
-                    <input type="checkbox" id="check_86" class="check-button" value="hwp">
+                    <input type="checkbox" id="check_86" class="check-button" value="type:hwp">
                     <label class="check-box-label " for="check_86">hwp</label>
-                    <input type="checkbox" id="check_87" class="check-button" value="gul">
+                    <input type="checkbox" id="check_87" class="check-button" value="type:gul">
                     <label class="check-box-label " for="check_87">gul</label>
-                    <input type="checkbox" id="check_88" class="check-button" value="ebook">
+                    <input type="checkbox" id="check_88" class="check-button" value="type:ebook">
                     <label class="check-box-label " for="check_88">ebook</label>
-                    <input type="checkbox" id="check_89" class="check-button" value="latex">
+                    <input type="checkbox" id="check_89" class="check-button" value="type:latex">
                     <label class="check-box-label " for="check_89">latex</label>
                 </div>
             </div>
@@ -389,39 +391,39 @@
                     <h9>Bundles: </h9>
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_92" class="check-button" value="isoimage">
+                    <input type="checkbox" id="check_92" class="check-button" value="type:isoimage">
                     <label class="check-box-label " for="check_92">isoimage</label>
-                    <input type="checkbox" id="check_93" class="check-button" value="zip">
+                    <input type="checkbox" id="check_93" class="check-button" value="type:zip">
                     <label class="check-box-label " for="check_93">zip</label>
-                    <input type="checkbox" id="check_94" class="check-button" value="gzip">
+                    <input type="checkbox" id="check_94" class="check-button" value="type:gzip">
                     <label class="check-box-label " for="check_94">gzip</label>
-                    <input type="checkbox" id="check_95" class="check-button" value="bzip">
+                    <input type="checkbox" id="check_95" class="check-button" value="type:bzip">
                     <label class="check-box-label " for="check_95">bzip</label>
-                    <input type="checkbox" id="check_96" class="check-button" value="rzip">
+                    <input type="checkbox" id="check_96" class="check-button" value="type:rzip">
                     <label class="check-box-label " for="check_96">rzip</label>
-                    <input type="checkbox" id="check_97" class="check-button" value="dzip">
+                    <input type="checkbox" id="check_97" class="check-button" value="type:dzip">
                     <label class="check-box-label " for="check_97">dzip</label>
-                    <input type="checkbox" id="check_98" class="check-button" value="7zip">
+                    <input type="checkbox" id="check_98" class="check-button" value="type:7zip">
                     <label class="check-box-label " for="check_98">7zip</label>
-                    <input type="checkbox" id="check_99" class="check-button" value="cab">
+                    <input type="checkbox" id="check_99" class="check-button" value="type:cab">
                     <label class="check-box-label " for="check_99">cab</label>
-                    <input type="checkbox" id="check_100" class="check-button" value="jar">
+                    <input type="checkbox" id="check_100" class="check-button" value="type:jar">
                     <label class="check-box-label " for="check_100">jar</label>
-                    <input type="checkbox" id="check_101" class="check-button" value="rar">
+                    <input type="checkbox" id="check_101" class="check-button" value="type:rar">
                     <label class="check-box-label " for="check_101">rar</label>
-                    <input type="checkbox" id="check_102" class="check-button" value="mscompress">
+                    <input type="checkbox" id="check_102" class="check-button" value="type:mscompress">
                     <label class="check-box-label " for="check_102">mscompress</label>
-                    <input type="checkbox" id="check_103" class="check-button" value="ace">
+                    <input type="checkbox" id="check_103" class="check-button" value="type:ace">
                     <label class="check-box-label " for="check_103">ace</label>
-                    <input type="checkbox" id="check_104" class="check-button" value="arc">
+                    <input type="checkbox" id="check_104" class="check-button" value="type:arc">
                     <label class="check-box-label " for="check_104">arc</label>
-                    <input type="checkbox" id="check_105" class="check-button" value="arj">
+                    <input type="checkbox" id="check_105" class="check-button" value="type:arj">
                     <label class="check-box-label " for="check_105">arj</label>
-                    <input type="checkbox" id="check_106" class="check-button" value="asd">
+                    <input type="checkbox" id="check_106" class="check-button" value="type:asd">
                     <label class="check-box-label " for="check_106">asd</label>
-                    <input type="checkbox" id="check_107" class="check-button" value="blackhole">
+                    <input type="checkbox" id="check_107" class="check-button" value="type:blackhole">
                     <label class="check-box-label " for="check_107">blackhole</label>
-                    <input type="checkbox" id="check_108" class="check-button" value="kgb">
+                    <input type="checkbox" id="check_108" class="check-button" value="type:kgb">
                     <label class="check-box-label " for="check_108">kgb</label>
                 </div>
             </div>
@@ -436,33 +438,33 @@
                     <h9>Code: </h9>
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_109" class="check-button" value="script">
+                    <input type="checkbox" id="check_109" class="check-button" value="type:script">
                     <label class="check-box-label " for="check_109">script</label>
-                    <input type="checkbox" id="check_110" class="check-button" value="php">
+                    <input type="checkbox" id="check_110" class="check-button" value="type:php">
                     <label class="check-box-label " for="check_110">php</label>
-                    <input type="checkbox" id="check_111" class="check-button" value="python">
+                    <input type="checkbox" id="check_111" class="check-button" value="type:python">
                     <label class="check-box-label " for="check_111">python</label>
-                    <input type="checkbox" id="check_112" class="check-button" value="perl">
+                    <input type="checkbox" id="check_112" class="check-button" value="type:perl">
                     <label class="check-box-label " for="check_112">perl</label>
-                    <input type="checkbox" id="check_113" class="check-button" value="ruby">
+                    <input type="checkbox" id="check_113" class="check-button" value="type:ruby">
                     <label class="check-box-label " for="check_113">ruby</label>
-                    <input type="checkbox" id="check_114" class="check-button" value="c">
+                    <input type="checkbox" id="check_114" class="check-button" value="type:c">
                     <label class="check-box-label " for="check_114">c</label>
-                    <input type="checkbox" id="check_115" class="check-button" value="cpp">
+                    <input type="checkbox" id="check_115" class="check-button" value="type:cpp">
                     <label class="check-box-label " for="check_115">cpp</label>
-                    <input type="checkbox" id="check_116" class="check-button" value="java">
+                    <input type="checkbox" id="check_116" class="check-button" value="type:java">
                     <label class="check-box-label " for="check_116">java</label>
-                    <input type="checkbox" id="check_117" class="check-button" value="shell">
+                    <input type="checkbox" id="check_117" class="check-button" value="type:shell">
                     <label class="check-box-label " for="check_117">shell</label>
-                    <input type="checkbox" id="check_118" class="check-button" value="pascal">
+                    <input type="checkbox" id="check_118" class="check-button" value="type:pascal">
                     <label class="check-box-label " for="check_118">pascal</label>
-                    <input type="checkbox" id="check_119" class="check-button" value="awk">
+                    <input type="checkbox" id="check_119" class="check-button" value="type:awk">
                     <label class="check-box-label " for="check_119">awk</label>
-                    <input type="checkbox" id="check_120" class="check-button" value="dyalog">
+                    <input type="checkbox" id="check_120" class="check-button" value="type:dyalog">
                     <label class="check-box-label " for="check_120">dyalog</label>
-                    <input type="checkbox" id="check_121" class="check-button" value="fortran">
+                    <input type="checkbox" id="check_121" class="check-button" value="type:fortran">
                     <label class="check-box-label " for="check_121">fortran</label>
-                    <input type="checkbox" id="check_122" class="check-button" value="java-bytecode">
+                    <input type="checkbox" id="check_122" class="check-button" value="type:java-bytecode">
                     <label class="check-box-label " for="check_122">java-bytecode</label>
                 </div>
             </div>
@@ -477,19 +479,19 @@
                     <h9>Apple: </h9>
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_123" class="check-button" value="apple">
+                    <input type="checkbox" id="check_123" class="check-button" value="type:apple">
                     <label class="check-box-label " for="check_123">apple</label>
-                    <input type="checkbox" id="check_124" class="check-button" value="mac">
+                    <input type="checkbox" id="check_124" class="check-button" value="type:mac">
                     <label class="check-box-label " for="check_124">mac</label>
-                    <input type="checkbox" id="check_125" class="check-button" value="applesingle">
+                    <input type="checkbox" id="check_125" class="check-button" value="type:applesingle">
                     <label class="check-box-label " for="check_125">applesingle</label>
-                    <input type="checkbox" id="check_126" class="check-button" value="appledouble">
+                    <input type="checkbox" id="check_126" class="check-button" value="type:appledouble">
                     <label class="check-box-label " for="check_126">appledouble</label>
-                    <input type="checkbox" id="check_127" class="check-button" value="machfs">
+                    <input type="checkbox" id="check_127" class="check-button" value="type:machfs">
                     <label class="check-box-label " for="check_127">machfs</label>
-                    <input type="checkbox" id="check_128" class="check-button" value="appleplist">
+                    <input type="checkbox" id="check_128" class="check-button" value="type:appleplist">
                     <label class="check-box-label " for="check_128">appleplist</label>
-                    <input type="checkbox" id="check_129" class="check-button" value="maclib">
+                    <input type="checkbox" id="check_129" class="check-button" value="type:maclib">
                     <label class="check-box-label " for="check_129">maclib</label>
                 </div>
             </div>
@@ -514,7 +516,7 @@
             </div>
             <div class="row">
                 <div class="col-2">
-                    <i class="fa fa-plus"></i>
+                    <button type="submit" class="plus-icon" value="positives"></button>
                     <h8>positives</h8>
                 </div>
                 <div class="col-2">
@@ -530,20 +532,20 @@
                     <!---------------    -------------------------->
                 </div>
                 <div class="col-2">
-                    <input class="size-input" id="positives">
+                    <label for="positives"></label><input class="size-input" id="positives">
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_133" class="check-button" value="respectively">
+                    <input type="radio" id="check_133" class="check-button " value="positives:respectively" name="positives">
                     <label class="check-box-label " for="check_133">respectively</label>
-                    <input type="checkbox" id="check_134" class="check-button" value="larger than">
+                    <input type="radio" id="check_134" class="check-button" value="positives:larger than" name="positives">
                     <label class="check-box-label " for="check_134">larger than</label>
-                    <input type="checkbox" id="check_135" class="check-button" value="smaller than">
+                    <input type="radio" id="check_135" class="check-button" value="positives:smaller than" name="positives">
                     <label class="check-box-label " for="check_135">smaller than</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col-2">
-                    <i class="fa fa-plus"></i>
+                    <button type="submit" class="plus-icon" value="children-positives"></button>
                     <h8>children positives</h8>
                 </div>
                 <div class="col-2">
@@ -559,21 +561,21 @@
                     <!---------------    -------------------------->
                 </div>
                 <div class="col-2">
-                    <input class="size-input" id="children-positives">
+                    <label for="children-positives"></label><input class="size-input" id="children-positives">
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_136" class="check-button" value="respectively">
+                    <input type="radio" id="check_136" class="check-button" value="respectively" name="children-positives">
                     <label class="check-box-label " for="check_136">respectively</label>
-                    <input type="checkbox" id="check_137" class="check-button" value="larger than">
+                    <input type="radio" id="check_137" class="check-button" value="larger than" name="children-positives">
                     <label class="check-box-label " for="check_137">larger than</label>
-                    <input type="checkbox" id="check_138" class="check-button" value="smaller than">
+                    <input type="radio" id="check_138" class="check-button" value="smaller than" name="children-positives">
                     <label class="check-box-label " for="check_138">smaller than</label>
 
                 </div>
             </div>
             <div class="row">
                 <div class="col-2">
-                    <i class="fa fa-plus"></i>
+                    <button type="submit" class="plus-icon" value="file-name"></button>
                     <h8>file name</h8>
                 </div>
                 <div class="col-2">
@@ -589,7 +591,9 @@
                     <!---------------    -------------------------->
                 </div>
                 <div class="col-2">
-                    <input class="size-input">
+                    <label>
+                        <input class="size-input">
+                    </label>
                 </div>
                 <div class="col-6">
 
@@ -597,7 +601,7 @@
             </div>
             <div class="row" style="margin-top: 10px; margin-bottom: 10px; ">
                 <div class="col-2">
-                    <i class="fa fa-plus"></i>
+                    <button type="submit" class="plus-icon" value="fsd"></button>
                     <h8>first submission datetime</h8>
                 </div>
                 <div class="col-2">
@@ -613,22 +617,24 @@
                     <!---------------    -------------------------->
                 </div>
                 <div class="col-2">
-                    <input type="date" placeholder="Select Date">
+                    <label>
+                        <input type="date" placeholder="Select Date">
+                    </label>
 
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_139" class="check-button" value="respectively">
+                    <input type="radio" id="check_139" class="check-button fsd" value="respectively" name="fsd">
                     <label class="check-box-label " for="check_139">respectively</label>
-                    <input type="checkbox" id="check_140" class="check-button" value="larger than">
+                    <input type="radio" id="check_140" class="check-button fsd" value="larger than" name="fsd">
                     <label class="check-box-label " for="check_140">larger than</label>
-                    <input type="checkbox" id="check_141" class="check-button" value="smaller than">
+                    <input type="radio" id="check_141" class="check-button fsd" value="smaller than" name="fsd">
                     <label class="check-box-label " for="check_141">smaller than</label>
 
                 </div>
             </div>
             <div class="row" style="margin-top: 10px; margin-bottom: 10px; ">
                 <div class="col-2">
-                    <i class="fa fa-plus"></i>
+                    <button type="submit" class="plus-icon" value="lsd"></button>
                     <h8>last submission datetime</h8>
                 </div>
                 <div class="col-2">
@@ -644,22 +650,24 @@
                     <!---------------    -------------------------->
                 </div>
                 <div class="col-2">
-                    <input type="date" placeholder="Select Date">
+                    <label>
+                        <input type="date" placeholder="Select Date">
+                    </label>
 
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_142" class="check-button" value="respectively">
+                    <input type="radio" id="check_142" class="check-button" value="respectively" name="lsd">
                     <label class="check-box-label " for="check_142">respectively</label>
-                    <input type="checkbox" id="check_143" class="check-button" value="larger than">
+                    <input type="radio" id="check_143" class="check-button" value="larger than" name="lsd">
                     <label class="check-box-label " for="check_143">larger than</label>
-                    <input type="checkbox" id="check_144" class="check-button" value="smaller than">
+                    <input type="radio" id="check_144" class="check-button" value="smaller than" name="lsd">
                     <label class="check-box-label " for="check_144">smaller than</label>
 
                 </div>
             </div>
             <div class="row" style="margin-top: 10px; margin-bottom: 10px; ">
                 <div class="col-2">
-                    <i class="fa fa-plus"></i>
+                    <button type="submit" class="plus-icon" value="lad"></button>
                     <h8>last analysis datetime</h8>
                 </div>
                 <div class="col-2">
@@ -675,22 +683,24 @@
                     <!---------------    -------------------------->
                 </div>
                 <div class="col-2">
-                    <input type="date" placeholder="Select Date">
+                    <label>
+                        <input type="date" placeholder="Select Date">
+                    </label>
 
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_145" class="check-button" value="respectively">
+                    <input type="radio" id="check_145" class="check-button" value="respectively" name="lad">
                     <label class="check-box-label " for="check_145">respectively</label>
-                    <input type="checkbox" id="check_146" class="check-button" value="larger than">
+                    <input type="radio" id="check_146" class="check-button" value="larger than" name="lad">
                     <label class="check-box-label " for="check_146">larger than</label>
-                    <input type="checkbox" id="check_147" class="check-button" value="smaller than">
+                    <input type="radio" id="check_147" class="check-button" value="smaller than" name="lad">
                     <label class="check-box-label " for="check_147">smaller than</label>
 
                 </div>
             </div>
             <div class="row">
                 <div class="col-2">
-                    <i class="fa fa-plus"></i>
+                    <button type="submit" class="plus-icon" value="submissions"></button>
                     <h8>submissions</h8>
                 </div>
                 <div class="col-2">
@@ -706,20 +716,22 @@
                     <!---------------    -------------------------->
                 </div>
                 <div class="col-2">
-                    <input class="size-input">
+                    <label>
+                        <input class="size-input">
+                    </label>
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_148" class="check-button" value="respectively">
+                    <input type="radio" id="check_148" class="check-button" value="respectively" name="submissions">
                     <label class="check-box-label " for="check_148">respectively</label>
-                    <input type="checkbox" id="check_149" class="check-button" value="larger than">
+                    <input type="radio" id="check_149" class="check-button" value="larger than" name="submissions">
                     <label class="check-box-label " for="check_149">larger than</label>
-                    <input type="checkbox" id="check_150" class="check-button" value="smaller than">
+                    <input type="radio" id="check_150" class="check-button" value="smaller than" name="submissions">
                     <label class="check-box-label " for="check_150">smaller than</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col-2">
-                    <i class="fa fa-plus"></i>
+                    <button type="submit" class="plus-icon" value="sources"></button>
                     <h8>sources</h8>
                 </div>
                 <div class="col-2">
@@ -735,20 +747,22 @@
                     <!---------------    -------------------------->
                 </div>
                 <div class="col-2">
-                    <input class="size-input">
+                    <label>
+                        <input class="size-input">
+                    </label>
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_151" class="check-button" value="respectively">
+                    <input type="radio" id="check_151" class="check-button" value="respectively" name="sources">
                     <label class="check-box-label " for="check_151">respectively</label>
-                    <input type="checkbox" id="check_152" class="check-button" value="larger than">
+                    <input type="radio" id="check_152" class="check-button" value="larger than" name="sources">
                     <label class="check-box-label " for="check_152">larger than</label>
-                    <input type="checkbox" id="check_153" class="check-button" value="smaller than">
+                    <input type="radio" id="check_153" class="check-button" value="smaller than" name="sources">
                     <label class="check-box-label " for="check_153">smaller than</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col-2">
-                    <i class="fa fa-plus"></i>
+                    <button type="submit" class="plus-icon" value="submitter"></button>
                     <h8>submitter</h8>
                 </div>
                 <div class="col-2">
@@ -764,7 +778,9 @@
                     <!---------------    -------------------------->
                 </div>
                 <div class="col-2">
-                    <input class="size-input">
+                    <label>
+                        <input class="size-input">
+                    </label>
                 </div>
                 <div class="col-6">
 
@@ -772,7 +788,7 @@
             </div>
             <div class="row" style="margin-bottom: 10px; margin-top: 10px;">
                 <div class="col-2">
-                    <i class="fa fa-plus"></i>
+                    <button type="submit" class="plus-icon" value="tagged"></button>
                     <h8>tagged</h8>
                 </div>
                 <div class="col-2">
@@ -792,15 +808,15 @@
 
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_154" class="check-button" value="via-tor">
+                    <input type="checkbox" id="check_154" class="check-button" value="tagged:via-tor">
                     <label class="check-box-label " for="check_154">via-tor</label>
-                    <input type="checkbox" id="check_155" class="check-button" value="zero-filled">
+                    <input type="checkbox" id="check_155" class="check-button" value="tagged:zero-filled">
                     <label class="check-box-label " for="check_155">zero-filled</label>
-                    <input type="checkbox" id="check_156" class="check-button" value="corrupt">
+                    <input type="checkbox" id="check_156" class="check-button" value="tagged:corrupt">
                     <label class="check-box-label " for="check_156">corrupt</label>
-                    <input type="checkbox" id="check_157" class="check-button" value="64bits">
+                    <input type="checkbox" id="check_157" class="check-button" value="tagged:64bits">
                     <label class="check-box-label " for="check_157">64bits</label>
-                    <input type="checkbox" id="check_158" class="check-button" value="trusted">
+                    <input type="checkbox" id="check_158" class="check-button" value="tagged:trusted">
                     <label class="check-box-label " for="check_158">trusted</label>
                 </div>
             </div>
@@ -815,15 +831,15 @@
                     <h9>Portable Executable specific: </h9>
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_159" class="check-button" value="assembly">
+                    <input type="checkbox" id="check_159" class="check-button" value="tagged:assembly">
                     <label class="check-box-label " for="check_159">assembly</label>
-                    <input type="checkbox" id="check_160" class="check-button" value="native">
+                    <input type="checkbox" id="check_160" class="check-button" value="tagged:native">
                     <label class="check-box-label " for="check_160">native</label>
-                    <input type="checkbox" id="check_161" class="check-button" value="efi">
+                    <input type="checkbox" id="check_161" class="check-button" value="tagged:efi">
                     <label class="check-box-label " for="check_161">efi</label>
-                    <input type="checkbox" id="check_162" class="check-button" value="overlay">
+                    <input type="checkbox" id="check_162" class="check-button" value="tagged:overlay">
                     <label class="check-box-label " for="check_162">overlay</label>
-                    <input type="checkbox" id="check_163" class="check-button" value="contains-rom">
+                    <input type="checkbox" id="check_163" class="check-button" value="tagged:contains-rom">
                     <label class="check-box-label " for="check_163">contains-rom</label>
                 </div>
             </div>
@@ -834,15 +850,15 @@
                     <h9>Mac OS X Executable specific: </h9>
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_164" class="check-button" value="lib">
+                    <input type="checkbox" id="check_164" class="check-button" value="tagged:lib">
                     <label class="check-box-label " for="check_164">lib</label>
-                    <input type="checkbox" id="check_165" class="check-button" value="arm">
+                    <input type="checkbox" id="check_165" class="check-button" value="tagged:arm">
                     <label class="check-box-label " for="check_165">arm</label>
-                    <input type="checkbox" id="check_166" class="check-button" value="ios">
+                    <input type="checkbox" id="check_166" class="check-button" value="tagged:ios">
                     <label class="check-box-label " for="check_166">ios</label>
-                    <input type="checkbox" id="check_167" class="check-button" value="suspicious-eip">
+                    <input type="checkbox" id="check_167" class="check-button" value="tagged:suspicious-eip">
                     <label class="check-box-label " for="check_167">suspicious-eip</label>
-                    <input type="checkbox" id="check_168" class="check-button" value="dropper">
+                    <input type="checkbox" id="check_168" class="check-button" value="tagged:dropper">
                     <label class="check-box-label " for="check_168">dropper</label>
                 </div>
             </div>
@@ -853,11 +869,11 @@
                     <h9>Linux ELF Executable specific: </h9>
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_169" class="check-button" value="relocatable">
+                    <input type="checkbox" id="check_169" class="check-button" value="tagged:relocatable">
                     <label class="check-box-label " for="check_169">relocatable</label>
-                    <input type="checkbox" id="check_170" class="check-button" value="shared-lib">
+                    <input type="checkbox" id="check_170" class="check-button" value="tagged:shared-lib">
                     <label class="check-box-label " for="check_170">shared-lib</label>
-                    <input type="checkbox" id="check_171" class="check-button" value="coredump">
+                    <input type="checkbox" id="check_171" class="check-button" value="tagged:coredump">
                     <label class="check-box-label " for="check_171">coredump</label>
 
                 </div>
@@ -869,31 +885,31 @@
                     <h9>File bundles specific: </h9>
                 </div>
                 <div class="col-6">
-                    <input type="checkbox" id="check_172" class="check-button" value="contains-pe">
+                    <input type="checkbox" id="check_172" class="check-button" value="tagged:contains-pe">
                     <label class="check-box-label " for="check_172">contains-pe</label>
-                    <input type="checkbox" id="check_173" class="check-button" value="contains-rom">
+                    <input type="checkbox" id="check_173" class="check-button" value="tagged:contains-rom">
                     <label class="check-box-label " for="check_173">contains-rom</label>
-                    <input type="checkbox" id="check_174" class="check-button" value="contains-macho">
+                    <input type="checkbox" id="check_174" class="check-button" value="tagged:contains-macho">
                     <label class="check-box-label " for="check_174">contains-macho</label>
-                    <input type="checkbox" id="check_175" class="check-button" value="mac-app">
+                    <input type="checkbox" id="check_175" class="check-button" value="tagged:mac-app">
                     <label class="check-box-label " for="check_175">mac-app</label>
-                    <input type="checkbox" id="check_176" class="check-button" value="contains-elf">
+                    <input type="checkbox" id="check_176" class="check-button" value="tagged:contains-elf">
                     <label class="check-box-label " for="check_176">contains-elf</label>
-                    <input type="checkbox" id="check_177" class="check-button" value="contains-dmg">
+                    <input type="checkbox" id="check_177" class="check-button" value="tagged:contains-dmg">
                     <label class="check-box-label " for="check_177">contains-dmg</label>
-                    <input type="checkbox" id="check_178" class="check-button" value="contains-deb">
+                    <input type="checkbox" id="check_178" class="check-button" value="tagged:contains-deb">
                     <label class="check-box-label " for="check_178">contains-deb</label>
-                    <input type="checkbox" id="check_179" class="check-button" value="blob">
+                    <input type="checkbox" id="check_179" class="check-button" value="tagged:blob">
                     <label class="check-box-label " for="check_179">blob</label>
-                    <input type="checkbox" id="check_180" class="check-button" value="encrypted">
+                    <input type="checkbox" id="check_180" class="check-button" value="tagged:encrypted">
                     <label class="check-box-label " for="check_180">encrypted</label>
-                    <input type="checkbox" id="check_181" class="check-button" value="tar-bundle">
+                    <input type="checkbox" id="check_181" class="check-button" value="tagged:tar-bundle">
                     <label class="check-box-label " for="check_181">tar-bundle</label>
                 </div>
             </div>
             <div class="row" style="margin-top: 10px; margin-bottom: 10px; ">
                 <div class="col-2">
-                    <i class="fa fa-plus"></i>
+                    <button type="submit" class="plus-icon" value="section"></button>
                     <h8>section</h8>
                 </div>
                 <div class="col-2">
@@ -909,7 +925,9 @@
                     <!---------------------------------------------->
                 </div>
                 <div class="col-2">
-                    <input class="size-input">
+                    <label>
+                        <input class="size-input">
+                    </label>
                 </div>
                 <div class="col-6">
 
@@ -917,7 +935,7 @@
             </div>
             <div class="row">
                 <div class="col-2">
-                    <i class="fa fa-plus"></i>
+                    <button type="submit" class="plus-icon" value="imports"></button>
                     <h8>imports</h8>
                 </div>
                 <div class="col-2">
@@ -933,7 +951,9 @@
                     <!---------------------------------------------->
                 </div>
                 <div class="col-2">
-                    <input class="size-input">
+                    <label>
+                        <input class="size-input">
+                    </label>
                 </div>
                 <div class="col-6">
 
@@ -941,7 +961,7 @@
             </div>
             <div class="row">
                 <div class="col-2">
-                    <i class="fa fa-plus"></i>
+                    <button type="submit" class="plus-icon" value="exports"></button>
                     <h8>exports</h8>
                 </div>
                 <div class="col-2">
@@ -957,7 +977,9 @@
                     <!---------------------------------------------->
                 </div>
                 <div class="col-2">
-                    <input class="size-input">
+                    <label>
+                        <input class="size-input">
+                    </label>
                 </div>
                 <div class="col-6">
 
@@ -967,6 +989,11 @@
     </div>
 
     <!--===============================================================================================-->
+    {% load staticfiles %}
+    <script src="{% static 'z_lab_engine/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'z_lab_engine/vendor/bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'z_lab_engine/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'z_lab_engine/js/main.js' %}"></script>
 
 
     <!--===============================input içine yazılanları alıyor==================================-->
@@ -974,7 +1001,7 @@
     <script type="text/javascript">
         function add() {
             var number = document.getElementById("positives").value;
-            number += number != "" ? "^" : "";
+            number += number !== "" ? ":" : "";
             if ($(this).prop("checked"))
 
                 $("#searchQuery").val(number)
@@ -983,16 +1010,44 @@
 
     <!--=================================tıklanan butonları alıyor====================================-->
 
+
     <script>
         $(".check-button").change(function() {
             var text = "";
             $(".check-button:checked").each(function() {
-                text += text !== "" ? "^" : "";
+                text += text !== "" ? " " : "";
                 if ($(this).prop("checked"))
                     text += $(this).val();
+                $("#searchQuery").val(text)
             });
-            $("#searchQuery").val(text);
+
         });
+
+    </script>
+
+    <script>
+
+
+    </script>
+    <!--===============================================================================================-->
+
+    <script type="text/javascript">
+        var grd = function(){
+            $("input[type='radio']").click(function() {
+                var previousValue = $(this).attr('previousValue');
+                var name = $(this).attr('name');
+
+                if (previousValue === 'checked') {
+                    $(this).removeAttr('checked');
+                    $(this).attr('previousValue', false);
+                    $(this).prop("checked", false);
+                } else {
+                    $("input[name="+name+"]:radio").attr('previousValue', false);
+                    $(this).attr('previousValue', 'checked');
+                }
+            });
+        };
+        grd();
     </script>
 
 

@@ -1,0 +1,8 @@
+{% extends 'z_lab_engine/base.html' %}
+
+{% block body %}
+    <h1>{{ tag }}</h1>
+    <div class="panel-footer">
+        To go back to virus total search page <a href="{% url 'virus_total_search' %}">Click here</a>.
+    </div>
+{% endblock %}

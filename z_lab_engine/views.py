@@ -1,24 +1,44 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import CreateView
 from .models import Hash, SearchTag
-from django.views.generic import FormView, RedirectView
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import REDIRECT_FIELD_NAME, login, logout, authenticate
-from django.utils.http import is_safe_url
-from .forms import UserForm
-# Create your views here.
+from django.contrib.auth import login, logout, authenticate
+from .forms import UserForm, SearchTagForm, HashForm, ChoiceForm
+import json
 
 
 def search(request):
-    return render(request, 'z_lab_engine/search_in_virustotal.html')
+    form = SearchTagForm(request.POST or None)
+    if form.is_valid():
+        search_tag = form.save(commit=False)
+        search_tag.tags = request.POST('input')
+        if search_tag in SearchTag.objects.get_queryset():
+            SearchTag.objects.get(search_tag).count += 1
+
+        search_tag.save()
+        return render(request, 'z_lab_engine/detail.html', {'tag': search_tag})
+    context = {
+        "form": form,
+    }
+    return render(request, 'z_lab_engine/search_in_virustotal.html', context)
 
 
 def dashboard(request):
-    data = Hash.objects.all()
+    data = Hash.objects.get_queryset()
     count = Hash.objects.count()
+    d = dict()
+    for h in data:
+        for tag in h.get_tags():
+            if tag in d:
+                d[tag] += 1
+            else:
+                d[tag] = 1
+
+    sorted(d.values(), reverse=False)
 
     return render(request, 'z_lab_engine/dashboard.html', {'data': data,
-                                                           'count': count})
+                                                           'count': count,
+                                                           'tags': list(d),
+                                                           'values': list(d.values())})
 
 
 def upload(request):
@@ -33,6 +53,11 @@ class HashCreateView(CreateView):
 class SearchTagCreateView(CreateView):
     model = SearchTag
     fields = ('tags', 'count')
+
+
+def detail(request, tagname):
+
+    render(request, 'z_lab_engine/detail.html', {'tag': tagname})
 
 
 def logout_user(request):
@@ -77,4 +102,32 @@ def register(request):
         "form": form,
     }
     return render(request, 'z_lab_engine/register.html', context)
+
+
+def virus_search(request):
+
+    form = SearchTagForm(request.POST or None)
+    if form.is_valid():
+        search_tag = form.save(commit=False)
+        tag = form.cleaned_data['tags']
+
+        if SearchTag.objects.filter(tags=tag).exists():
+            search_tag = SearchTag.objects.get(tags=tag)
+            count = search_tag.count
+            search_tag.count = count + 1
+            search_tag.save()
+
+        else:
+            search_tag.tags = tag
+            search_tag.save()
+        return render(request, 'z_lab_engine/detail.html', {'tag': search_tag})
+    liste = [obj.as_dict() for obj in SearchTag.objects.get_queryset()]
+
+    context = {
+        "form": form,
+        "searchTag": json.dumps(liste),
+    }
+    return render(request, 'z_lab_engine/search_in_virustotal.html', context)
+
+
 # TODO: search a way to get the text from the htmls

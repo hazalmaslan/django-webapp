@@ -5,15 +5,15 @@
         <div class="container col-12">
             <div class="row">
 
-                <div class="col-3 col-lg-2">
+                <div class="col-md-6 col-xs-3 col-lg-6">
                     <div id="chartdiv"></div>
-                </div>
-                <div class="col-3 col-lg-2">
+
+
                     <div id="chartdiv1"></div>
 
                 </div>
 
-                <div class="col-6 col-lg-8">
+                <div class="col-md-6 col-xs-3 col-lg-6">
                     <article>Latest Hashes</article>
                     <div class="wrap-input100 validate-input bg0">
                         <textarea class="input100 latest-hash" placeholder="hash">
@@ -29,12 +29,12 @@
         <div class="container col-12">
             <div class="row">
 
-                <div class="col-6">
+                <div class="col-md-6 col-xs-3 col-lg-6">
                     <div id="chartContainer" style="height: 200px; width: 100%;">
                     </div>
 
                 </div>
-                <div class="col-6">
+                <div class="col-md-6 col-xs-3 col-lg-6">
                     <table style="width:100%">
                         <tr>
                             <th></th>
@@ -74,7 +74,6 @@
         </div>
     </form>
 </div>
-
 <!-- Resources -->
 <script src="https://www.amcharts.com/lib/4/core.js"></script>
 <script src="https://www.amcharts.com/lib/4/charts.js"></script>
@@ -134,15 +133,16 @@
         // Create chart instance
         var chart = am4core.create("chartdiv1", am4charts.PieChart);
         // Add data
+
         chart.data = [{
-            "type": "PE",
-            "percentage": 501.9
+            "type": "{{ tags.0 }}",
+            "percentage": {{ values.0 }}
         }, {
-            "type": "DOCX",
-            "percentage": 301.9
+            "type": "{{ tags.1 }}",
+            "percentage": {{ values.1 }}
         }, {
-            "type": "APK",
-            "percentage": 201.1
+            "type": "{{ tags.2 }}",
+            "percentage": {{ values.2 }}
         }];
 
         // Add and configure Series
@@ -160,6 +160,8 @@
 
     }); // end am4core.ready()
 </script>
+
+
 
 <!-- HTML -->
 

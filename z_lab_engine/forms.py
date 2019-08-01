@@ -14,7 +14,7 @@ class SearchTagForm(forms.ModelForm):
 
     class Meta:
         model = SearchTag
-        fields = ['tags', 'count']
+        fields = ['tags']
 
 
 class UserForm(forms.ModelForm):
@@ -23,3 +23,8 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password']
+
+
+class ChoiceForm(forms.Form):
+    fields = ['recent', 'mostused', 'sort']
+    choice = forms.ChoiceField(choices=fields, widget=forms.RadioSelect)

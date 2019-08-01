@@ -1,5 +1,7 @@
 from django.db import models
 from taggit.managers import TaggableManager
+from taggit.models import Tag
+import taggit_templatetags2
 
 '''
     TODO: Learn how to filter those values when storing to database
@@ -25,10 +27,23 @@ class Hash(models.Model):
             string += '\nsha256= ' + self.sha256
         return string
 
+    def get_tags(self):
+        return self.upload_tags.names()
+
 
 class SearchTag(models.Model):
     tags = models.CharField(max_length=1000)
-    count = models.IntegerField()
+    count = models.IntegerField(default=1)
+
+    def as_dict(self):
+        return {
+            "tags": self.tags,
+            "count": self.count
+        }
+
+    def __str__(self):
+        string = 'Tag Name: '+self.tags + '\n' + 'count:'+str(self.count)
+        return string
 
 
 # TODO: find the best way to associate the hash with searchtags

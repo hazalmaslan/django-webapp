@@ -13,7 +13,7 @@ urlpatterns = [
     path('upload/', views.upload, name='upload'),
 
     # /virus_total_search/
-    path('virus_total_search/', views.search, name='virus_total_search'),
+    path('virus_total_search/', views.virus_search, name='virus_total_search'),
 
     # /login/
     path('login/', views.login_user, name='login'),
@@ -23,5 +23,8 @@ urlpatterns = [
 
     # /register/
     path('register/', views.register, name='register'),
+
+    # /detail/
+    path('detail/', views.detail, name='detail'),
 ]
 

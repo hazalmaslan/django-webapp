@@ -16,6 +16,8 @@ class Hash(models.Model):
     sha1 = models.CharField(max_length=40, blank=True)
     sha256 = models.CharField(max_length=64, blank=True)
     upload_tags = TaggableManager()
+    vt_score = models.IntegerField(default=0, blank=True)
+    magic_header = models.CharField(max_length=1024, blank=True)
 
     def __str__(self):
         string = ''

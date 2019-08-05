@@ -108,14 +108,14 @@
             </div>
             <div class="col-2">
                 <label for="size"></label>
-                <input type="text" class="size-input" id="size" placeholder="size" value="">
+                <input type="number" class="size-input" id="size" placeholder="size" value="">
             </div>
             <div class="col-2">
-                <input type="radio" id="check_4" class="check-button" value="Byte" name="size-val">
+                <input type="radio" id="check_4" class="check-button" value="Byte" name="size-val" required>
                 <label class="check-box-label " for="check_4">Byte</label>
-                <input type="radio" id="check_5" class="check-button" value="KB" name="size-val">
+                <input type="radio" id="check_5" class="check-button" value="KB" name="size-val" required>
                 <label class="check-box-label " for="check_5">KB</label>
-                <input type="radio" id="check_6" class="check-button" value="MB" name="size-val">
+                <input type="radio" id="check_6" class="check-button" value="MB" name="size-val" required>
                 <label class="check-box-label " for="check_6">MB</label>
             </div>
             <div class="col-4">
@@ -543,11 +543,11 @@
             <input class="size-input" id="positives">
         </div>
         <div class="col-6">
-            <input type="radio" id="check_133" class="check-button " value="positives:respectively" name="positives">
+            <input type="radio" id="check_133" class="check-button " value="respectively" name="positives">
             <label class="check-box-label " for="check_133">respectively</label>
-            <input type="radio" id="check_134" class="check-button" value="positives:larger than" name="positives">
+            <input type="radio" id="check_134" class="check-button" value="larger than" name="positives">
             <label class="check-box-label " for="check_134">larger than</label>
-            <input type="radio" id="check_135" class="check-button" value="positives:smaller than" name="positives">
+            <input type="radio" id="check_135" class="check-button" value="smaller than" name="positives">
             <label class="check-box-label " for="check_135">smaller than</label>
         </div>
     </div>
@@ -709,7 +709,7 @@
     </div>
     <div class="row">
         <div class="col-2">
-            <input type="checkbox" id="plus-submissions-button" class="plus add-item" onchange="addSubmissionsVal()">
+            <label for="plus-submissions-button"></label><input type="checkbox" id="plus-submissions-button" class="plus add-item" onchange="addSubmissionsVal()">
             <h8>submissions</h8>
         </div>
         <div class="col-2">
@@ -788,7 +788,7 @@
         </div>
         <div class="col-2">
             <label>
-                <input class="size-input">
+                <input class="size-input" name="submitter">
             </label>
         </div>
         <div class="col-6">
@@ -935,7 +935,7 @@
         </div>
         <div class="col-2">
             <label>
-                <input class="size-input">
+                <input class="size-input" id="section">
             </label>
         </div>
         <div class="col-6">
@@ -961,7 +961,7 @@
         </div>
         <div class="col-2">
             <label>
-                <input class="size-input">
+                <input class="size-input" id="imports">
             </label>
         </div>
         <div class="col-6">
@@ -987,7 +987,7 @@
         </div>
         <div class="col-2">
             <label>
-                <input class="size-input">
+                <input class="size-input" id="exports">
             </label>
         </div>
         <div class="col-6">

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="574a96d0-4245-420a-ab8e-6ea79e387520" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images/remove.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/js/textbox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/search_in_virustotal.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/search_in_virustotal.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,6 +41,7 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -60,19 +64,19 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine" />
-      <recent name="$PROJECT_DIR$/templates/registration" />
-      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images" />
-      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css" />
-      <recent name="$PROJECT_DIR$/z_lab_engine/static" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images" />
       <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine" />
       <recent name="$PROJECT_DIR$/z_lab_engine/templates" />
       <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/" />
       <recent name="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine" />
+      <recent name="$PROJECT_DIR$/templates/registration" />
+      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images" />
+      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css" />
+      <recent name="$PROJECT_DIR$/z_lab_engine/static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -128,6 +132,7 @@
       <workItem from="1564493486519" duration="4040000" />
       <workItem from="1564553773264" duration="22503000" />
       <workItem from="1564640126799" duration="17858000" />
+      <workItem from="1564986596800" duration="13640000" />
     </task>
     <servers />
   </component>

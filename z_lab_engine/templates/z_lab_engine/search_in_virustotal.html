@@ -90,8 +90,7 @@
         {% csrf_token %}
         <div class="row">
             <div class="col-2">
-                <input type="checkbox" id="plus-size-button" class="check-button plus add-item" onchange="addSizeVal()">
-                <label class="check-box-label " for="plus-size-button">size</label>
+                <label for="plus-size-button"></label><input type="checkbox" id="plus-size-button" class="plus add-item" onchange="addSizeVal()">
                 <h8>size</h8>
             </div>
             <div class="col-2">
@@ -130,109 +129,11 @@
         </div>
     </form>
     <!--===============================================================================================-->
-    <script>
-        var arr = [];
-        function addItemValues() {
-            document.getElementsByName("type").forEach(function (element) {
-                if(element.isChecked()){
-                   arr.push(element.getAttribute(value));
-                }
-                else if(element.isUnchecked()){
-                    remove(arr, element.getAttribute(value));
-                }
-            });
-            document.getElementsByName("tagged").forEach(function (element) {
-                if(element.isChecked()){
-                    arr.push(element.getAttribute(value));
-                }
-                else if(element.isUnchecked()){
-                    remove(arr, element.getAttribute(value));
-                }
-            });
-            var sizeVal = document.getElementById("size").value;
-            var sizeType = "";
-            var sizeMag = "";
-            while(sizeVal !== "" || sizeType === "" || sizeMag === ""){
-                sizeType = $('input[name=size-val]:checked').val();
-                sizeMag = $('input[name=size-mag]:checked').val();
-            }
 
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        function remove(arr, value) {
-        return arr.filter(function (ele) {
-            return ele !== value;
-        });
-        }
-    </script>
-
-
-
-
-    <script>
-        function addSizeVal() {
-            var str = "";
-            console.log("ehel");
-            if ($("#plus-size-button:checked")) {
-                var sizeVal = document.getElementById("size").value;
-                var sizeType = $('input[name=size-val]:checked').val();
-                var sizeMag = $('input[name=size-mag]:checked').val();
-                str = "size: " + sizeVal + sizeType + " " + sizeMag;
-                arr[0] = str;
-                console.log(arr);
-                $("#plus-size-button").val(str);
-            }
-            else{
-                $("#plus-size-button").val("");
-            }
-        }
-
-    </script>
-
-    <script>
-        $(".plus").change(function() {
-            var text = "";
-            $(".plus:checked").each(function() {
-                text += text !== "" ? " " : "";
-                if ($(this).prop("checked"))
-                    text += $(this).val();
-                $("#searchQuery").val(text)
-            });
-        });
-    </script>
-
-    <script type="text/javascript">
-    function add() {
-        var number = document.getElementById("positives").value;
-        number += number !== "" ? ":" : "";
-        if ($(this).prop("checked"))
-
-            $("#searchQuery").val(number)
-    }
-    </script>
-
-
-     <!--===============================================================================================-->
 
     <div class="row">
         <div class="col-2">
-            <input type="checkbox" id="plus-type-button" class="check-button plus" onchange="addPlusValue()">
-            <label class="check-box-label " for="plus-size-button">size</label>
-            <button type="submit" class="plus-icon" value="type-of"></button>
+            <input type="checkbox" id="plus-type-button" class="plus add-item" onchange="addTypeVal()">
             <h8>type of</h8>
         </div>
         <div class="col-2">
@@ -622,7 +523,7 @@
 
     <div class="row">
         <div class="col-2">
-            <button type="submit" class="plus-icon" value="positives"></button>
+            <input type="checkbox" id="plus-positives-button" class="plus add-item" onchange="addPositivesVal()">
             <h8>positives</h8>
         </div>
         <div class="col-2">
@@ -652,7 +553,7 @@
     </div>
     <div class="row">
         <div class="col-2">
-            <button type="submit" class="plus-icon" value="children-positives"></button>
+            <input type="checkbox" id="plus-children-pos-button" class="plus add-item" onchange="addChildrenPositivesVal()">
             <h8>children positives</h8>
         </div>
         <div class="col-2">
@@ -683,7 +584,7 @@
     </div>
     <div class="row">
         <div class="col-2">
-            <button type="submit" class="plus-icon" value="file-name"></button>
+            <input type="checkbox" id="plus-file-name-button" class="plus add-item" onchange="addFileName()">
             <h8>file name</h8>
         </div>
         <div class="col-2">
@@ -700,7 +601,7 @@
         </div>
         <div class="col-2">
             <label>
-                <input class="size-input">
+                <input class="size-input" id="file-name">
             </label>
         </div>
         <div class="col-6">
@@ -808,7 +709,7 @@
     </div>
     <div class="row">
         <div class="col-2">
-            <button type="submit" class="plus-icon" value="submissions"></button>
+            <input type="checkbox" id="plus-submissions-button" class="plus add-item" onchange="addSubmissionsVal()">
             <h8>submissions</h8>
         </div>
         <div class="col-2">
@@ -825,7 +726,7 @@
         </div>
         <div class="col-2">
             <label>
-                <input class="size-input">
+                <input class="size-input" id="submission">
             </label>
         </div>
         <div class="col-6">
@@ -839,7 +740,7 @@
     </div>
     <div class="row">
         <div class="col-2">
-            <button type="submit" class="plus-icon" value="sources"></button>
+            <input type="checkbox" id="plus-sources-button" class="plus add-item" onchange="addSourcesVal()">
             <h8>sources</h8>
         </div>
         <div class="col-2">
@@ -856,7 +757,7 @@
         </div>
         <div class="col-2">
             <label>
-                <input class="size-input">
+                <input class="size-input" id="sources">
             </label>
         </div>
         <div class="col-6">
@@ -870,7 +771,7 @@
     </div>
     <div class="row">
         <div class="col-2">
-            <button type="submit" class="plus-icon" value="submitter"></button>
+            <input type="checkbox" id="plus-submitter-button" class="plus add-item" onchange="addSubmitterVal()">
             <h8>submitter</h8>
         </div>
         <div class="col-2">
@@ -896,7 +797,7 @@
     </div>
     <div class="row" style="margin-bottom: 10px; margin-top: 10px;">
         <div class="col-2">
-            <button type="submit" class="plus-icon" value="tagged"></button>
+            <input type="checkbox" id="plus-tagged-button" class="plus add-item" onchange="addTaggedValues()">
             <h8>tagged</h8>
         </div>
         <div class="col-2">
@@ -1017,7 +918,7 @@
     </div>
     <div class="row" style="margin-top: 10px; margin-bottom: 10px; ">
         <div class="col-2">
-            <button type="submit" class="plus-icon" value="section"></button>
+            <input type="checkbox" id="plus-section-button" class="plus add-item" onchange="addSectionVal()">
             <h8>section</h8>
         </div>
         <div class="col-2">
@@ -1043,7 +944,7 @@
     </div>
     <div class="row">
         <div class="col-2">
-            <button type="submit" class="plus-icon" value="imports"></button>
+            <label for="plus-imports-button"></label><input type="checkbox" id="plus-imports-button" class="plus add-item" onchange="addImportVal()">
             <h8>imports</h8>
         </div>
         <div class="col-2">
@@ -1069,7 +970,7 @@
     </div>
     <div class="row">
         <div class="col-2">
-            <button type="submit" class="plus-icon" value="exports"></button>
+            <label for="plus-exports-button"></label><input type="checkbox" id="plus-exports-button" class="plus add-item" onchange="addExportVal()">
             <h8>exports</h8>
         </div>
         <div class="col-2">
@@ -1097,10 +998,11 @@
 
 <!--===============================================================================================-->
 {% load staticfiles %}
-<script src="{% static 'z_lab_engine/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
-<script src="{% static 'z_lab_engine/vendor/bootstrap/js/popper.min.js' %}"></script>
-<script src="{% static 'z_lab_engine/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'z_lab_engine/js/main.js' %}"></script>
+    <script src="{% static 'z_lab_engine/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'z_lab_engine/vendor/bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'z_lab_engine/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'z_lab_engine/js/main.js' %}"></script>
+    <script src="{% static 'z_lab_engine/js/textbox.js' %}"></script>
 
 <!--===============================input içine yazılanları alıyor==================================-->
 
@@ -1111,23 +1013,6 @@
 
 <!--===============================================================================================-->
 
-<script type="text/javascript">
-    var grd = function() {
-        $("input[type='radio']").click(function() {
-            var previousValue = $(this).attr('previousValue');
-            var name = $(this).attr('name');
 
-            if (previousValue === 'checked') {
-                $(this).removeAttr('checked');
-                $(this).attr('previousValue', false);
-                $(this).prop("checked", false);
-            } else {
-                $("input[name=" + name + "]:radio").attr('previousValue', false);
-                $(this).attr('previousValue', 'checked');
-            }
-        });
-    };
-    grd();
-</script>
 
 {% endblock %}

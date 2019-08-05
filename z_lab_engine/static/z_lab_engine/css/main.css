@@ -401,6 +401,9 @@ textarea {
 
 /*---------------------------------------------*/
 
+
+/*---------------------------------------------*/
+
 input.input100 {
 	height: 100px;
 }
@@ -802,9 +805,29 @@ input[type="date"]{
 	min-width: 400px;
 }
 
-.plus-icon{
-	height: 16px;
+.plus[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Styling checkbox */
+  width: 16px;
+  height: 16px;
+  background-image:url("../images/plus.png");
+}
+
+.plus[type=checkbox] ~ .content {
+  -webkit-filter: blur(5px);
+
+}
+.plus[type=checkbox]:not(:checked) ~ label {
+  display: none;
+}
+.plus[type=checkbox]:not(:checked) ~ .content {
+  -webkit-filter: none;
+}
+.plus[type=checkbox]:checked{
 	width: 16px;
-	background-image:url('../images/plus.png');
-	background-repeat:no-repeat;
+  	height: 16px;
+	background-image: url("../images/remove.png");
 }

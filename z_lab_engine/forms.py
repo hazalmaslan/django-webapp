@@ -4,10 +4,11 @@ from django.contrib.auth.models import User
 
 
 class HashForm(forms.ModelForm):
+    hash_list = forms.TextInput()
 
     class Meta:
         model = Hash
-        fields = ['md5', 'sha1', 'sha256', 'upload_tags', 'vt_score', 'magic_header', 'file', ]
+        fields = ['md5', 'sha1', 'sha256', 'upload_tags']
 
 
 class SearchTagForm(forms.ModelForm):

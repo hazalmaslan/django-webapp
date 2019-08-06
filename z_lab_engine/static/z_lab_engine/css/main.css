@@ -449,7 +449,7 @@ textarea.input100 {
 	justify-content: center;
 	align-items: center;
 	padding: 0 20px;
-	width: 45%;
+	width: 100px;
 	height: 50px;
 	background-color: #333333;
 	border-radius: 25px;
@@ -832,4 +832,20 @@ input[type="date"]{
 	width: 16px;
   	height: 16px;
 	background-image: url("../images/remove.png");
+}
+
+.textbox {
+	width: inherit;
+	max-width: fit-content;
+	background-color: lightgrey;
+}
+.hash{
+	height: 500px;
+}
+.tags{
+	height: 200px;
+}
+
+.submit-button{
+
 }

@@ -20,7 +20,6 @@ class Hash(models.Model):
     sha256 = models.CharField(max_length=64, blank=True,
                               validators=[MinLengthValidator(64, "Enter a value with length 64.")])
     upload_tags = TaggableManager()
-    file = models.FileField(upload_to="z_lab_engine/static/images", default=" ")
     vt_score = models.IntegerField(default=0, blank=True)
     magic_header = models.CharField(max_length=1024, blank=True)
 
@@ -51,7 +50,3 @@ class SearchTag(models.Model):
     def __str__(self):
         string = 'Tag Name: '+self.tags + '\n' + 'count:'+str(self.count)
         return string
-
-
-# TODO: find the best way to associate the hash with searchtags
-

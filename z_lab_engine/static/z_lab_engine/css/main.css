@@ -412,6 +412,8 @@ textarea.input100 {
 	min-height: 120px;
 	padding-top: 9px;
 	padding-bottom: 13px;
+	font-size: small;
+	font-size-adjust: inherit;
 }
 
 .input100:focus+.focus-input100::before {

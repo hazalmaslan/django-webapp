@@ -7,7 +7,7 @@ class HashForm(forms.ModelForm):
 
     class Meta:
         model = Hash
-        fields = ['md5', 'sha1', 'sha256', 'upload_tags']
+        fields = ['md5', 'sha1', 'sha256', 'upload_tags', 'vt_score', 'magic_header', 'file', ]
 
 
 class SearchTagForm(forms.ModelForm):
@@ -23,8 +23,3 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password']
-
-
-class ChoiceForm(forms.Form):
-    fields = ['recent', 'mostused', 'sort']
-    choice = forms.ChoiceField(choices=fields, widget=forms.RadioSelect)

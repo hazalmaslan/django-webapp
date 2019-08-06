@@ -1,6 +1,7 @@
 from django.db import models
 from taggit.managers import TaggableManager
 from taggit.models import Tag
+from django.core.validators import MinLengthValidator, MaxLengthValidator
 import taggit_templatetags2
 
 '''
@@ -12,10 +13,14 @@ import taggit_templatetags2
 
 
 class Hash(models.Model):
-    md5 = models.CharField(max_length=32, blank=True)
-    sha1 = models.CharField(max_length=40, blank=True)
-    sha256 = models.CharField(max_length=64, blank=True)
+    md5 = models.CharField(max_length=32, blank=True,
+                           validators=[MinLengthValidator(32, "Enter a value with length 32.")])
+    sha1 = models.CharField(max_length=40, blank=True,
+                            validators=[MinLengthValidator(40, "Enter a value with length 40.")])
+    sha256 = models.CharField(max_length=64, blank=True,
+                              validators=[MinLengthValidator(64, "Enter a value with length 64.")])
     upload_tags = TaggableManager()
+    file = models.FileField(upload_to="z_lab_engine/static/images", default=" ")
     vt_score = models.IntegerField(default=0, blank=True)
     magic_header = models.CharField(max_length=1024, blank=True)
 

@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import CreateView
 from .models import Hash, SearchTag
 from django.contrib.auth import login, logout, authenticate
-from .forms import UserForm, SearchTagForm, HashForm, ChoiceForm
+from .forms import UserForm, SearchTagForm, HashForm
 import copy
 import json
 

@@ -16,12 +16,14 @@
                 <div class="col-md-6 col-xs-3 col-lg-6">
                     <article>Latest Hashes</article>
                     <div class="wrap-input100 validate-input bg0">
-                        <textarea class="input100 latest-hash" placeholder="hash">
-                            {%  for hash in data %}
-                                ----------{{ hash.id }}-----------
-                                {{ hash }}
-                            {% endfor %}
-                        </textarea>
+                        <label>
+                            <textarea class="input100 latest-hash" placeholder="hash">
+                                {%  for hash in data %}
+                                    ----------{{ hash.id }}-----------
+                                    {{ hash }}
+                                {% endfor %}
+                            </textarea>
+                        </label>
                     </div>
                 </div>
             </div>

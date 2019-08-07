@@ -1,111 +1,133 @@
-{% extends 'z_lab_engine/base.html' %}
-{% block body %}
+{% extends 'z_lab_engine/base.html' %} {% block body %}
 <div class="container-fluid">
 
     {% if error_message %}
-        <p><strong>{{ error_message }}</strong></p>
+    <p><strong>{{ error_message }}</strong></p>
     {% endif %}
-<div class="wrap-contact100">
+    <div class="wrap-contact100">
         <form class="contact100-form validate-form" role="form" action="" method="post">
             {% csrf_token %}
 
             <div class="wrap-input100 validate-input bg1 rs1-wrap-input100 col-8">
                 <span class="label-input100">MD5 / SHA1 / SHA256</span>
+                <label for="hash_list"></label>
                 <textarea class="input100" id="hash_list" placeholder="hash" name="hash_list"></textarea>
             </div>
 
-            <div class="wrap-input100 validate-input bg1 rs1-wrap-input100 col-3"  >
-                <span class="label-input100">File Upload</span>
-                <input class="input100" type="text" name="files">
+            <div class="wrap-input100 validate-input bg1 rs1-wrap-input100 col-3" id="file-upload-div">
+                <form action="" class="dropzone">
+                    <div class="form-group">
+                        <div class="fallback">
+                            <input name="file" type="file" multiple height="100px"/>
+                        </div>
+                         <div class="col-1">
+                            <button type="submit" class="contact50-form-btn" style="background-color: orange">
+                                <span>Upload Files<i class="fa fa-long-arrow-up" aria-hidden="true"></i></span>
+                            </button>
+                            <button type="reset" class="contact50-form-btn" style="background-color: gray">
+                                <span>Clear<i class="fa fa-long-arrow-up" aria-hidden="true"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
 
             </div>
 
             <div class="container col-md-12 col-xs-6 col-lg-12">
-              <div class="row">
-                <div class="col-3">
-                  <article>Tags</article>
-                    <div class="wrap-input100 validate-input bg0">
-                        <label for="tags-textbox"></label>
-                        <textarea class="input100" id="tags-textbox" name="upload_tags" placeholder="tags"></textarea>
+                <div class="row">
+                    <div class="col-3">
+                        <article>Tags</article>
+                        <div class="wrap-input100 validate-input bg0">
+                            <label for="tags-textbox"></label>
+                            <textarea class="input100" id="tags-textbox" name="upload_tags" placeholder="tags"></textarea>
+                        </div>
                     </div>
+                    <div class="col-3 ">
+                        <article>Action - VIRUSTOTAL</article>
+                        <label>
+                            <input type="checkbox" value="Download Sample">
+                        </label> Download Sample
+                        <br>
+                        <label>
+                            <input type="checkbox" value="Download Report">
+                        </label> Download Report
+                        <br>
+                        <label>
+                            <input type="checkbox" value="Download Network Traffic">
+                        </label> Download Network Traffic
+                        <br>
+                        <label>
+                            <input type="checkbox" value="Rescan">
+                        </label> Rescan
+                        <br>
+                    </div>
+                    <div class="col-3 ">
+                        <article>Action - ANALYSIS</article>
+                        <label>
+                            <input type="checkbox" value="Cuckoo Sandbox">
+                        </label> Cuckoo Sandbox
+                        <br>
+                    </div>
+
                 </div>
                 <div class="col-3 ">
-                    <article>Action - VIRUSTOTAL</article>
-                    <input type="checkbox" value="Download Sample"> Download Sample <br>
-                    <input type="checkbox" value="Download Report"> Download Report <br>
-                    <input type="checkbox" value="Download Network Traffic"> Download Network Traffic <br>
-                    <input type="checkbox" value="Rescan"> Rescan <br>
-                </div>
-                <div class="col-3 ">
-                    <article>Action - ANALYSIS</article>
-                    <input type="checkbox" value="Cuckoo Sandbox"> Cuckoo Sandbox <br>
-                </div>
-                  <div class="col-3">
-                    <button class="contact50-form-btn"  style="background-color: orange">
-                        <span>
-                            Upload Files
-                            <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
-                        </span>
-                    </button>
-                </div>
-            </div>
-            <div class="col-3 ">
-                {% for tag in sample_tags %}
+                    {% for tag in sample_tags %}
                     <label>
                         <input type="checkbox" name="tags" value="{{ tag }}" onchange="printOnTagsTextBox()">
-                    </label>{{ tag }}<br>
-                {% endfor %}
+                    </label>{{ tag }}
+                    <br> {% endfor %}
+                </div>
             </div>
-        </div>
-        <div class="container-contact100-form-btn" >
-            <button class="contact100-form-btn" style="background-color: gray">
-                <span>
+            <div class="container-contact100-form-btn">
+                <button class="contact100-form-btn" style="background-color: gray">
+                    <span>
                     Clear
                     <i aria-hidden="true"></i>
                 </span>
-            </button>
-            <button class="contact100-form-btn btn btn-success" style="background-color: cadetblue">
-                <span>
+                </button>
+                <button class="contact100-form-btn btn btn-success" style="background-color: cadetblue">
+                    <span>
                     Submit
                     <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
                 </span>
-            </button>
-        </div>
-    </form>
+                </button>
+            </div>
+        </form>
+    </div>
 </div>
-</div>
-    {% block content %}
-    <script type="text/javascript">
-        function remove(arr, value) {
-            return arr.filter(function(ele) {
-                return ele !== value;
-            });
-        }
-        function getTags() {
-            var arr = [];
-            document.getElementsByName("tags").forEach(function (element) {
-                if(element.checked){
-                    arr.push(element.value);
-                    console.log(arr);
-                }
-                else{
-                    remove(arr, element.value);
-                }
-            });
-            var text = "";
-            for(var index=0; index < arr.length-1; index++){
-                text += arr[index] + ", ";
-                console.log(text);
-            }
-            text += arr[arr.length-1];
-            return text;
-        }
-        function printOnTagsTextBox() {
-            var text = getTags();
+{% block content %}
+<script type="text/javascript">
+    function remove(arr, value) {
+        return arr.filter(function(ele) {
+            return ele !== value;
+        });
+    }
 
-            var tagBox = document.getElementById("tags-textbox");
-            tagBox.value = text;
+    function getTags() {
+        var arr = [];
+        document.getElementsByName("tags").forEach(function(element) {
+            if (element.checked) {
+                arr.push(element.value);
+                console.log(arr);
+            } else {
+                remove(arr, element.value);
+            }
+        });
+        var text = "";
+        for (var index = 0; index < arr.length - 1; index++) {
+            text += arr[index] + ", ";
+            console.log(text);
         }
-    </script>
-{% endblock %}
-{% endblock %}
+        text += arr[arr.length - 1];
+        return text;
+    }
+
+    function printOnTagsTextBox() {
+        var text = getTags();
+
+        var tagBox = document.getElementById("tags-textbox");
+        tagBox.value = text;
+    }
+</script>
+{% endblock %} {% endblock %}

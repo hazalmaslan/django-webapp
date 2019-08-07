@@ -43,13 +43,14 @@ def dashboard(request):
 
 
 def upload(request):
-    sample_tags_list = Tag.objects.get_queryset()[:10]
+    sample_tags_list = Tag.objects.get_queryset()[:5]
     form = HashForm(request.POST or None)
     if form.is_valid():
         hash_save = form.save(commit=False)
         hash_lines = request.POST.get('hash_list')
         hash_list = hash_lines.split()
         upload_tags = request.POST.get('upload_tags').split(", ")
+
         for h in hash_list:
             if len(h) == 32:
                 if Hash.objects.filter(md5=h).exists():
@@ -59,7 +60,9 @@ def upload(request):
                     hash_obj.save()
                 else:
                     hash_save.md5 = h
-                    hash_save.upload_tags = upload_tags
+                    hash_save.save()
+                    for tag in upload_tags:
+                        hash_save.upload_tags.add(tag)
                     hash_save.save()
 
             elif len(h) == 40:
@@ -70,7 +73,10 @@ def upload(request):
                     hash_obj.save()
                 else:
                     hash_save.sha1 = h
-                    hash_save.upload_tags = upload_tags
+                    hash_save.save()
+                    for tag in upload_tags:
+                        hash_save.upload_tags.add(tag)
+
                     hash_save.save()
 
             elif len(h) == 64:
@@ -81,7 +87,9 @@ def upload(request):
                     hash_obj.save()
                 else:
                     hash_save.sha256 = h
-                    hash_save.upload_tags = upload_tags
+                    hash_save.save()
+                    for tag in upload_tags:
+                        hash_save.upload_tags.add(tag)
                     hash_save.save()
     return render(request, 'z_lab_engine/upload.html', {'sample_tags': sample_tags_list})
 

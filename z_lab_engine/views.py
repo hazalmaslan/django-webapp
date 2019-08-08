@@ -50,7 +50,6 @@ def upload(request):
         hash_lines = request.POST.get('hash_list')
         hash_list = hash_lines.split()
         upload_tags = request.POST.get('upload_tags').split(", ")
-
         for h in hash_list:
             if len(h) == 32:
                 if Hash.objects.filter(md5=h).exists():
@@ -91,6 +90,9 @@ def upload(request):
                     for tag in upload_tags:
                         hash_save.upload_tags.add(tag)
                     hash_save.save()
+
+            files = request.FILES.get('file')
+            return render(request, 'z_lab_engine/detail.html', {'tag': files})
     return render(request, 'z_lab_engine/upload.html', {'sample_tags': sample_tags_list})
 
 # TODO: DO not forget to check for 2,3 input hashes

@@ -1,110 +1,93 @@
-{% extends 'z_lab_engine/base.html' %}
-{% block body %}
-        {% if error_message %}
-        <p><strong>{{ error_message }}</strong></p>
-        {% endif %}
-        <form class="contact100-form validate-form" role="form" action="" method="post">
-            {% csrf_token %}
-            <div class="column col-8 wrap-contact100">
+{% extends 'z_lab_engine/base.html' %} {% block body %} {% if error_message %}
+<p><strong>{{ error_message }}</strong></p>
+{% endif %}
 
-                <div class="row col-8">
-                    <div class="wrap-input100 validate-input bg1 rs1-wrap-input100 col-8">
-                        <span class="label-input100">MD5 / SHA1 / SHA256</span>
-                        <label for="hash_list"></label>
-                        <textarea class="input100" id="hash_list" placeholder="hash" name="hash_list"></textarea>
-                    </div>
+<form method="post" action="" class="contact100-form validate-form">
+    {% csrf_token %}
+    <div class="wrap-input100 validate-input bg1 rs1-wrap-input100 col-8 form-group">
+        <span class="label-input100">MD5 / SHA1 / SHA256</span>
+        <textarea id="hash_list" class="input100" placeholder="hash" name="hash_list"></textarea>
+    </div>
 
+    <div class="container col-md-12 col-xs-6 col-lg-12">
+        <div class="row">
+            <div class="col-3">
+                <article>Tags</article>
+                <div class="wrap-input100 validate-input bg0 form-group">
+                    <textarea id="tags-textbox" class="input100" placeholder="tags" name="upload_tags"></textarea>
                 </div>
-                <div class="container col-md-12 col-xs-6 col-lg-12">
-                <div class="row">
-                    <div class="col-3">
-                        <article>Tags</article>
-                        <div class="wrap-input100 validate-input bg0">
-                            <label for="tags-textbox"></label>
-                            <textarea class="input100" id="tags-textbox" name="upload_tags" placeholder="tags"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-3 ">
-                        <article>Action - VIRUSTOTAL</article>
-                        <label>
-                            <input type="checkbox" value="Download Sample">
-                        </label> Download Sample
-                        <br>
-                        <label>
-                            <input type="checkbox" value="Download Report">
-                        </label> Download Report
-                        <br>
-                        <label>
-                            <input type="checkbox" value="Download Network Traffic">
-                        </label> Download Network Traffic
-                        <br>
-                        <label>
-                            <input type="checkbox" value="Rescan">
-                        </label> Rescan
-                        <br>
-                    </div>
-                    <div class="col-3 ">
-                        <article>Action - ANALYSIS</article>
-                        <label>
-                            <input type="checkbox" value="Cuckoo Sandbox">
-                        </label> Cuckoo Sandbox
-                        <br>
-                    </div>
-                    <div class="col-2">
-                        <button type="submit" class="contact50-form-btn" style="background-color: orange">
-                            <span>Upload Files<i class="fa fa-long-arrow-up" aria-hidden="true"></i></span>
-                        </button>
-                        <br>
-                        <button type="reset" class="contact50-form-btn" style="background-color: gray">
-                            <span>Clear<i class="fa fa-long-arrow-up" aria-hidden="true"></i></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="col-3 ">
-                    {% for tag in sample_tags %}
-                    <label>
-                        <input type="checkbox" name="tags" value="{{ tag }}" onchange="printOnTagsTextBox()">
-                    </label>{{ tag }}
-                    <br> {% endfor %}
-                </div>
-                            <div class="container-contact100-form-btn">
-                <button class="contact100-form-btn" style="background-color: gray">
-                    <span>
+            </div>
+            <div class="col-3 ">
+                <article>Action - VIRUSTOTAL</article>
+                <input type="checkbox" value="Download Sample"> Download Sample
+                <br>
+                <input type="checkbox" value="Download Report"> Download Report
+                <br>
+                <input type="checkbox" value="Download Network Traffic"> Download Network Traffic
+                <br>
+                <input type="checkbox" value="Rescan"> Rescan
+                <br>
+            </div>
+            <div class="col-3 ">
+                <article>Action - ANALYSIS</article>
+                <input type="checkbox" value="Cuckoo Sandbox"> Cuckoo Sandbox
+                <br>
+            </div>
+        </div>
+        <div class="col-3 ">
+            {% for tag in sample_tags %}
+                <input type="checkbox" name="tags" value="{{ tag }}" onchange="printOnTagsTextBox()"> {{ tag }} <br>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container-contact100-form-btn">
+        <button type="reset" class="contact100-form-btn" style="background-color: gray">
+            <span>
                     Clear
                     <i aria-hidden="true"></i>
                 </span>
-                </button>
-                <button class="contact100-form-btn btn btn-success" style="background-color: cadetblue">
-                    <span>
+        </button>
+        <button type="submit" class="contact100-form-btn" style="background-color: cadetblue">
+            <span>
                     Submit
                     <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
                 </span>
-                </button>
-            </div>
-            </div>
-            </div>
-        </form>
-        <!---------------------------------------------------->
-
-
-        <form>
-         <div class="column col-3">
-
-            <div class="wrap-input100 validate-input bg1 rs1-wrap-input100 col-3" id="file-upload-div">
-                <form action="" class="dropzone">
-                    <div class="form-group">
-                        <div class="fallback">
-                            <input name="file" type="file" multiple height="100px"/>
-                        </div>
-
-                    </div>
-
-                </form>
-
+        </button>
+    </div>
+</form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<form action="" class="dropzone" method="post">
+    {% csrf_token %}
+    <h1>File Upload</h1>
+        <div class="form-group col-6">
+            <div class="fallback wrap-input100 validate-input bg1">
+                <input id="file" name="file" type="file" class="input100" multiple/>
             </div>
 
         </div>
-    </form>
+        <div class="col-3 form-group col-2">
+            <button type="submit" class="contact50-form-btn" style="background-color: orange">
+                <span>
+            Upload Files
+            <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+            </span>
+            </button>
+            <br>
+            <button type="reset" class="contact50-form-btn" style="background-color: gray">
+                <span>
+            delete
+            <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+            </span>
+            </button>
+            <br>
+        </div>
+
+</form>
+
 {% block content %}
 <script type="text/javascript">
     function remove(arr, value) {
@@ -139,6 +122,4 @@
         tagBox.value = text;
     }
 </script>
-{% endblock %}
-
-{% endblock%}
+{% endblock %} {% endblock %}

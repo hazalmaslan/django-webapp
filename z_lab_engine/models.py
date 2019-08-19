@@ -1,8 +1,7 @@
 from django.db import models
 from taggit.managers import TaggableManager
 from taggit.models import Tag
-from django.core.validators import MinLengthValidator, MaxLengthValidator
-import taggit_templatetags2
+from django.core.validators import MinLengthValidator
 
 '''
     TODO: Learn how to filter those values when storing to database
@@ -50,3 +49,8 @@ class SearchTag(models.Model):
     def __str__(self):
         string = 'Tag Name: '+self.tags + '\n' + 'count:'+str(self.count)
         return string
+
+
+class Document(models.Model):
+    files = models.FileField(upload_to="files/")
+    hashes = models.ForeignKey(Hash, on_delete=models.CASCADE)

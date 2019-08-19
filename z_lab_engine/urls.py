@@ -6,9 +6,6 @@ urlpatterns = [
     # /
     path('', views.dashboard, name='dashboard'),
 
-    # /search/
-    path('search/', views.search, name='search'),
-
     # /update/
     path('upload/', views.upload, name='upload'),
 

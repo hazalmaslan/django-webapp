@@ -8,23 +8,6 @@ from .forms import UserForm, SearchTagForm, HashForm
 from taggit.models import Tag
 
 
-@login_required(login_url='/login/')
-def search(request):
-    form = SearchTagForm(request.POST or None)
-    if form.is_valid():
-        search_tag = form.save(commit=False)
-        search_tag.tags = request.POST('input')
-        if search_tag in SearchTag.objects.get_queryset():
-            SearchTag.objects.get(search_tag).count += 1
-
-        search_tag.save()
-        return render(request, 'z_lab_engine/detail.html', {'tag': search_tag})
-    context = {
-        "form": form,
-    }
-    return render(request, 'z_lab_engine/search_in_virustotal.html', context)
-
-
 def dashboard(request):
     data = Hash.objects.get_queryset()
     count = Hash.objects.count()

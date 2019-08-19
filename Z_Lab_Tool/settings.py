@@ -129,4 +129,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'z_lab_engine/static'),
+)
+
 LOGIN_REDIRECT_URL = ''
+
+MEDIA_URL = '/files/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'files')

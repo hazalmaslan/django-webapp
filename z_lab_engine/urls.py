@@ -6,7 +6,7 @@ urlpatterns = [
     # /
     path('', views.dashboard, name='dashboard'),
 
-    # /update/
+    # /upload/
     path('upload/', views.upload, name='upload'),
 
     # /virus_total_search/
@@ -23,5 +23,9 @@ urlpatterns = [
 
     # /detail/
     path('detail/', views.detail, name='detail'),
+
+    # /upload_files/
+    path('upload_files/', views.BasicUploadView.as_view(), name='upload_files'),
+
 ]
 

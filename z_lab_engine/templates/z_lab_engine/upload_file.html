@@ -1,0 +1,39 @@
+{% include 'z_lab_engine/base.html' %}
+
+{% block javascript %}
+    {% load staticfiles %}
+  {# JQUERY FILE UPLOAD SCRIPTS #}
+  <script src="{% static 'z_lab_engine/vendor/jquery-file-upload/jquery.fileupload.js' %}"></script>
+  <script src="{% static 'z_lab_engine/vendor/jquery-file-upload/jquery.iframe-transport.js' %}"></script>
+  <script src="{% static 'z_lab_engine/vendor/jquery-file-upload/vendor/jquery.ui.widget.js' %}"></script>
+
+  {# FILES PAGE SCRIPTS #}
+  <script src="{% static 'z_lab_engine/js/drag-and-drop-upload.js' %}"></script>
+{% endblock %}
+
+
+{% block body %}
+    <div class="well text-muted text-center" style="padding-top: 4rem; padding-bottom: 4rem;">
+        <span class="glyphicon glyphicon-arrow-down" style="font-size: 4rem;"></span>
+        <h3>Drop Files Here to Upload</h3>
+      </div>
+
+    <input id="fileupload" type="file" name="file" multiple
+         style="display: none;"
+         data-url="{% url 'upload_files' %}"
+         data-form-data='{"csrfmiddlewaretoken": "{{ csrf_token }}"}'>
+      <table id="gallery" class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Files</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for file in files %}
+        <tr>
+          <td><a href="{{ file.file.url }}">{{ file.file.name }}</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

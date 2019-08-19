@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="574a96d0-4245-420a-ab8e-6ea79e387520" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/z_lab_engine/migrations/0009_document.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/z_lab_engine/migrations/0010_auto_20190819_1414.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/js/drag-and-drop-upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/vendor/jquery-file-upload/jquery.fileupload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/vendor/jquery-file-upload/jquery.iframe-transport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/vendor/jquery-file-upload/vendor/jquery.ui.widget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/upload_file.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c06d9319-93f3-48ff-a830-ace0300bab47.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c06d9319-93f3-48ff-a830-ace0300bab47.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Z_Lab_Tool/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Z_Lab_Tool/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/z_lab_engine/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/base_visitor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/z_lab_engine/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/z_lab_engine/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/views.py" afterDir="false" />
     </list>
@@ -77,8 +85,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -95,25 +103,25 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/vendor/dropzone" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/vendor" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/vendor" />
+      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/vendor/jquery" />
+      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/vendor/dropzone" />
+      <recent name="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine" />
+      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/js" />
       <recent name="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine" />
       <recent name="$PROJECT_DIR$/templates/registration" />
       <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images" />
       <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/css" />
-      <recent name="$PROJECT_DIR$/z_lab_engine/static" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/vendor/dropzone" />
-      <recent name="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine" />
-      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine/images" />
-      <recent name="$PROJECT_DIR$/z_lab_engine/static/z_lab_engine" />
-      <recent name="$PROJECT_DIR$/z_lab_engine/templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -181,7 +189,8 @@
       <workItem from="1564640126799" duration="17858000" />
       <workItem from="1564986596800" duration="18559000" />
       <workItem from="1565072472700" duration="27685000" />
-      <workItem from="1566196480504" duration="6561000" />
+      <workItem from="1566196480504" duration="7170000" />
+      <workItem from="1566213023147" duration="4677000" />
     </task>
     <servers />
   </component>

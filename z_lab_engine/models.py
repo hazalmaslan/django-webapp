@@ -51,6 +51,8 @@ class SearchTag(models.Model):
         return string
 
 
-class Document(models.Model):
-    files = models.FileField(upload_to="files/")
+class File(models.Model):
+    file = models.FileField(upload_to="files/")
     hashes = models.ForeignKey(Hash, on_delete=models.CASCADE)
+    title = models.CharField(max_length=255, blank=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True)

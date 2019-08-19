@@ -1,11 +1,28 @@
 from django.contrib.auth.decorators import login_required
-from django.db.models import QuerySet
-from django.shortcuts import render, get_object_or_404
-from django.views.generic import CreateView
-from .models import Hash, SearchTag
+from django.shortcuts import render
+from .models import Hash, SearchTag, File
 from django.contrib.auth import login, logout, authenticate
-from .forms import UserForm, SearchTagForm, HashForm
+from .forms import UserForm, SearchTagForm, HashForm, FileForm
 from taggit.models import Tag
+import time
+from django.shortcuts import redirect
+from django.http import JsonResponse
+from django.views import View
+
+
+class BasicUploadView(View):
+    def get(self, request):
+        file_list = File.objects.all()
+        return render(self.request, 'z_lab_engine/upload_file.html', {'files': file_list})
+
+    def post(self, request):
+        form = FileForm(self.request.POST, self.request.FILES)
+        if form.is_valid():
+            file = form.save()
+            data = {'is_valid': True, 'name': file.file.name, 'url': file.file.url}
+        else:
+            data = {'is_valid': False}
+        return JsonResponse(data)
 
 
 def dashboard(request):

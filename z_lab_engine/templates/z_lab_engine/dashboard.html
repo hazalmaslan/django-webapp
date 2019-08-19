@@ -40,15 +40,15 @@
                     <table style="width:100%">
                         <tr>
                             <th></th>
-                            <th>Malware</th>
-                            <th>Benign</th>
-                            <th>Not Scanned</th>
+                            <th>{{status.0}}</th>
+                            <th>{{status.1}}</th>
+                            <th>{{status.2}}</th>
                         </tr>
                         <tr>
                             <td>Total Number</td>
-                            <td>234234</td>
-                            <td>50</td>
-                            <td>54564560</td>
+                            <td>{{ stat_num.0 }}</td>
+                            <td>{{ stat_num.1 }}</td>
+                            <td>{{ stat_num.2 }}</td>
                         </tr>
                         <tr>
                             <td>This Week</td>
@@ -93,14 +93,14 @@
         var chart = am4core.create("chartdiv", am4charts.PieChart);
         // Add data
         chart.data = [{
-            "status": "Malware",
-            "percentage": {{ count }}
+            "status": "{{ status.0 }}",
+            "percentage": {{ stat_num.0 }}
         }, {
-            "status": "Not Scanned",
-            "percentage": 301.9
+            "status": "{{ status.1 }}",
+            "percentage": {{ stat_num.1 }}
         }, {
-            "status": "Benign",
-            "percentage": 201.1
+            "status": "{{ status.2 }}",
+            "percentage": {{ stat_num.2 }}
         }];
 
         // Add and configure Series

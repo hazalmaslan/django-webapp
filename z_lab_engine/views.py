@@ -29,19 +29,37 @@ def dashboard(request):
     data = Hash.objects.get_queryset()
     count = Hash.objects.count()
     d = dict()
+    status = dict()
+    status["Malware"] = 0
+    status["Benign"] = 0
+    status["Not Scanned"] = 0
     for h in data:
+        stat = 0
         for tag in h.get_tags():
             if tag in d:
                 d[tag] += 1
             else:
                 d[tag] = 1
 
+            if tag.lower() == "malware":
+                stat = 1
+            elif tag.lower() == "benign":
+                stat = -1
+
+        if stat == 1:
+            status["Malware"] += 1
+        elif stat == -1:
+            status["Benign"] += 1
+        else:
+            status["Not Scanned"] += 1
+
     sorted(d.values(), reverse=False)
 
     return render(request, 'z_lab_engine/dashboard.html', {'data': data,
-                                                           'count': count,
                                                            'tags': list(d),
-                                                           'values': list(d.values())})
+                                                           'values': list(d.values()),
+                                                           'status': list(status),
+                                                           'stat_num': list(status.values())})
 
 
 @login_required(login_url='/login/')
@@ -95,18 +113,6 @@ def upload(request):
                     hash_save.save()
             return render(request, 'z_lab_engine/detail.html', {'tag': hash_list})
     return render(request, 'z_lab_engine/upload.html', {'sample_tags': sample_tags_list})
-
-
-
-class HashCreateView(CreateView):
-    model = Hash
-    fields = ('md5', 'sha1', 'sha256', 'update_tags')
-
-
-class SearchTagCreateView(CreateView):
-    model = SearchTag
-    fields = ('tags', 'count')
-
 
 def detail(request, tagname):
 

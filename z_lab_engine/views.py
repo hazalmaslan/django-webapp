@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.db.models import QuerySet
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import CreateView
@@ -7,6 +8,7 @@ from .forms import UserForm, SearchTagForm, HashForm
 from taggit.models import Tag
 
 
+@login_required(login_url='/login/')
 def search(request):
     form = SearchTagForm(request.POST or None)
     if form.is_valid():
@@ -42,13 +44,14 @@ def dashboard(request):
                                                            'values': list(d.values())})
 
 
+@login_required(login_url='/login/')
 def upload(request):
     sample_tags_list = Tag.objects.get_queryset()[:5]
     form = HashForm(request.POST or None)
     if form.is_valid():
         hash_save = form.save(commit=False)
         hash_lines = request.POST.get('hash_list')
-        hash_list = hash_lines.split()
+        hash_list = hash_lines.splitlines()
         upload_tags = request.POST.get('upload_tags').split(", ")
         for h in hash_list:
             if len(h) == 32:
@@ -90,12 +93,10 @@ def upload(request):
                     for tag in upload_tags:
                         hash_save.upload_tags.add(tag)
                     hash_save.save()
-
-            files = request.FILES.get('file')
-            return render(request, 'z_lab_engine/detail.html', {'tag': files})
+            return render(request, 'z_lab_engine/detail.html', {'tag': hash_list})
     return render(request, 'z_lab_engine/upload.html', {'sample_tags': sample_tags_list})
 
-# TODO: DO not forget to check for 2,3 input hashes
+
 
 class HashCreateView(CreateView):
     model = Hash
@@ -156,6 +157,7 @@ def register(request):
     return render(request, 'z_lab_engine/register.html', context)
 
 
+@login_required(login_url='/login/')
 def virus_search(request):
 
     form = SearchTagForm(request.POST or None)

@@ -55,38 +55,7 @@
         </button>
     </div>
 </form>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-<form action="" class="dropzone" method="post">
-    {% csrf_token %}
-    <h1>File Upload</h1>
-        <div class="form-group col-6">
-            <div class="fallback wrap-input100 validate-input bg1">
-                <input id="file" name="file" type="file" class="input100" multiple/>
-            </div>
 
-        </div>
-        <div class="col-3 form-group col-2">
-            <button type="submit" class="contact50-form-btn" style="background-color: orange">
-                <span>
-            Upload Files
-            <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
-            </span>
-            </button>
-            <br>
-            <button type="reset" class="contact50-form-btn" style="background-color: gray">
-                <span>
-            delete
-            <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
-            </span>
-            </button>
-            <br>
-        </div>
-
-</form>
 
 {% block content %}
 <script type="text/javascript">

@@ -16,19 +16,19 @@
       <ObjectId>16583</ObjectId>
       <Owner>postgres</Owner>
       <IntrospectionStateNumber>1206</IntrospectionStateNumber>
-      <Relations>sequence|table|16773|16775|1
-sequence|table|16785|16787|1
-sequence|table|16754|16756|1
-sequence|table|16762|16764|1
-sequence|table|16710|16712|1
-sequence|table|16642|16644|1
+      <Relations>sequence|table|16642|16644|1
 sequence|table|16650|16652|1
 sequence|table|16614|16616|1
 sequence|table|16624|16626|1
 sequence|table|16632|16634|1
+sequence|table|16606|16608|1
 sequence|table|16585|16587|1
 sequence|table|16596|16598|1
-sequence|table|16606|16608|1
+sequence|table|16773|16775|1
+sequence|table|16785|16787|1
+sequence|table|16754|16756|1
+sequence|table|16762|16764|1
+sequence|table|16710|16712|1
 </Relations>
       <Visible>1</Visible>
     </database>

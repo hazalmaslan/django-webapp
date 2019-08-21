@@ -62,7 +62,6 @@ def dashboard(request):
                                                            'stat_num': list(status.values())})
 
 
-@login_required(login_url='/login/')
 def upload(request):
     sample_tags_list = Tag.objects.get_queryset()[:5]
     form = HashForm(request.POST or None)
@@ -163,7 +162,6 @@ def register(request):
     return render(request, 'z_lab_engine/register.html', context)
 
 
-@login_required(login_url='/login/')
 def virus_search(request):
 
     form = SearchTagForm(request.POST or None)

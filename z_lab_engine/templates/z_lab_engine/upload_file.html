@@ -1,5 +1,5 @@
 {% extends 'z_lab_engine/base.html' %} {% block body %}
-<form method="post" action="{% url 'clear_database' %}">
+        <form method="post" action="{% url 'clear_database' %}">
     {% csrf_token %}
     <input type="hidden" name="next" value="{{ request.path }}">
     <button type="submit" class="btn btn-danger pull-right">
@@ -43,4 +43,5 @@
 
     </div>
 </div>
+
 {% endblock %}

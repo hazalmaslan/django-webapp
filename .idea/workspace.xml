@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="574a96d0-4245-420a-ab8e-6ea79e387520" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/files/files/deneme.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/upload.html" afterDir="false" />
-    </list>
+    <list default="true" id="574a96d0-4245-420a-ab8e-6ea79e387520" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +177,7 @@
       <workItem from="1566196480504" duration="7170000" />
       <workItem from="1566213023147" duration="5080000" />
       <workItem from="1566301703834" duration="6166000" />
-      <workItem from="1566376443059" duration="625000" />
+      <workItem from="1566376443059" duration="957000" />
     </task>
     <servers />
   </component>

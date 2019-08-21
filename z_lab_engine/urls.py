@@ -27,5 +27,7 @@ urlpatterns = [
     # /upload_files/
     path('upload_files/', views.BasicUploadView.as_view(), name='upload_files'),
 
+    # /clear/
+    path('clear/', views.clear_database, name='clear_database'),
 ]
 

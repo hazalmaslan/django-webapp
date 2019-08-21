@@ -16,7 +16,7 @@ class BasicUploadView(View):
         return render(self.request, 'z_lab_engine/upload_file.html', {'files': file_list})
 
     def post(self, request):
-        form = FileForm(self.request.POST, self.request.FILES)
+        form = FileForm(self.request.POST or None, self.request.FILES or None)
         if form.is_valid():
             file = form.save()
             data = {'is_valid': True, 'name': file.file.name, 'url': file.file.url}
@@ -204,3 +204,10 @@ def virus_search(request):
         "sorted": li2,
     }
     return render(request, 'z_lab_engine/search_in_virustotal.html', context)
+
+
+def clear_database(request):
+    for file in File.objects.all():
+        file.file.delete()
+        file.delete()
+    return redirect(request.POST.get('next'))

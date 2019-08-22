@@ -30,7 +30,7 @@ class BasicUploadView(View):
             file_hash.save()
             file.file.name = helpers.sha256(file.file.name)
             file.save()
-
+            api.file_scan(file)
             data = {'is_valid': True, 'name': file.file.name, 'url': file.file.url}
         else:
             data = {'is_valid': False}
@@ -82,7 +82,18 @@ def upload(request):
         hash_lines = request.POST.get('hash_list')
         hash_list = hash_lines.splitlines()
         upload_tags = request.POST.get('upload_tags').split(", ")
-        checked_values = request.POST.get('1')
+        checked_values = request.POST.get('action_box')
+        if len(checked_values > 0):
+            checked_values = checked_values.split(", ")
+        if "1" in checked_values:
+            map(api.file_download_sample, hash_list)
+        if "2" in checked_values:
+            map(api.file_report, hash_list)
+        if "3" in checked_values:
+            map(api.file_network_traffic, hash_list)
+        if "4" in checked_values:
+            map(api.file_rescan, hash_list)
+
         for h in hash_list:
             if len(h) == 32:
                 if Hash.objects.filter(md5=h).exists():
@@ -123,7 +134,10 @@ def upload(request):
                     for tag in upload_tags:
                         hash_save.upload_tags.add(tag)
                     hash_save.save()
-            return render(request, 'z_lab_engine/detail_hash.html', {'tag': checked_values})
+        return render(request, 'z_lab_engine/detail_hash.html', {'tag': hash_save})
+
+
+
     return render(request, 'z_lab_engine/upload.html', {'sample_tags': sample_tags_list})
 
 def detail(request, tagname):
@@ -191,6 +205,8 @@ def virus_search(request):
         else:
             search_tag.tags = tag
             search_tag.save()
+
+        api.file_search(search_tag)
         return render(request, 'z_lab_engine/detail.html', {'tag': search_tag})
     liste = SearchTag.objects.get_queryset()
     search_tag_dict = dict()

@@ -17,16 +17,17 @@
                     <textarea id="tags-textbox" class="input100" placeholder="tags" name="upload_tags"></textarea>
                 </div>
             </div>
-            <div class="col-3 ">
+            <div class="col-3 form-group">
                 <article>Action - VIRUSTOTAL</article>
-                <input type="checkbox" value="download_sample" name="1"> Download Sample
+                <input type="checkbox" value="1" name="checks" onchange="printOnActionBox()"> Download Sample
                 <br>
-                <input type="checkbox" value="download_report" name="2"> Download Report
+                <input type="checkbox" value="2" name="checks" onchange="printOnActionBox()"> Download Report
                 <br>
-                <input type="checkbox" value="download_network_traffic" name="3"> Download Network Traffic
+                <input type="checkbox" value="3" name="checks" onchange="printOnActionBox()"> Download Network Traffic
                 <br>
-                <input type="checkbox" value="rescan" name="4"> Rescan
+                <input type="checkbox" value="4" name="checks" onchange="printOnActionBox()"> Rescan
                 <br>
+                <textarea id="action-box" name="action_box"></textarea>
             </div>
             <div class="col-3 ">
                 <article>Action - ANALYSIS</article>
@@ -54,9 +55,6 @@
                 </span>
         </button>
     </div>
-</form>
-
-
 {% block content %}
 <script type="text/javascript">
     function remove(arr, value) {
@@ -86,13 +84,37 @@
 
     function printOnTagsTextBox() {
         var text = getTags();
-
         var tagBox = document.getElementById("tags-textbox");
         tagBox.value = text;
     }
 
-    function
+    function getCheckedActionBoxes(){
+        var arr = [];
+        document.getElementsByName("checks").forEach(function(element) {
+            if (element.checked) {
+                arr.push(element.value);
+                console.log(arr);
+            } else {
+                remove(arr, element.value);
+            }
+        });
+        var text = "";
+        for (var index = 0; index < arr.length - 1; index++) {
+            text += arr[index] + ", ";
+            console.log(text);
+        }
+        text += arr[arr.length - 1];
+        return text;
+    }
+
+    function printOnActionBox(){
+        document.getElementById("action-box").value = getCheckedActionBoxes();
+    }
 </script>
 {% endblock %}
+</form>
+
+
+
 
 {% endblock %}

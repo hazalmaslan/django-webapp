@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="574a96d0-4245-420a-ab8e-6ea79e387520" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/z_lab_engine/utils/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/upload.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/z_lab_engine/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/views.py" afterDir="false" />
     </list>
@@ -184,7 +182,7 @@
       <workItem from="1566213023147" duration="5080000" />
       <workItem from="1566301703834" duration="6166000" />
       <workItem from="1566376443059" duration="957000" />
-      <workItem from="1566394991516" duration="17096000" />
+      <workItem from="1566394991516" duration="19941000" />
     </task>
     <servers />
   </component>

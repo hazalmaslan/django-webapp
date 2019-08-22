@@ -2,6 +2,7 @@ from django.db import models
 from taggit.managers import TaggableManager
 from taggit.models import Tag
 from django.core.validators import MinLengthValidator
+from .utils import helpers
 
 '''
     TODO: Learn how to filter those values when storing to database
@@ -51,7 +52,17 @@ class SearchTag(models.Model):
         return string
 
 
+def get_upload_path(instance, filename):
+    text_hash = filename[:4]
+    path = text_hash + "/" + text_hash[1:4] + "/" + text_hash[2:4] + "/" + text_hash[3] + "/" + filename + "/"
+    return path
+
+
 class File(models.Model):
-    file = models.FileField(upload_to="files/")
+    file = models.FileField(upload_to=get_upload_path)
     title = models.CharField(max_length=255, blank=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
+
+
+
+

@@ -9,18 +9,19 @@
 <div class="row">
     <div class="col-md-9">
 
-        {% load static %} {% block title %}Drag and Drop Upload{% endblock %} {% block javascript %} {# JQUERY FILE UPLOAD SCRIPTS #}
+        {% load static %} {% block title %}Drag and Drop Upload{% endblock %} {% block javascript %}
+        {# JQUERY FILE UPLOAD SCRIPTS #}
         <script src="{% static 'z_lab_engine/vendor/jquery-file-upload/vendor/jquery.ui.widget.js' %}"></script>
         <script src="{% static 'z_lab_engine/vendor/jquery-file-upload/jquery.iframe-transport.js' %}"></script>
         <script src="{% static 'z_lab_engine/vendor/jquery-file-upload/jquery.fileupload.js' %}"></script>
 
-        {# PHOTOS PAGE SCRIPTS #}
+        {# FILES PAGE SCRIPTS #}
         <script src="{% static 'z_lab_engine/js/drag-and-drop-upload.js' %}"></script>
         {% endblock %}
 
         <div class="well text-muted text-center" style="padding-top: 4rem; padding-bottom: 4rem;">
             <span class="glyphicon glyphicon-arrow-down" style="font-size: 4rem;"></span>
-            <h3>Drop Photos Here to Upload</h3>
+            <h3>Drop Files Here to Upload</h3>
         </div>
 
         <input id="fileupload" type="file" name="file" multiple style="display: none;" data-url="{% url 'upload_files' %}" data-form-data='{"csrfmiddlewaretoken": "{{ csrf_token }}"}'>

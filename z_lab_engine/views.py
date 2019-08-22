@@ -8,6 +8,8 @@ import time
 from django.shortcuts import redirect
 from django.http import JsonResponse
 from django.views import View
+from .utils import helpers
+import os
 
 
 class BasicUploadView(View):
@@ -18,7 +20,9 @@ class BasicUploadView(View):
     def post(self, request):
         form = FileForm(self.request.POST or None, self.request.FILES or None)
         if form.is_valid():
-            file = form.save()
+            file = form.save(commit=False)
+            file.file.name = helpers.sha256(file.file.name)
+            file.save()
             data = {'is_valid': True, 'name': file.file.name, 'url': file.file.url}
         else:
             data = {'is_valid': False}
@@ -110,7 +114,7 @@ def upload(request):
                     for tag in upload_tags:
                         hash_save.upload_tags.add(tag)
                     hash_save.save()
-            return render(request, 'z_lab_engine/detail.html', {'tag': hash_list})
+            return render(request, 'z_lab_engine/detail_hash.html', {'tag': hash_list})
     return render(request, 'z_lab_engine/upload.html', {'sample_tags': sample_tags_list})
 
 def detail(request, tagname):

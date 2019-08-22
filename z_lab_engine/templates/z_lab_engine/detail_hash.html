@@ -1,0 +1,8 @@
+{% extends 'z_lab_engine/base.html' %}
+
+{% block body %}
+    <h1>{{ tag }}</h1>
+    <div class="panel-footer">
+        To go back to hash upload page <a href="{% url 'upload' %}">Click here</a>.
+    </div>
+{% endblock %}

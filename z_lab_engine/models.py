@@ -54,7 +54,7 @@ class SearchTag(models.Model):
 
 def get_upload_path(instance, filename):
     text_hash = filename[:4]
-    path = text_hash + "/" + text_hash[1:4] + "/" + text_hash[2:4] + "/" + text_hash[3] + "/" + filename + "/"
+    path = text_hash[0] + "/" + text_hash[1] + "/" + text_hash[2] + "/" + text_hash[3] + "/" + filename + "/"
     return path
 
 

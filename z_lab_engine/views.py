@@ -9,20 +9,28 @@ from django.shortcuts import redirect
 from django.http import JsonResponse
 from django.views import View
 from .utils import helpers
-import os
 
 
 class BasicUploadView(View):
+
     def get(self, request):
-        file_list = File.objects.all()
-        return render(self.request, 'z_lab_engine/upload_file.html', {'files': file_list})
+        file_list = File.objects.get_queryset()[:10]
+        sample_tags_list = Tag.objects.get_queryset()[:5]
+        return render(self.request, 'z_lab_engine/upload_file.html', {'files': file_list,})
 
     def post(self, request):
         form = FileForm(self.request.POST or None, self.request.FILES or None)
         if form.is_valid():
             file = form.save(commit=False)
+            file_hash = Hash()
+            file_hash.sha256 = helpers.sha256(file.file.name)
+            file_hash.sha1 = helpers.sha1(file.file.name)
+            file_hash.md5 = helpers.md5(file.file.name)
+            check_if_hash_exists(file_hash)
+            file_hash.save()
             file.file.name = helpers.sha256(file.file.name)
             file.save()
+
             data = {'is_valid': True, 'name': file.file.name, 'url': file.file.url}
         else:
             data = {'is_valid': False}
@@ -213,3 +221,25 @@ def clear_database(request):
         file.file.delete()
         file.delete()
     return redirect(request.POST.get('next'))
+
+
+def check_if_hash_exists(hash_name):
+    all_hash_objects = Hash.objects.get_queryset()
+    for h in all_hash_objects:
+        upload_tags = Tag.objects.filter(id=h.id)
+        if h.sha256 == hash_name.sha256:
+            for tag in upload_tags:
+                hash_name.upload_tags.add(tag)
+            h.delete()
+            return True
+        if h.md5 == hash_name.md5:
+            for tag in upload_tags:
+                hash_name.upload_tags.add(tag)
+            h.delete()
+            return True
+        if h.sha1 == hash_name.sha1:
+            for tag in upload_tags:
+                hash_name.upload_tags.add(tag)
+            h.delete()
+            return True
+    return False

@@ -24,8 +24,12 @@
             <h3>Drop Files Here to Upload</h3>
         </div>
 
-        <input id="fileupload" type="file" name="file" multiple style="display: none;" data-url="{% url 'upload_files' %}" data-form-data='{"csrfmiddlewaretoken": "{{ csrf_token }}"}'>
+        <input id="fileupload" type="file" name="file"
+               multiple style="display: none;"
+               data-url="{% url 'upload_files' %}"
+               data-form-data='{"csrfmiddlewaretoken": "{{ csrf_token }}"}'>
 
+    </div>
         <table id="gallery" class="table table-bordered">
             <thead>
                 <tr>
@@ -41,8 +45,39 @@
                 {% endfor %}
             </tbody>
         </table>
-
-    </div>
 </div>
 
+
+    {% block content %}
+<script type="text/javascript">
+    function remove(arr, value) {
+        return arr.filter(function(ele) {
+            return ele !== value;
+        });
+    }
+
+    function getTags() {
+        var arr = [];
+        document.getElementsByName("tags").forEach(function(element) {
+            if (element.checked) {
+                arr.push(element.value);
+                console.log(arr);
+            } else {
+                remove(arr, element.value);
+            }
+        });
+        var text = "";
+        for (var index = 0; index < arr.length - 1; index++) {
+            text += arr[index] + ", ";
+            console.log(text);
+        }
+        text += arr[arr.length - 1];
+        return text;
+    }
+
+    function printOnTagsTextBox() {
+        document.getElementById("tags-textbox-file").value = getTags();
+    }
+</script>
+{% endblock %}
 {% endblock %}

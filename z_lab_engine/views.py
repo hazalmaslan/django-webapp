@@ -8,7 +8,7 @@ import time
 from django.shortcuts import redirect
 from django.http import JsonResponse
 from django.views import View
-from .utils import helpers
+from .utils import helpers, api
 
 
 class BasicUploadView(View):
@@ -82,6 +82,7 @@ def upload(request):
         hash_lines = request.POST.get('hash_list')
         hash_list = hash_lines.splitlines()
         upload_tags = request.POST.get('upload_tags').split(", ")
+        checked_values = request.POST.get('1')
         for h in hash_list:
             if len(h) == 32:
                 if Hash.objects.filter(md5=h).exists():
@@ -122,7 +123,7 @@ def upload(request):
                     for tag in upload_tags:
                         hash_save.upload_tags.add(tag)
                     hash_save.save()
-            return render(request, 'z_lab_engine/detail_hash.html', {'tag': hash_list})
+            return render(request, 'z_lab_engine/detail_hash.html', {'tag': checked_values})
     return render(request, 'z_lab_engine/upload.html', {'sample_tags': sample_tags_list})
 
 def detail(request, tagname):

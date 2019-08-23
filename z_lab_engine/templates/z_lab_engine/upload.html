@@ -27,7 +27,7 @@
                 <br>
                 <input type="checkbox" value="4" name="checks" onchange="printOnActionBox()"> Rescan
                 <br>
-                <textarea id="action-box" name="action_box"></textarea>
+                <textarea id="action-box" name="action_box" style="color: white"></textarea>
             </div>
             <div class="col-3 ">
                 <article>Action - ANALYSIS</article>
@@ -64,7 +64,7 @@
     }
 
     function getTags() {
-        var arr = [];
+        var arr = ["",];
         document.getElementsByName("tags").forEach(function(element) {
             if (element.checked) {
                 arr.push(element.value);
@@ -74,7 +74,7 @@
             }
         });
         var text = "";
-        for (var index = 0; index < arr.length - 1; index++) {
+        for (var index = 1; index < arr.length - 1; index++) {
             text += arr[index] + ", ";
             console.log(text);
         }
@@ -89,7 +89,7 @@
     }
 
     function getCheckedActionBoxes(){
-        var arr = [];
+        var arr = ["",];
         document.getElementsByName("checks").forEach(function(element) {
             if (element.checked) {
                 arr.push(element.value);
@@ -99,7 +99,7 @@
             }
         });
         var text = "";
-        for (var index = 0; index < arr.length - 1; index++) {
+        for (var index = 1; index < arr.length - 1; index++) {
             text += arr[index] + ", ";
             console.log(text);
         }

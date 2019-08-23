@@ -29,5 +29,8 @@ urlpatterns = [
 
     # /clear/
     path('clear/', views.clear_database, name='clear_database'),
+
+    # /file_scan/
+    path('file_scan/', views.file_scan, name='file_scan'),
 ]
 

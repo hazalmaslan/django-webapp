@@ -1,16 +1,16 @@
-{% extends 'z_lab_engine/base.html' %} {% block body %}
-        <form method="post" action="{% url 'clear_database' %}">
-    {% csrf_token %}
-    <input type="hidden" name="next" value="{{ request.path }}">
-    <button type="submit" class="btn btn-danger pull-right">
-        <span class="glyphicon glyphicon-trash"></span> Clear Database
-    </button>
-</form>
-<div class="row">
+{% extends 'z_lab_engine/base.html' %}
+{% block title %}File Upload{% endblock %}
+{% block body %}
+    <h1 style="text-align: center">Drag and Drop Files</h1>
+
+
+
+<div class="row" style="margin-left: auto;">
     <div class="col-md-9">
 
-        {% load static %} {% block title %}Drag and Drop Upload{% endblock %} {% block javascript %}
-        {# JQUERY FILE UPLOAD SCRIPTS #}
+        {% load static %}
+        {% block javascript %}
+            {# JQUERY FILE UPLOAD SCRIPTS #}
         <script src="{% static 'z_lab_engine/vendor/jquery-file-upload/vendor/jquery.ui.widget.js' %}"></script>
         <script src="{% static 'z_lab_engine/vendor/jquery-file-upload/jquery.iframe-transport.js' %}"></script>
         <script src="{% static 'z_lab_engine/vendor/jquery-file-upload/jquery.fileupload.js' %}"></script>
@@ -24,60 +24,47 @@
             <h3>Drop Files Here to Upload</h3>
         </div>
 
-        <input id="fileupload" type="file" name="file"
-               multiple style="display: none;"
-               data-url="{% url 'upload_files' %}"
-               data-form-data='{"csrfmiddlewaretoken": "{{ csrf_token }}"}'>
+        <input id="fileupload" type="file" name="file" multiple style="display: none;" data-url="{% url 'upload_files' %}" data-form-data='{"csrfmiddlewaretoken": "{{ csrf_token }}"}'>
+
 
     </div>
+<div class="row col-8" style="margin-left: 50px;">
+    <form method="post" action="{% url 'file_scan' %}">
+    {% csrf_token %}
         <table id="gallery" class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Files
-                        <th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for file in files %}
-                <tr>
-                    <td><a href="{{ file.file.url }}">{{ file.file.name }}</a></td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+        <thead>
+            <tr>
+                <th> Files</th>
+                <th>Scan File</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for file in files %}
+            <tr>
+                <td><a href="{{ file.file.url }}">{{ file.file.name }}</a></td>
+                <td><label>
+                    <input type="checkbox" name="file-scan" value="{{ file.file.name }}">
+                </label></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button type="submit" class="btn contact100-form-btn  pull-right">
+        Scan Files
+    </button>
+</form>
 </div>
 
+<div class="row">
+    <form method="post" action="{% url 'clear_database' %}">
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ request.path }}">
+    <button type="submit" class="btn btn-danger contact100-form-btn">
+        <span class="glyphicon glyphicon-trash"></span> Clear Database
+    </button>
+</form>
+</div>
 
-    {% block content %}
-<script type="text/javascript">
-    function remove(arr, value) {
-        return arr.filter(function(ele) {
-            return ele !== value;
-        });
-    }
+</div>
 
-    function getTags() {
-        var arr = [];
-        document.getElementsByName("tags").forEach(function(element) {
-            if (element.checked) {
-                arr.push(element.value);
-                console.log(arr);
-            } else {
-                remove(arr, element.value);
-            }
-        });
-        var text = "";
-        for (var index = 0; index < arr.length - 1; index++) {
-            text += arr[index] + ", ";
-            console.log(text);
-        }
-        text += arr[arr.length - 1];
-        return text;
-    }
-
-    function printOnTagsTextBox() {
-        document.getElementById("tags-textbox-file").value = getTags();
-    }
-</script>
-{% endblock %}
 {% endblock %}

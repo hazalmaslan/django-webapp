@@ -1,10 +1,10 @@
-from django.contrib.auth.decorators import login_required
+from builtins import len, map, dict
+import os;
 from django.shortcuts import render
 from .models import Hash, SearchTag, File
 from django.contrib.auth import login, logout, authenticate
 from .forms import UserForm, SearchTagForm, HashForm, FileForm
 from taggit.models import Tag
-import time
 from django.shortcuts import redirect
 from django.http import JsonResponse
 from django.views import View
@@ -30,8 +30,11 @@ class BasicUploadView(View):
             file_hash.save()
             file.file.name = helpers.sha256(file.file.name)
             file.save()
-            api.file_scan(file)
+            if request.POST.get('file_scan'):
+                report = file.file.name
+                render(request, "z_lab_engine/file_report.html", {"file_report": report})
             data = {'is_valid': True, 'name': file.file.name, 'url': file.file.url}
+
         else:
             data = {'is_valid': False}
         return JsonResponse(data)
@@ -82,6 +85,7 @@ def upload(request):
         hash_lines = request.POST.get('hash_list')
         hash_list = hash_lines.splitlines()
         upload_tags = request.POST.get('upload_tags').split(", ")
+        """
         checked_values = request.POST.get('action_box')
         if len(checked_values > 0):
             checked_values = checked_values.split(", ")
@@ -93,7 +97,7 @@ def upload(request):
             map(api.file_network_traffic, hash_list)
         if "4" in checked_values:
             map(api.file_rescan, hash_list)
-
+        """
         for h in hash_list:
             if len(h) == 32:
                 if Hash.objects.filter(md5=h).exists():
@@ -135,13 +139,9 @@ def upload(request):
                         hash_save.upload_tags.add(tag)
                     hash_save.save()
         return render(request, 'z_lab_engine/detail_hash.html', {'tag': hash_save})
-
-
-
     return render(request, 'z_lab_engine/upload.html', {'sample_tags': sample_tags_list})
 
 def detail(request, tagname):
-
     render(request, 'z_lab_engine/detail.html', {'tag': tagname})
 
 
@@ -260,3 +260,9 @@ def check_if_hash_exists(hash_name):
             h.delete()
             return True
     return False
+
+
+def file_scan(request):
+    file_name = request.POST.get('file-scan')
+    report = open("files/" + file_name).name
+    return render(request, "z_lab_engine/file_report.html", {'file_report': report})

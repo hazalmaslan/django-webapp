@@ -108,15 +108,13 @@ def file_cluster(date, api_key=key): #date format YYYY-MM-DD       this clusteri
 
 
 def file_search(query, api_key=key):
-
     params = {'apikey': api_key, 'query': query}
     response = requests.get('https://www.virustotal.com/vtapi/v2/file/search', params=params)
-    print(response.json())
     with io.BytesIO(response.content) as f:
         with tarfile.open(fileobj=f, mode="r:bz2") as t:
             url_infos = [[json.loads(line) for line in t.extractfile(compressed_file)] for compressed_file in t]
             print(url_infos)
-
+    return response.json()
 
 
 

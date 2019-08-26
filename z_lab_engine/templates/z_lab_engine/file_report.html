@@ -2,6 +2,9 @@
 {% extends 'z_lab_engine/base.html' %}
 {% block title %}File Report{% endblock %}
 {% block body %}
-<h1>{{ file_report }}</h1>
-<p><a href="{% url 'upload_files' %}">Click</a> here in order to scan more files.</p>
+    <div style="margin-left: 50px">
+        <h1>{{ file_report }}</h1>
+        <p><a href="{% url 'upload_files' %}">Click</a> here in order to scan more files.</p>
+    </div>
+
 {% endblock %}

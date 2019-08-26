@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="574a96d0-4245-420a-ab8e-6ea79e387520" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/z_lab_engine/migrations/0012_auto_20190823_0753.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/c/6/1/5/c6153f9b650026a6f20c654b43758fcedf9d551c209ffadf6446cc5d1ae5857f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/d/8/0/4/d804180c52b08c630acc131aebb3f6089a93896f3fa8a49c58fad9e3c66d8042" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/file_report.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/file_report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/upload_file.html" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/templates/z_lab_engine/upload_file.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/z_lab_engine/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_lab_engine/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +188,7 @@
       <workItem from="1566394991516" duration="19941000" />
       <workItem from="1566476542729" duration="346000" />
       <workItem from="1566476899966" duration="6268000" />
-      <workItem from="1566540963381" duration="4112000" />
+      <workItem from="1566540963381" duration="6120000" />
     </task>
     <servers />
   </component>

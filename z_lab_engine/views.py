@@ -16,7 +16,7 @@ class BasicUploadView(View):
     def get(self, request):
         file_list = File.objects.get_queryset()[:10]
         sample_tags_list = Tag.objects.get_queryset()[:5]
-        return render(self.request, 'z_lab_engine/upload_file.html', {'files': file_list,})
+        return render(self.request, 'z_lab_engine/upload_file.html', {'files': file_list, })
 
     def post(self, request):
         form = FileForm(self.request.POST or None, self.request.FILES or None)
@@ -141,6 +141,7 @@ def upload(request):
         return render(request, 'z_lab_engine/detail_hash.html', {'tag': hash_save})
     return render(request, 'z_lab_engine/upload.html', {'sample_tags': sample_tags_list})
 
+
 def detail(request, tagname):
     render(request, 'z_lab_engine/detail.html', {'tag': tagname})
 
@@ -190,7 +191,6 @@ def register(request):
 
 
 def virus_search(request):
-
     form = SearchTagForm(request.POST or None)
     if form.is_valid():
         search_tag = form.save(commit=False)
@@ -264,5 +264,12 @@ def check_if_hash_exists(hash_name):
 
 def file_scan(request):
     file_name = request.POST.get('file-scan')
-    report = open("files/" + file_name).name
+    if file_name:
+        report = open("files/" + file_name).name
+        '''
+            file = open("files/" + file_name)
+            report = api.file_scan(file)
+        '''
+    else:
+        report = "You didn't choose a file to get a report."
     return render(request, "z_lab_engine/file_report.html", {'file_report': report})

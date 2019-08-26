@@ -206,7 +206,7 @@ def virus_search(request):
             search_tag.tags = tag
             search_tag.save()
 
-        api.file_search(search_tag)
+        #api.file_search(search_tag)
         return render(request, 'z_lab_engine/detail.html', {'tag': search_tag})
     liste = SearchTag.objects.get_queryset()
     search_tag_dict = dict()

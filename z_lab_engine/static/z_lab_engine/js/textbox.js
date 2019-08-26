@@ -148,18 +148,6 @@ function addFileName() {
     }
 }
 
-function addFSDate() {
-
-}
-
-function addLSDate() {
-
-}
-
-function addLADate() {
-
-}
-
 function addSourcesVal() {
     var sources = document.getElementById("sources").value;
     var str;
@@ -316,6 +304,90 @@ function addExportVal() {
     else{
         arr = remove(arr, str);
         exports.value = "";
+    }
+}
+
+function addFirstSubmissionDate(){
+    var date = document.getElementById("first-submission-date");
+    var str;
+    if (date.value !== "") {
+        str = "first submission date:" + date.value;
+    }
+    var dateMag = "";
+    document.getElementsByName("fsd").forEach(function(element) {
+        if (element.checked) {
+            dateMag = element.value;
+        }
+    });
+    str +=" " + dateMag;
+    if(document.getElementById("plus-first-submission-date-button").checked){
+        arr.push(str);
+    }
+    else{
+        if (arr.includes(str)){
+            console.log(str);
+            arr = remove(arr, str);
+        }
+        document.getElementsByName("fsd").forEach(function (element) {
+            element.checked = false;
+        });
+        date.value = "";
+    }
+}
+
+function addLastSubmissionDate(){
+    var date = document.getElementById("last-submission-date");
+    var str;
+    if (date.value !== "") {
+        str = "last submission date:" + date.value;
+    }
+    var dateMag = "";
+    document.getElementsByName("lsd").forEach(function(element) {
+        if (element.checked) {
+            dateMag = element.value;
+        }
+    });
+    str +=" " + dateMag;
+    if(document.getElementById("plus-last-submission-date-button").checked){
+        arr.push(str);
+    }
+    else{
+        if (arr.includes(str)){
+            console.log(str);
+            arr = remove(arr, str);
+        }
+        document.getElementsByName("lsd").forEach(function (element) {
+            element.checked = false;
+        });
+        date.value = "";
+    }
+}
+
+function addLastAnalysisDate(){
+    var date = document.getElementById("last-analysis-date");
+    var str;
+    if (date.value !== "") {
+        str = "last analysis date:" + date.value;
+    }
+    var dateMag = "";
+    document.getElementsByName("lad").forEach(function(element) {
+        if (element.checked) {
+            dateMag = element.value;
+        }
+    });
+    str +=" " + dateMag;
+    if(document.getElementById("plus-last-analysis-date-button").checked){
+        arr.push(str);
+    }
+    else{
+        if (arr.includes(str)){
+            console.log(str);
+            arr = remove(arr, str);
+        }
+        document.getElementsByName("lad").forEach(function (element) {
+            element.checked = false;
+        });
+        date.value = "";
     }
 }
 

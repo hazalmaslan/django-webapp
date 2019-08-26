@@ -610,7 +610,7 @@
     </div>
     <div class="row" style="margin-top: 10px; margin-bottom: 10px; ">
         <div class="col-2">
-            <button type="submit" class="plus-icon" value="fsd"></button>
+            <input type="checkbox" id="plus-first-submission-date-button" class="plus add-item" onchange="addFirstSubmissionDate()">
             <h8>first submission datetime</h8>
         </div>
         <div class="col-2">
@@ -627,23 +627,23 @@
         </div>
         <div class="col-2">
             <label>
-                <input type="date" placeholder="Select Date">
+                <input type="date" placeholder="Select Date" id="first-submission-date">
             </label>
 
         </div>
         <div class="col-6">
-            <input type="radio" id="check_139" class="check-button fsd" value="respectively" name="fsd">
+            <input type="radio" id="check_139" class="check-button" value="respectively" name="fsd">
             <label class="check-box-label " for="check_139">respectively</label>
-            <input type="radio" id="check_140" class="check-button fsd" value="larger than" name="fsd">
+            <input type="radio" id="check_140" class="check-button" value="larger than" name="fsd">
             <label class="check-box-label " for="check_140">larger than</label>
-            <input type="radio" id="check_141" class="check-button fsd" value="smaller than" name="fsd">
+            <input type="radio" id="check_141" class="check-button" value="smaller than" name="fsd">
             <label class="check-box-label " for="check_141">smaller than</label>
 
         </div>
     </div>
     <div class="row" style="margin-top: 10px; margin-bottom: 10px; ">
         <div class="col-2">
-            <button type="submit" class="plus-icon" value="lsd"></button>
+            <input type="checkbox" id="plus-last-submission-date-button" class="plus add-item" onchange="addLastSubmissionDate()">
             <h8>last submission datetime</h8>
         </div>
         <div class="col-2">
@@ -660,7 +660,7 @@
         </div>
         <div class="col-2">
             <label>
-                <input type="date" placeholder="Select Date">
+                <input type="date" placeholder="Select Date" id="last-submission-date">
             </label>
 
         </div>
@@ -676,6 +676,7 @@
     </div>
     <div class="row" style="margin-top: 10px; margin-bottom: 10px; ">
         <div class="col-2">
+            <input type="checkbox" id="plus-last-analysis-date-button" class="plus add-item" onchange="addLastAnalysisDate()">
             <button type="submit" class="plus-icon" value="lad"></button>
             <h8>last analysis datetime</h8>
         </div>
@@ -693,7 +694,7 @@
         </div>
         <div class="col-2">
             <label>
-                <input type="date" placeholder="Select Date">
+                <input type="date" placeholder="Select Date" id="last-analysis-date">
             </label>
 
         </div>
@@ -995,7 +996,10 @@
         </div>
     </div>
 </div>
-
+<br>
+    <br>
+    <br>
+    <br>
 <!--===============================================================================================-->
 {% load staticfiles %}
     <script src="{% static 'z_lab_engine/vendor/jquery/jquery-3.2.1.min.js' %}"></script>

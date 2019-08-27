@@ -378,24 +378,18 @@ textarea {
 }
 
 .check-button+.check-box-label {
-	display: inline-block;
-	padding: 0 5px 5px 5px;
-	cursor: pointer;
-	border: 1px solid black ;
-	color: black;
-	background-color: white;
-	height: 25px;
-	width: auto;
-    border-bottom: 3px solid black;
-    border-right: 4px solid black;
+  -webkit-appearance: push-button;
+  -moz-appearance: button;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .check-button:checked+.check-box-label {
-	border: 1px solid white;
-	color: white;
-	background-color: skyblue;
-    border-bottom: 3px solid black;
-    border-right: 4px solid black;
+	-webkit-appearance: push-button;
+  	-moz-appearance: button;
+	background-color: orange;
+	display: inline-block;
+  	cursor: pointer;
 }
 
 
